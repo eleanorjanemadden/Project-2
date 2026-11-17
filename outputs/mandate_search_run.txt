@@ -1,0 +1,64 @@
+Reserve minimum: 3.0%
+
+Candidate as_loaded
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 20.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate equity_minus_one
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 10.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate correlation_050
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 40.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate all_months
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 60.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate all_months_attack
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 55.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate last_36
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 85.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule
+
+Candidate last_36_attack
+  Weights sum to 100: 100.0% — pass
+  Lowest weight (long-only): 0.0% — pass
+  Reserve-eligible weight: 85.0% — pass
+  Weight redeemable within 5 business days: 100.0% — pass
+  Largest single company: 0.0% — pass
+  Calendar-year loss rule: requires CIO clarification
+  passes every checkable rule

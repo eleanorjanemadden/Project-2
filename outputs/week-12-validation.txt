@@ -1,0 +1,30 @@
+PASS: Lab 14 printed output preserved byte for byte
+PASS: Meridian as loaded: 0/20/25/55, 6.51%, 9.44%
+PASS: Meridian equity 7%: 0/10/10/80, 6.53%, 12.94%
+PASS: Meridian largest change = 25 percentage points
+PASS: Infeasible objective returns None
+PASS: Positive reserve with no eligible assets is infeasible
+PASS: Zero reserve permits no eligible assets
+PASS: 3-asset search fully invested and long-only
+PASS: 6-asset search fully invested and long-only
+PASS: CSV estimates match independent pandas calculation; last_36=False
+PASS: CSV estimates match independent pandas calculation; last_36=True
+PASS: BIL: every price matches retained Yahoo response
+PASS: IEF: every price matches retained Yahoo response
+PASS: LQD: every price matches retained Yahoo response
+PASS: VT: every price matches retained Yahoo response
+PASS: 60 price rows retained, producing 59 returns
+PASS: Unordered/missing-month and nonfinite-price CSVs rejected
+2026-11-17 16:29:18.091 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS: Streamlit starts without an exception
+PASS: Project 2 snapshot is the default view
+PASS: App displays training volatility
+PASS: App widget stress displays 12.94% and 25.00-point change
+PASS: Bundled CSV loads in the app
+PASS: 36-month app switch displays 85% BIL and 25.00-point change
+2026-11-17 16:29:18.364 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS: Uploaded CSV bytes load through the uploader path
+PASS: App reports infeasibility without lowering the objective
+PASS: Saved engine correlation 0.50 changes actual app to 0/40/0/60, 6.52%, 9.73%
+PASS: Submitted engine restored to 0.25
+All checks passed.
