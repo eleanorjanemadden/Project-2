@@ -1,0 +1,13 @@
+test_costco_course_answer (__main__.LabChecks.test_costco_course_answer) ... ok
+test_jpm_gaps (__main__.LabChecks.test_jpm_gaps) ... ok
+test_memo_numbers_and_binding (__main__.LabChecks.test_memo_numbers_and_binding) ... ok
+test_missing_equity_and_flow (__main__.LabChecks.test_missing_equity_and_flow) ... ok
+test_raw_sources_and_latest_filings (__main__.LabChecks.test_raw_sources_and_latest_filings) ... ok
+test_streamlit_app (__main__.LabChecks.test_streamlit_app) ... 2026-11-03 16:07:54.713 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_tag_priority_annual_and_latest (__main__.LabChecks.test_tag_priority_annual_and_latest) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.887s
+
+OK

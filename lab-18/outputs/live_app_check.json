@@ -1,0 +1,10 @@
+{
+  "mode": "Live SEC download",
+  "ticker": "COST",
+  "rows": 5,
+  "latest_owner_earnings_millions": "9,382",
+  "memo_numeric_check": "Every numeric token in the memo appears in the printed financial evidence.",
+  "chart_type": "vega_lite_chart",
+  "exception_count": 0,
+  "network_note": "HTTPS DNS fallback enabled for this environment; actual financial responses from SEC."
+}

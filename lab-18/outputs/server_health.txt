@@ -1,0 +1,5 @@
+Command: python3 -m streamlit run buffett_app.py --server.headless true --server.address 127.0.0.1 --server.port 8518 --browser.gatherUsageStats false
+Health URL: http://127.0.0.1:8518/_stcore/health
+HTTP status: 200
+Response: ok
+App behavior separately checked with Streamlit AppTest.

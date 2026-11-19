@@ -1,0 +1,54 @@
+# JPM — JPMORGAN CHASE & CO
+Amounts in USD millions. ROE in percent. Thresholds: ROE >= 15%; owner earnings > 0.
+Fiscal year end: 2021-12-31 | Revenue: 121,649 | Net income: 48,334 | Operating cash flow: 78,084 | Capital spending: not found | Equity: 294,127 | ROE %: 16.4% | Owner earnings: not found
+Fiscal year end: 2022-12-31 | Revenue: 128,695 | Net income: 37,676 | Operating cash flow: 107,119 | Capital spending: not found | Equity: 292,332 | ROE %: 12.9% | Owner earnings: not found
+Fiscal year end: 2023-12-31 | Revenue: 158,104 | Net income: 49,552 | Operating cash flow: 12,974 | Capital spending: not found | Equity: 327,878 | ROE %: 15.1% | Owner earnings: not found
+Fiscal year end: 2024-12-31 | Revenue: 177,556 | Net income: 58,471 | Operating cash flow: -42,012 | Capital spending: not found | Equity: 344,758 | ROE %: 17.0% | Owner earnings: not found
+Fiscal year end: 2025-12-31 | Revenue: 182,447 | Net income: 57,048 | Operating cash flow: -147,782 | Capital spending: not found | Equity: 362,438 | ROE %: 15.7% | Owner earnings: not found
+ROE of 15% or more every year: fail
+Owner earnings positive every year: not known
+Owner earnings grew, first year to last: not known
+
+XBRL sources (USD):
+2021-12-31
+  Revenue: 121,649; us-gaap:Revenues; period 2021-01-01 to 2021-12-31; filed 2024-02-16; accession 0000019617-24-000225
+  Net income: 48,334; us-gaap:NetIncomeLoss; period 2021-01-01 to 2021-12-31; filed 2024-02-16; accession 0000019617-24-000225
+  Operating cash flow: 78,084; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2021-01-01 to 2021-12-31; filed 2024-02-16; accession 0000019617-24-000225
+  Capital spending: not found; not found
+  Equity: 294,127; us-gaap:StockholdersEquity; period instant to 2021-12-31; filed 2024-02-16; accession 0000019617-24-000225
+  ROE %: 16.4%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: not found; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − not found
+2022-12-31
+  Revenue: 128,695; us-gaap:Revenues; period 2022-01-01 to 2022-12-31; filed 2025-02-14; accession 0000019617-25-000270
+  Net income: 37,676; us-gaap:NetIncomeLoss; period 2022-01-01 to 2022-12-31; filed 2025-02-14; accession 0000019617-25-000270
+  Operating cash flow: 107,119; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2022-01-01 to 2022-12-31; filed 2025-02-14; accession 0000019617-25-000270
+  Capital spending: not found; not found
+  Equity: 292,332; us-gaap:StockholdersEquity; period instant to 2022-12-31; filed 2025-02-14; accession 0000019617-25-000270
+  ROE %: 12.9%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: not found; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − not found
+2023-12-31
+  Revenue: 158,104; us-gaap:Revenues; period 2023-01-01 to 2023-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Net income: 49,552; us-gaap:NetIncomeLoss; period 2023-01-01 to 2023-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Operating cash flow: 12,974; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2023-01-01 to 2023-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Capital spending: not found; not found
+  Equity: 327,878; us-gaap:StockholdersEquity; period instant to 2023-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  ROE %: 15.1%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: not found; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − not found
+2024-12-31
+  Revenue: 177,556; us-gaap:Revenues; period 2024-01-01 to 2024-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Net income: 58,471; us-gaap:NetIncomeLoss; period 2024-01-01 to 2024-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Operating cash flow: -42,012; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2024-01-01 to 2024-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Capital spending: not found; not found
+  Equity: 344,758; us-gaap:StockholdersEquity; period instant to 2024-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  ROE %: 17.0%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: not found; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − not found
+2025-12-31
+  Revenue: 182,447; us-gaap:Revenues; period 2025-01-01 to 2025-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Net income: 57,048; us-gaap:NetIncomeLoss; period 2025-01-01 to 2025-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Operating cash flow: -147,782; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2025-01-01 to 2025-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  Capital spending: not found; not found
+  Equity: 362,438; us-gaap:StockholdersEquity; period instant to 2025-12-31; filed 2026-02-13; accession 0001628280-26-008131
+  ROE %: 15.7%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: not found; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − not found
+
+Memo unsupported numbers: []

@@ -1,0 +1,8 @@
+Local Markdown links checked: 32; all resolve.
+Installed skill matches submission script.
+Raw COST/JPM downloads match recorded checksums.
+Seven validation tests: PASS (outputs/validation_run.txt).
+COST known-answer comparison: 35 of 35 financial cells match.
+JPM gaps and app 40.0% probe: PASS.
+Live app and server health checks: PASS.
+Remaining activities: fresh browser chat, in-person exercises, personal draft review, GitHub/Brightspace submission.

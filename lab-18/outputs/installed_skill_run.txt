@@ -1,0 +1,54 @@
+# COST — COSTCO WHOLESALE CORP /NEW
+Amounts in USD millions. ROE in percent. Thresholds: ROE >= 15%; owner earnings > 0.
+Fiscal year end: 2022-08-28 | Revenue: 226,954 | Net income: 5,844 | Operating cash flow: 7,392 | Capital spending: 3,891 | Equity: 20,642 | ROE %: 28.3% | Owner earnings: 3,501
+Fiscal year end: 2023-09-03 | Revenue: 242,290 | Net income: 6,292 | Operating cash flow: 11,068 | Capital spending: 4,323 | Equity: 25,058 | ROE %: 25.1% | Owner earnings: 6,745
+Fiscal year end: 2024-09-01 | Revenue: 254,453 | Net income: 7,367 | Operating cash flow: 11,339 | Capital spending: 4,710 | Equity: 23,622 | ROE %: 31.2% | Owner earnings: 6,629
+Fiscal year end: 2025-08-31 | Revenue: 275,235 | Net income: 8,099 | Operating cash flow: 13,335 | Capital spending: 5,498 | Equity: 29,164 | ROE %: 27.8% | Owner earnings: 7,837
+Fiscal year end: 2026-08-30 | Revenue: 303,154 | Net income: 9,226 | Operating cash flow: 15,817 | Capital spending: 6,435 | Equity: 35,803 | ROE %: 25.8% | Owner earnings: 9,382
+ROE of 15% or more every year: pass
+Owner earnings positive every year: pass
+Owner earnings grew, first year to last: pass
+
+XBRL sources (USD):
+2022-08-28
+  Revenue: 226,954; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2021-08-30 to 2022-08-28; filed 2024-10-09; accession 0000909832-24-000049
+  Net income: 5,844; us-gaap:NetIncomeLoss; period 2021-08-30 to 2022-08-28; filed 2024-10-09; accession 0000909832-24-000049
+  Operating cash flow: 7,392; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2021-08-30 to 2022-08-28; filed 2024-10-09; accession 0000909832-24-000049
+  Capital spending: 3,891; us-gaap:PaymentsToAcquirePropertyPlantAndEquipment; period 2021-08-30 to 2022-08-28; filed 2024-10-09; accession 0000909832-24-000049
+  Equity: 20,642; us-gaap:StockholdersEquity; period instant to 2022-08-28; filed 2023-10-11; accession 0000909832-23-000042
+  ROE %: 28.3%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 3,501; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquirePropertyPlantAndEquipment
+2023-09-03
+  Revenue: 242,290; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2022-08-29 to 2023-09-03; filed 2025-10-08; accession 0000909832-25-000101
+  Net income: 6,292; us-gaap:NetIncomeLoss; period 2022-08-29 to 2023-09-03; filed 2025-10-08; accession 0000909832-25-000101
+  Operating cash flow: 11,068; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2022-08-29 to 2023-09-03; filed 2025-10-08; accession 0000909832-25-000101
+  Capital spending: 4,323; us-gaap:PaymentsToAcquirePropertyPlantAndEquipment; period 2022-08-29 to 2023-09-03; filed 2025-10-08; accession 0000909832-25-000101
+  Equity: 25,058; us-gaap:StockholdersEquity; period instant to 2023-09-03; filed 2026-10-07; accession 0000909832-26-000093
+  ROE %: 25.1%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 6,745; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquirePropertyPlantAndEquipment
+2024-09-01
+  Revenue: 254,453; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2023-09-04 to 2024-09-01; filed 2026-10-07; accession 0000909832-26-000093
+  Net income: 7,367; us-gaap:NetIncomeLoss; period 2023-09-04 to 2024-09-01; filed 2026-10-07; accession 0000909832-26-000093
+  Operating cash flow: 11,339; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2023-09-04 to 2024-09-01; filed 2026-10-07; accession 0000909832-26-000093
+  Capital spending: 4,710; us-gaap:PaymentsToAcquirePropertyPlantAndEquipment; period 2023-09-04 to 2024-09-01; filed 2026-10-07; accession 0000909832-26-000093
+  Equity: 23,622; us-gaap:StockholdersEquity; period instant to 2024-09-01; filed 2026-10-07; accession 0000909832-26-000093
+  ROE %: 31.2%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 6,629; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquirePropertyPlantAndEquipment
+2025-08-31
+  Revenue: 275,235; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2024-09-02 to 2025-08-31; filed 2026-10-07; accession 0000909832-26-000093
+  Net income: 8,099; us-gaap:NetIncomeLoss; period 2024-09-02 to 2025-08-31; filed 2026-10-07; accession 0000909832-26-000093
+  Operating cash flow: 13,335; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2024-09-02 to 2025-08-31; filed 2026-10-07; accession 0000909832-26-000093
+  Capital spending: 5,498; us-gaap:PaymentsToAcquirePropertyPlantAndEquipment; period 2024-09-02 to 2025-08-31; filed 2026-10-07; accession 0000909832-26-000093
+  Equity: 29,164; us-gaap:StockholdersEquity; period instant to 2025-08-31; filed 2026-10-07; accession 0000909832-26-000093
+  ROE %: 27.8%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 7,837; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquirePropertyPlantAndEquipment
+2026-08-30
+  Revenue: 303,154; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2025-09-01 to 2026-08-30; filed 2026-10-07; accession 0000909832-26-000093
+  Net income: 9,226; us-gaap:NetIncomeLoss; period 2025-09-01 to 2026-08-30; filed 2026-10-07; accession 0000909832-26-000093
+  Operating cash flow: 15,817; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2025-09-01 to 2026-08-30; filed 2026-10-07; accession 0000909832-26-000093
+  Capital spending: 6,435; us-gaap:PaymentsToAcquirePropertyPlantAndEquipment; period 2025-09-01 to 2026-08-30; filed 2026-10-07; accession 0000909832-26-000093
+  Equity: 35,803; us-gaap:StockholdersEquity; period instant to 2026-08-30; filed 2026-10-07; accession 0000909832-26-000093
+  ROE %: 25.8%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 9,382; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquirePropertyPlantAndEquipment
+
+Memo unsupported numbers: []
