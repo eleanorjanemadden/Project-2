@@ -9,8 +9,8 @@
 
 **Pace — 75 minutes, on the slides:** opener 0–8 · I the app 8–30 · V known answer 30–42 · E your series 42–52 · explain the code 52–58 · partner attack and your call 58–65 · learn, reflect, checkout 65–75.
 
-**You arrive with:** your Lab 16 chat · your [Lab 15](../week-09/lab-15-portfolio-stability.md)
-Streamlit app · the series you chose for [the prework](student-prework.md) · your partner.
+**You arrive with:** your Lab 16 chat · your [Lab 15](https://github.com/CinderZhang/FIN43900-Fall2026/blob/bb73c5fe49648b5076e8419ff3dd095ffdc13f45/lessons/week-09/lab-15-portfolio-stability.md)
+Streamlit app · the series you chose for [the prework](week-10_student-prework.md) · your partner.
 
 **Something not working?** Debug with your AI: paste the exact command and the exact error text.
 

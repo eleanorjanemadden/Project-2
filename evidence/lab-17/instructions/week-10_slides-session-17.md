@@ -162,6 +162,6 @@ only as known on each decision date, never today's values with a fixed lag."
 **Before Tuesday — do these**
 
 1. Keep your Lab 17 chat, your app and your call.
-2. Read the [F-Squared reading](../week-11/student-prework.md).
+2. Read the [F-Squared reading](week-11_student-prework.md).
 
 **Next week:** a rule frozen before you look, and a holdout you do not touch until the end.

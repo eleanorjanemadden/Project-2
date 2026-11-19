@@ -36,7 +36,7 @@ files.
 [ALFRED Help](https://alfred.stlouisfed.org/help): **"What is ALFRED?"**, **"What is a Release and
 what are Release Dates?"**, **"How are Release Dates determined?"**, and **"How does ALFRED verify
 vintage data?"** (5–7 minutes). Ask: **what was knowable on the decision date, and what is visible
-only because I am looking later?** The [handout's point-in-time section](student-handout.md#point-in-time-in-plain-language)
+only because I am looking later?** The [handout's point-in-time section](week-10_student-handout.md#point-in-time-in-plain-language)
 is the complete alternative.
 
 **Before Thursday — about 15 minutes.** Choose one series on [FRED](https://fred.stlouisfed.org)
@@ -48,8 +48,8 @@ page. Thursday's app pulls it live.
 
 | Session | Lab | One thing |
 |---|---|---|
-| Tuesday | [Lab 16](lab-16-provenance-gate.md) | the as-of filter, proved on the training table |
-| Thursday | [Lab 17](lab-17-point-in-time.md) | a FRED-style app showing what was known on any date, and an admit, quarantine or reject call |
+| Tuesday | [Lab 16](../../lab-16/instructions/lab-16-provenance-gate.md) | the as-of filter, proved on the training table |
+| Thursday | [Lab 17](week-10_lab-17-point-in-time.md) | a FRED-style app showing what was known on any date, and an admit, quarantine or reject call |
 
 ## Teams this week
 
@@ -65,10 +65,10 @@ Reflect: why the as-of filter, not a fixed lag, keeps a backtest honest.
 
 ## Package map
 
-- [Lab 16](lab-16-provenance-gate.md) and [Lab 17](lab-17-point-in-time.md) — the labs.
-- [Student handout](student-handout.md) — point-in-time, the digits once, the rules.
-- [Open challenge](open-ended-challenge.md) — after class.
-- [Prework](student-prework.md) — generated from the prework section above.
+- [Lab 16](../../lab-16/instructions/lab-16-provenance-gate.md) and [Lab 17](week-10_lab-17-point-in-time.md) — the labs.
+- [Student handout](week-10_student-handout.md) — point-in-time, the digits once, the rules.
+- [Open challenge](https://github.com/CinderZhang/FIN43900-Fall2026/blob/bb73c5fe49648b5076e8419ff3dd095ffdc13f45/lessons/week-10/open-ended-challenge.md) — after class.
+- [Prework](week-10_student-prework.md) — generated from the prework section above.
 - Instructor guide, grading key and verification record — instructor only, not published.
 
 ## Brightspace order

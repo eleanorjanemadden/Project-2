@@ -231,6 +231,15 @@ def main():
     # Run the real app, modify a widget, and check the rendered results.
     at=AppTest.from_file(str(ROOT/'app.py'), default_timeout=20).run()
     check(not at.exception,'Streamlit starts without an exception')
+    guidance = "\n".join(node.value for node in at.markdown)
+    check("Stop the paper pilot and return to committee if the agreed reserve rule or "
+          "after-cost return screen becomes infeasible." in guidance
+          and "A weight shift above five percentage points keeps live adoption deferred." in guidance,
+          'App distinguishes the pilot stop rule from the live-adoption deferral threshold')
+    captions = "\n".join(node.value for node in at.caption)
+    check("55–85% BIL, 15–45% VT, and 0% IEF/LQD" in captions
+          and "45–85% BIL, 15–55% VT, 0% IEF, and 0–5% LQD" in captions,
+          'App labels both historical stress ranges separately')
     check('60.00' in at.table[0].value.to_string(), 'Project 2 snapshot is the default view')
     monthly = df.pct_change().dropna()
     gs10_readouts = check_gs10(at)
@@ -281,6 +290,7 @@ def main():
     cost_failure = at.dataframe[0].value.set_index("Measure or rule")
     stress_failure = at.dataframe[1].value
     check(not at.exception and len(at.error) == 1 and "6.50%" in at.error[0].value
+          and "Stop the paper pilot and return to committee" in at.error[0].value
           and all(cost_failure["Constrained portfolio"] == "N/A")
           and list(stress_failure.loc[
               (stress_failure["Annual cost (bps)"] == 100)

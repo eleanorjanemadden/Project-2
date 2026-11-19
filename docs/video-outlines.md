@@ -14,11 +14,11 @@ Use this opening aloud in each recording. For Video 3, put the running app on sc
 
 - Show the README run command and trace the saved adjusted prices through `estimate_from_csv`, annualized estimates and covariance, and `search_portfolio` in `portfolio.py`. Explain the long-only five-point grid and 6.5% return and 3% reserve screens.
 - Toggle the last-36 switch with the default inputs and point to the saved 25-point movement in `outputs/allocations.csv`. Show why a correct calculation can fail the stability test.
-- Show the separate Lab 17 timing gate. At the September 30, 2026 cutoff the latest visible GS10 is August’s 4.68%. September’s 4.99% belongs to the later vintage. [Evidence map](evidence-index.md)
+- Show the GS10 timing panel in the app and its Lab 17 data card. At the September 30, 2026 cutoff the latest visible GS10 is August’s 4.68%. September’s 4.99% belongs to the later vintage. [Evidence map](evidence-index.md)
 
 ## Video 3 — Committee decision (up to 5:00)
 
 - Open with the app live and speak the disclosure, then ask the committee to approve a paper pilot at 60% BIL / 40% VT and defer live allocation.
-- On data through September 2026, show 6.61% estimated return and 6.05% volatility for the reference portfolio. Explain that the 15–45% VT and 55–85% BIL ranges come from the observed window and return stresses.
-- Ask the client to confirm BIL/IEF eligibility. Monitor reserve eligibility, screen feasibility and weights monthly. Require credible forward estimates and a cost allowance, with no more than a five-point shift, before adoption. Stop the pilot if the agreed reserve or return screen becomes infeasible.
+- On data through September 2026, show 6.61% estimated return and 6.05% volatility for the reference portfolio. Label the reference as zero additional cost. The original window and return stresses produced 55–85% BIL, 15–45% VT, and 0% IEF/LQD. The illustrative cost stresses across both windows produced 45–85% BIL, 15–55% VT, 0% IEF, and 0–5% LQD.
+- Ask the client to confirm BIL/IEF eligibility. Monitor reserve eligibility, screen feasibility and weights monthly. Require credible forward estimates and a cost allowance before adoption. A weight shift above five percentage points keeps live adoption deferred. Stop the paper pilot and return to committee if the agreed reserve rule or after-cost return screen becomes infeasible.
 - Rehearse with a sceptic. If asked whether 6.61% establishes the rolling five-year net objective, say that the system estimates historical arithmetic return and needs forward return and cost evidence for that decision. [Committee memo](decision-memo.md)

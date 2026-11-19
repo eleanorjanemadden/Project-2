@@ -6,7 +6,7 @@
 [*In the Matter of F-Squared Investments*](https://www.sec.gov/files/litigation/admin/2014/ia-3988.pdf),
 Section III.A **"Summary," paragraphs 1–4, PDF pages labeled 2–3** (5–7 minutes). Ask: **how can one
 week of timing leakage manufacture most of the apparent alpha?** The
-[handout's F-Squared summary](student-handout.md#f-squared-accessible-case-summary) is the complete
+[handout's F-Squared summary](week-11_student-handout.md#f-squared-accessible-case-summary) is the complete
 alternative.
 
 **Before Thursday — about 15 minutes.** Put your Lab 17 series — at each month-end, the value your as-of

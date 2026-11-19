@@ -8,6 +8,12 @@ Installed the requirements in a fresh Python 3.13.1 environment and ran `python 
 
 The executed CSV and full-precision JSON are in `outputs/`. The local Streamlit health endpoint returned `ok`. The app-level window test and other checks are in the validation log. [Executed result](../outputs/week-12-result.md) · [Validation log](../outputs/week-12-validation.txt)
 
+## Automated cold run and submission audit — November 19, 2026
+
+A separate fresh clone at `2832a67` ran the documented setup, analysis, and Streamlit commands. The server health check returned HTTP 200 in 22.2 seconds from clone, 53 checks passed, and the regenerated tracked files matched the checkout. The transcript omits the machine's local network address. [Automated cold-run transcript](../outputs/automated-cold-run.txt) · [Original link findings and post-repair checks](../outputs/submission-link-audit.txt)
+
+The app now shows the original stress range, the broader illustrative cost-stress range, and the pilot stop condition separately from the live-adoption deferral threshold. The original must-fix list below records the earlier studio state.
+
 ## Partner record — pending
 
 Before Tuesday’s swap, write your committee decision and most reversible claim independently with AI closed. Give your partner only the published README and have them run it in their own folder. Record their command, first failure (or none), elapsed time, and result location. Swap and independently check the test evidence. Thursday, rehearse Video 3 live and capture your partner’s sceptical question.

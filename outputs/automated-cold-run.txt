@@ -1,0 +1,305 @@
+Project 2 automated cold run. The independent partner review is separate.
+Fresh clone directory: /var/folders/g_/dv_1n5y517187hqfvxlm60km0000gp/T/project2-audit-cold-q7jd5xk9
+
+$ git clone --single-branch --branch main https://github.com/eleanorjanemadden/Project-2.git .
+Cloning into '.'...
+
+$ git rev-parse HEAD && python3 --version
+2832a673f43d3c79fe43c5b550cf5a6b5c735c83
+Python 3.13.1
+
+$ python3 -m venv .venv && source .venv/bin/activate && python -m pip install -r requirements.txt
+Collecting streamlit==1.66.0 (from -r requirements.txt (line 1))
+  Using cached streamlit-1.66.0-py3-none-any.whl.metadata (10 kB)
+Collecting pandas==2.2.3 (from -r requirements.txt (line 2))
+  Using cached pandas-2.2.3-cp313-cp313-macosx_11_0_arm64.whl.metadata (89 kB)
+Collecting altair!=5.4.0,!=5.4.1,<7,>=5.0.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached altair-6.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting click<9,>=7.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting numpy<3,>=1.25.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached numpy-2.5.5-cp313-cp313-macosx_14_0_arm64.whl.metadata (6.6 kB)
+Collecting packaging>=20 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow<13,>=9.2.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached pillow-12.3.0-cp313-cp313-macosx_11_0_arm64.whl.metadata (9.1 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting protobuf<8,>=5.26.1 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl.metadata (595 bytes)
+Collecting pyarrow!=25.0.0,<27,>=10.0.1 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached pyarrow-26.0.1-cp313-cp313-macosx_12_0_arm64.whl.metadata (3.0 kB)
+Collecting requests<3,>=2.27 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting typing-extensions<5,>=4.10.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting starlette<2,>=0.46.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting uvicorn<1,>=0.30.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting anyio<5,>=4.0.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting python-multipart<1,>=0.0.10 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached python_multipart-0.0.34-py3-none-any.whl.metadata (6.3 kB)
+Collecting websockets<18,>=12.0.0 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached websockets-17.4-cp313-cp313-macosx_11_0_arm64.whl.metadata (6.3 kB)
+Collecting itsdangerous<3,>=2.1.2 (from streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r requirements.txt (line 2))
+  Using cached python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pytz>=2020.1 (from pandas==2.2.3->-r requirements.txt (line 2))
+  Using cached pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas==2.2.3->-r requirements.txt (line 2))
+  Using cached tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting jinja2 (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting narwhals>=2.4.0 (from altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached narwhals-2.29.0-py3-none-any.whl.metadata (15 kB)
+Collecting idna>=2.8 (from anyio<5,>=4.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.27->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached charset_normalizer-3.5.2-cp313-cp313-macosx_10_13_universal2.whl.metadata (46 kB)
+Collecting urllib3<3,>=1.26 (from requests<3,>=2.27->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests<3,>=2.27->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting h11>=0.8 (from uvicorn<1,>=0.30.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached markupsafe-3.0.4-cp313-cp313-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=5.0.0->streamlit==1.66.0->-r requirements.txt (line 1))
+  Using cached rpds_py-2026.9.1-cp313-cp313-macosx_11_0_arm64.whl.metadata (4.1 kB)
+Using cached streamlit-1.66.0-py3-none-any.whl (10.4 MB)
+Using cached pandas-2.2.3-cp313-cp313-macosx_11_0_arm64.whl (11.3 MB)
+Using cached altair-6.3.0-py3-none-any.whl (797 kB)
+Using cached anyio-4.16.0-py3-none-any.whl (134 kB)
+Using cached click-8.5.1-py3-none-any.whl (126 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached numpy-2.5.5-cp313-cp313-macosx_14_0_arm64.whl (5.5 MB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pillow-12.3.0-cp313-cp313-macosx_11_0_arm64.whl (4.8 MB)
+Using cached protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl (456 kB)
+Using cached pyarrow-26.0.1-cp313-cp313-macosx_12_0_arm64.whl (37.3 MB)
+Using cached pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+Using cached python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Using cached python_multipart-0.0.34-py3-none-any.whl (32 kB)
+Using cached pytz-2026.6-py2.py3-none-any.whl (506 kB)
+Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+Using cached starlette-1.10.0-py3-none-any.whl (80 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Using cached websockets-17.4-cp313-cp313-macosx_11_0_arm64.whl (216 kB)
+Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached charset_normalizer-3.5.2-cp313-cp313-macosx_10_13_universal2.whl (366 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached narwhals-2.29.0-py3-none-any.whl (501 kB)
+Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached markupsafe-3.0.4-cp313-cp313-macosx_11_0_arm64.whl (12 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-2026.9.1-cp313-cp313-macosx_11_0_arm64.whl (340 kB)
+Installing collected packages: pytz, websockets, urllib3, tzdata, typing-extensions, rpds-py, python-multipart, pyarrow, protobuf, pillow, packaging, numpy, narwhals, MarkupSafe, itsdangerous, idna, h11, click, charset_normalizer, certifi, attrs, uvicorn, requests, referencing, python-dateutil, jinja2, anyio, starlette, pydeck, pandas, jsonschema-specifications, jsonschema, altair, streamlit
+Successfully installed MarkupSafe-3.0.4 altair-6.3.0 anyio-4.16.0 attrs-26.1.0 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.1 h11-0.16.0 idna-3.20 itsdangerous-2.2.0 jinja2-3.1.6 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 narwhals-2.29.0 numpy-2.5.5 packaging-26.3 pandas-2.2.3 pillow-12.3.0 protobuf-7.36.2 pyarrow-26.0.1 pydeck-0.9.3 python-dateutil-4.0.0 python-multipart-0.0.34 pytz-2026.6 referencing-0.37.0 requests-2.34.2 rpds-py-2026.9.1 starlette-1.10.0 streamlit-1.66.0 typing-extensions-4.16.0 tzdata-2026.6 urllib3-2.8.0 uvicorn-0.54.0 websockets-17.4
+
+[notice] A new release of pip is available: 24.3.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+
+$ source .venv/bin/activate && python analyze.py && python -m streamlit run app.py
+training
+as_loaded {'weights': [0.0, 0.2, 0.25, 0.55], 'return': 0.0651, 'volatility': 0.0944171594573783, 'reserve': 0.2}
+equity_minus_one {'weights': [0.0, 0.1, 0.1, 0.8], 'return': 0.06530000000000001, 'volatility': 0.12938701635017327, 'reserve': 0.1}
+correlation_050 {'weights': [0.0, 0.4, 0.0, 0.6], 'return': 0.06520000000000001, 'volatility': 0.09727486828569855, 'reserve': 0.4}
+all_months
+answer {'weights': [0.6, 0.0, 0.0, 0.4], 'return': 0.06614541296479183, 'volatility': 0.06051842314618742, 'reserve': 0.6}
+VT minus one point {'weights': [0.55, 0.0, 0.0, 0.45], 'return': 0.06534182467467842, 'volatility': 0.06790065537007649, 'reserve': 0.55}
+last_36
+answer {'weights': [0.85, 0.0, 0.0, 0.15], 'return': 0.06748141811440823, 'volatility': 0.017921169644584692, 'reserve': 0.85}
+VT minus one point {'weights': [0.85, 0.0, 0.0, 0.15], 'return': 0.06598141811440823, 'volatility': 0.017921169644584692, 'reserve': 0.85}
+All estimated mixes mapped by role into the existing mandate checker.
+See outputs/mandate_search_run.txt; ETF settlement/eligibility are draft mandate assumptions.
+2026-11-19 17:44:09.157 Uvicorn server started on :::8501
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: [local network address omitted]
+
+  Help agents write better Streamlit apps?
+  Install the official Streamlit skills by running streamlit skills in your terminal.
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+
+Cold-run server health on IPv6 loopback: ok
+HTTP 200
+Elapsed from clone through successful health probe: 22.20 seconds.
+First failure in README setup and run: none. IPv6 selected to reach this clone's listener because another app already held the IPv4 loopback port.
+
+$ source .venv/bin/activate && python validate.py
+2026-11-19 17:44:27.300 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-19 17:44:28.420 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+PASS: Negative and nonfinite cost assumptions rejected
+PASS: An exact after-cost threshold is feasible and a higher cost makes the same grid infeasible
+PASS: Lab 14 printed output preserved byte for byte
+PASS: Meridian as loaded: 0/20/25/55, 6.51%, 9.44%
+PASS: Meridian equity 7%: 0/10/10/80, 6.53%, 12.94%
+PASS: Meridian largest change = 25 percentage points
+PASS: Infeasible objective returns None
+PASS: Positive reserve with no eligible assets is infeasible
+PASS: Zero reserve permits no eligible assets
+PASS: 3-asset search fully invested and long-only
+PASS: 6-asset search fully invested and long-only
+PASS: CSV estimates match independent pandas calculation; last_36=False
+PASS: CSV estimates match independent pandas calculation; last_36=True
+PASS: BIL: every price matches retained Yahoo response
+PASS: IEF: every price matches retained Yahoo response
+PASS: LQD: every price matches retained Yahoo response
+PASS: VT: every price matches retained Yahoo response
+PASS: 60 price rows retained, producing 59 returns
+PASS: Unordered/missing-month and nonfinite-price CSVs rejected
+PASS: Streamlit starts without an exception
+PASS: Project 2 snapshot is the default view
+PASS: GS10 offers exactly the dated Lab 17 ALFRED vintages
+PASS: September GS10 is absent September 30 and present in the October 1 vintage
+PASS: Later GS10 vintage adds September with zero revisions to shared months
+PASS: Later GS10 vintage adds September with zero revisions to shared months
+PASS: 2026-09-30 saved GS10 observation is August 2026 at 4.68% per annum
+PASS: 2026-09-30 app displays the cutoff, observation, value, units, vintage, source and timing caveat
+PASS: 2026-09-30 GS10 selection leaves the portfolio comparison unchanged
+PASS: 2026-10-01 saved GS10 observation is September 2026 at 4.99% per annum
+PASS: 2026-10-01 app displays the cutoff, observation, value, units, vintage, source and timing caveat
+PASS: 2026-10-01 GS10 selection leaves the portfolio comparison unchanged
+PASS: 2026-10-29 saved GS10 observation is September 2026 at 4.99% per annum
+PASS: 2026-10-29 app displays the cutoff, observation, value, units, vintage, source and timing caveat
+PASS: 2026-10-29 GS10 selection leaves the portfolio comparison unchanged
+PASS: Missing GS10 evidence reports unresolved without substituting a value or changing weights
+PASS: All-month 0/25/50/100 bps tables match independent grid and baseline calculations
+PASS: Editable 25 bps cost reoptimizes both all-month sensitivity mixes at the unchanged objective
+PASS: All-month app weights, risk, return, reserve, and verdicts agree with independent calculations
+PASS: App displays training volatility
+PASS: App widget stress displays 12.94% and 25.00-point change
+PASS: Bundled CSV loads in the app
+PASS: 36-month app switch displays 85% BIL and 25.00-point change
+PASS: 36-month 0/25/50/100 bps tables match independent grid and baseline calculations
+PASS: 36-month app weights, risk, return, reserve, and verdicts agree with independent calculations
+PASS: App accepts a return override and a reserve eligibility edit
+PASS: All three comparisons use the edited return and reserve eligibility
+PASS: A 100% reserve threshold fails both baselines and passes the all-BIL constrained mix
+PASS: 100 bps makes the reserve-constrained app case infeasible while the objective stays at 6.5%
+PASS: Uploaded CSV bytes load through the uploader path
+PASS: App reports infeasibility without lowering the objective
+PASS: Infeasible search still displays both failing baselines and leaves the constrained column unavailable
+PASS: Saved engine correlation 0.50 changes actual app to 0/40/0/60, 6.52%, 9.73%
+PASS: Submitted engine restored to 0.25
+
+Rendered comparison, 59 monthly returns:
+                                                         Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+Measure or rule
+BIL weight                                                              25.00%                      87.24%                60.00%
+IEF weight                                                              25.00%                       5.55%                 0.00%
+LQD weight                                                              25.00%                       4.34%                 0.00%
+VT weight                                                               25.00%                       2.87%                40.00%
+Annual return before additional cost                                     3.01%                       3.37%                 6.61%
+Annual return after additional cost                                      3.01%                       3.37%                 6.61%
+Estimated annual volatility                                              7.55%                       1.37%                 6.05%
+Reserve-eligible weight                                                 50.00%                      92.79%                60.00%
+Fully invested (100%)                                                     Pass                        Pass                  Pass
+Long-only weights                                                         Pass                        Pass                  Pass
+After-cost return screen (≥ 6.50%)                                        Fail                        Fail                  Pass
+Reserve allocation (≥ 3.00%)                                              Pass                        Pass                  Pass
+Project 2 universe (BIL, IEF, LQD, VT)                                    Pass                        Pass                  Pass
+Liquidity (≥ 90% within 5 business days)                            Unresolved                  Unresolved            Unresolved
+Company issuer limit (≤ 8%, subject to exemptions)                  Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+Rolling five-year net return objective (CPI + 4%)                   Unresolved                  Unresolved            Unresolved
+
+Rendered comparison, 36 monthly returns:
+                                                         Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+Measure or rule
+BIL weight                                                              25.00%                      92.80%                85.00%
+IEF weight                                                              25.00%                       2.97%                 0.00%
+LQD weight                                                              25.00%                       2.53%                 0.00%
+VT weight                                                               25.00%                       1.69%                15.00%
+Annual return before additional cost                                     8.13%                       4.61%                 6.75%
+Annual return after additional cost                                      8.13%                       4.61%                 6.75%
+Estimated annual volatility                                              5.88%                       0.61%                 1.79%
+Reserve-eligible weight                                                 50.00%                      95.78%                85.00%
+Fully invested (100%)                                                     Pass                        Pass                  Pass
+Long-only weights                                                         Pass                        Pass                  Pass
+After-cost return screen (≥ 6.50%)                                        Pass                        Fail                  Pass
+Reserve allocation (≥ 3.00%)                                              Pass                        Pass                  Pass
+Project 2 universe (BIL, IEF, LQD, VT)                                    Pass                        Pass                  Pass
+Liquidity (≥ 90% within 5 business days)                            Unresolved                  Unresolved            Unresolved
+Company issuer limit (≤ 8%, subject to exemptions)                  Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+Rolling five-year net return objective (CPI + 4%)                   Unresolved                  Unresolved            Unresolved
+
+Rendered cost scenarios, 59 monthly returns:
+ Annual cost (bps)                   Portfolio                                       Weights Return before cost Return after cost Volatility Reserve weight After-cost screen
+                 0       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              3.01%             3.01%      7.55%         50.00%              Fail
+                 0 Inverse-volatility baseline    BIL 87.24%, IEF 5.55%, LQD 4.34%, VT 2.87%              3.37%             3.37%      1.37%         92.79%              Fail
+                 0       Constrained portfolio   BIL 60.00%, IEF 0.00%, LQD 0.00%, VT 40.00%              6.61%             6.61%      6.05%         60.00%              Pass
+                25       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              3.01%             2.76%      7.55%         50.00%              Fail
+                25 Inverse-volatility baseline    BIL 87.24%, IEF 5.55%, LQD 4.34%, VT 2.87%              3.37%             3.12%      1.37%         92.79%              Fail
+                25       Constrained portfolio   BIL 55.00%, IEF 0.00%, LQD 0.00%, VT 45.00%              6.98%             6.73%      6.79%         55.00%              Pass
+                50       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              3.01%             2.51%      7.55%         50.00%              Fail
+                50 Inverse-volatility baseline    BIL 87.24%, IEF 5.55%, LQD 4.34%, VT 2.87%              3.37%             2.87%      1.37%         92.79%              Fail
+                50       Constrained portfolio   BIL 50.00%, IEF 0.00%, LQD 0.00%, VT 50.00%              7.35%             6.85%      7.53%         50.00%              Pass
+               100       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              3.01%             2.01%      7.55%         50.00%              Fail
+               100 Inverse-volatility baseline    BIL 87.24%, IEF 5.55%, LQD 4.34%, VT 2.87%              3.37%             2.37%      1.37%         92.79%              Fail
+               100       Constrained portfolio   BIL 45.00%, IEF 0.00%, LQD 0.00%, VT 55.00%              7.72%             6.72%      8.27%         45.00%              Pass
+
+Rendered cost scenarios, 36 monthly returns:
+ Annual cost (bps)                   Portfolio                                       Weights Return before cost Return after cost Volatility Reserve weight After-cost screen
+                 0       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              8.13%             8.13%      5.88%         50.00%              Pass
+                 0 Inverse-volatility baseline    BIL 92.80%, IEF 2.97%, LQD 2.53%, VT 1.69%              4.61%             4.61%      0.61%         95.78%              Fail
+                 0       Constrained portfolio   BIL 85.00%, IEF 0.00%, LQD 0.00%, VT 15.00%              6.75%             6.75%      1.79%         85.00%              Pass
+                25       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              8.13%             7.88%      5.88%         50.00%              Pass
+                25 Inverse-volatility baseline    BIL 92.80%, IEF 2.97%, LQD 2.53%, VT 1.69%              4.61%             4.36%      0.61%         95.78%              Fail
+                25       Constrained portfolio   BIL 80.00%, IEF 0.00%, LQD 5.00%, VT 15.00%              6.77%             6.52%      2.08%         80.00%              Pass
+                50       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              8.13%             7.63%      5.88%         50.00%              Pass
+                50 Inverse-volatility baseline    BIL 92.80%, IEF 2.97%, LQD 2.53%, VT 1.69%              4.61%             4.11%      0.61%         95.78%              Fail
+                50       Constrained portfolio   BIL 80.00%, IEF 0.00%, LQD 0.00%, VT 20.00%              7.54%             7.04%      2.37%         80.00%              Pass
+               100       Equal-weight baseline BIL 25.00%, IEF 25.00%, LQD 25.00%, VT 25.00%              8.13%             7.13%      5.88%         50.00%              Pass
+               100 Inverse-volatility baseline    BIL 92.80%, IEF 2.97%, LQD 2.53%, VT 1.69%              4.61%             3.61%      0.61%         95.78%              Fail
+               100       Constrained portfolio   BIL 80.00%, IEF 0.00%, LQD 0.00%, VT 20.00%              7.54%             6.54%      2.37%         80.00%              Pass
+
+Rendered GS10 panel, saved decision cutoffs:
+**Decision cutoff:** 2026-09-30
+**Latest observation in the cutoff vintage:** August 2026
+**Signal value:** 4.68% per annum (monthly average, not seasonally adjusted)
+**ALFRED vintage date:** 2026-09-30
+Source: Federal Reserve Board, H.15 Selected Interest Rates, via [ALFRED vintage download](https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-09-30). [Bundled GS10 data card](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/Lab_17.md#r--represent-my-data-card) · [Download manifest](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/data/download_manifest.json)
+
+**Decision cutoff:** 2026-10-01
+**Latest observation in the cutoff vintage:** September 2026
+**Signal value:** 4.99% per annum (monthly average, not seasonally adjusted)
+**ALFRED vintage date:** 2026-10-01
+Source: Federal Reserve Board, H.15 Selected Interest Rates, via [ALFRED vintage download](https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-10-01). [Bundled GS10 data card](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/Lab_17.md#r--represent-my-data-card) · [Download manifest](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/data/download_manifest.json)
+
+**Decision cutoff:** 2026-10-29
+**Latest observation in the cutoff vintage:** September 2026
+**Signal value:** 4.99% per annum (monthly average, not seasonally adjusted)
+**ALFRED vintage date:** 2026-10-29
+Source: Federal Reserve Board, H.15 Selected Interest Rates, via [ALFRED vintage download](https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-10-29). [Bundled GS10 data card](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/Lab_17.md#r--represent-my-data-card) · [Download manifest](https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/data/download_manifest.json)
+
+All checks passed.
+
+$ git diff --exit-code
+Tracked files match the checkout after reproduction. The README run regenerated the bundled result files.
+  Stopping...

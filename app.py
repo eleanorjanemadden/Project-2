@@ -79,7 +79,8 @@ def show_portfolio_comparison(comparison, constrained, objective, cost_bps):
                  height=34 * (len(comparison["Measure or rule"]) + 1) + 3)
     if constrained is None:
         st.error(f"No constrained mix meets the {objective:.2%} after-cost screen "
-                 "and reserve minimum on the five-point grid.")
+                 "and reserve minimum on the five-point grid. Stop the paper pilot "
+                 "and return to committee under the agreed settings.")
     st.caption("The universe check flags any positive weight outside the draft ETF list, "
                "using the ticker labels supplied in the data. "
                "Meridian uses course training sleeves. The reserve check uses the selected "
@@ -133,6 +134,14 @@ def show_gs10_monitor():
 st.set_page_config(page_title="Portfolio stability", layout="wide")
 st.title("Portfolio stability")
 st.caption("Built with AI help, a learning demonstration, not investment advice.")
+st.subheader("Paper-pilot decision and stop condition")
+st.write("Stop the paper pilot and return to committee if the agreed reserve rule or "
+         "after-cost return screen becomes infeasible. A weight shift above five percentage "
+         "points keeps live adoption deferred.")
+st.caption("Bundled snapshot, zero-additional-cost reference: 60% BIL / 40% VT. "
+           "Original window and return stresses: 55–85% BIL, 15–45% VT, and 0% IEF/LQD. "
+           "Illustrative cost stresses across both windows: 45–85% BIL, 15–55% VT, "
+           "0% IEF, and 0–5% LQD.")
 objective = st.sidebar.number_input("Objective (%)", value=6.5, step=0.1) / 100
 minimum = st.sidebar.number_input("Reserve minimum (%)", min_value=0.0,
                                   max_value=100.0, value=3.0, step=1.0) / 100

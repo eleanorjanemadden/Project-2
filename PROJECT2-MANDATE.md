@@ -6,6 +6,8 @@ This draft carries forward the four ETF roles I prepared in Lab 14 and uses a fi
 
 The foundation has a $100 million portfolio, a seven-year horizon, and quarterly scholarship payments of $0.75 million. Its objective is CPI + 4% annually over rolling five-year periods, net of costs. Using a 2.5% CPI estimate gives a **6.5% numerical objective** for the lab. The app applies that screen after subtracting the annual additional cost assumption. Among mixes meeting the screen, the app minimizes estimated annual volatility.
 
+The Lab 14 Meridian benchmark is **60% global equity / 40% investment-grade bonds**. The app also shows equal-weight and inverse-volatility baselines using the selected inputs.
+
 The universe is **BIL, IEF, LQD, and VT**: Treasury bills for cash and reserve, intermediate Treasury bonds, investment-grade corporate bonds, and global equities. Use only fully invested, long-only allocations, with no borrowing, short sales, or derivatives. The app searches in five-percentage-point steps.
 
 My one additional hard constraint for the search is **at least 3% in reserve-eligible BIL and IEF**, calculated as 4 × $0.75 million / $100 million. IEF counts as a daily-liquid government-bond fund for this draft, but its market value can fall. Eligibility does not mean its principal is guaranteed. There is no separate sector, ESG, tax, or home-bias preference in this draft.

@@ -1,0 +1,35 @@
+158 local Markdown link occurrences checked, 13 broken
+evidence/lab-17/instructions/week-10_README.md -> student-handout.md#point-in-time-in-plain-language
+evidence/lab-17/instructions/week-10_README.md -> lab-16-provenance-gate.md
+evidence/lab-17/instructions/week-10_README.md -> lab-17-point-in-time.md
+evidence/lab-17/instructions/week-10_README.md -> student-handout.md
+evidence/lab-17/instructions/week-10_README.md -> open-ended-challenge.md
+evidence/lab-17/instructions/week-10_README.md -> student-prework.md
+evidence/lab-17/instructions/week-10_lab-17-point-in-time.md -> ../week-09/lab-15-portfolio-stability.md
+evidence/lab-17/instructions/week-10_lab-17-point-in-time.md -> student-prework.md
+evidence/lab-17/instructions/week-10_slides-session-17.md -> ../week-11/student-prework.md
+evidence/lab-17/instructions/week-10_student-prework.md -> student-handout.md#point-in-time-in-plain-language
+evidence/lab-17/instructions/week-11_student-prework.md -> student-handout.md#f-squared-accessible-case-summary
+
+Public HTTP checks for core submission/evidence links
+200 https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-06/lab-11-proforma-what-if.md
+200 https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-12/student-handout.md
+200 https://github.com/eleanorjanemadden/Lab-13
+200 https://github.com/eleanorjanemadden/Lab-14
+200 https://github.com/eleanorjanemadden/Lab-15
+200 https://github.com/eleanorjanemadden/Lab-16
+200 https://github.com/eleanorjanemadden/Lab-17
+200 https://github.com/eleanorjanemadden/Lab-18
+200 https://github.com/eleanorjanemadden/Lab-19
+200 https://github.com/eleanorjanemadden/Project-2/blob/main/docs/decision-memo.md
+200 https://github.com/eleanorjanemadden/Project-2/blob/main/docs/validation-and-ai-use.md
+200 https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/Lab_17.md
+200 https://github.com/eleanorjanemadden/Project-2/blob/main/evidence/lab-17/data/download_manifest.json
+200 https://github.com/eleanorjanemadden/Project-2/blob/main/outputs/week-12-result.md
+
+Post-repair link check
+154 local Markdown link occurrences checked, 0 broken
+200 https://github.com/CinderZhang/FIN43900-Fall2026/blob/bb73c5fe49648b5076e8419ff3dd095ffdc13f45/lessons/week-09/lab-15-portfolio-stability.md
+200 https://github.com/CinderZhang/FIN43900-Fall2026/blob/bb73c5fe49648b5076e8419ff3dd095ffdc13f45/lessons/week-10/open-ended-challenge.md
+Verified heading: evidence/lab-17/instructions/week-10_student-handout.md#point-in-time-in-plain-language
+Verified heading: evidence/lab-17/instructions/week-11_student-handout.md#f-squared-accessible-case-summary

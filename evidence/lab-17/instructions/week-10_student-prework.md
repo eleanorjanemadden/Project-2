@@ -6,7 +6,7 @@
 [ALFRED Help](https://alfred.stlouisfed.org/help): **"What is ALFRED?"**, **"What is a Release and
 what are Release Dates?"**, **"How are Release Dates determined?"**, and **"How does ALFRED verify
 vintage data?"** (5–7 minutes). Ask: **what was knowable on the decision date, and what is visible
-only because I am looking later?** The [handout's point-in-time section](student-handout.md#point-in-time-in-plain-language)
+only because I am looking later?** The [handout's point-in-time section](week-10_student-handout.md#point-in-time-in-plain-language)
 is the complete alternative.
 
 **Before Thursday — about 15 minutes.** Choose one series on [FRED](https://fred.stlouisfed.org)
