@@ -4,10 +4,80 @@ import importlib
 import io
 from pathlib import Path
 import streamlit as st
+import mandate
 import portfolio
 
 # Reload the engine so a browser rerun picks up saved training-input changes.
 importlib.reload(portfolio)
+
+def show_portfolio_comparison(current, estimates, eligible, objective, minimum,
+                              constrained, is_training):
+    assets = current["assets"]
+    covariance = portfolio.covariance_matrix(current["volatilities"], current["correlations"])
+    equal = portfolio.equal_weights(len(assets))
+    inverse = portfolio.inverse_volatility_weights(current["volatilities"])
+    labels = [
+        *(f"{asset} weight" for asset in assets),
+        "Estimated annual return", "Estimated annual volatility", "Reserve-eligible weight",
+        "Fully invested (100%)", "Long-only weights",
+        f"Numerical return screen (≥ {objective:.2%})",
+        f"Reserve allocation (≥ {minimum:.2%})",
+        "Project 2 universe (BIL, IEF, LQD, VT)",
+        f"Liquidity (≥ {mandate.MINIMUM_LIQUID_SHARE}% within "
+        f"{mandate.LIQUIDITY_WINDOW} business days)",
+        f"Company issuer limit (≤ {mandate.ISSUER_LIMIT}%, subject to exemptions)",
+        "Live borrowing, short sales and derivatives restrictions",
+        "Rolling five-year net return objective (CPI + 4%)",
+    ]
+    comparison = {"Measure or rule": labels}
+    unresolved = "Unresolved"
+    allowed_assets = {"BIL", "IEF", "LQD", "VT"}
+    tolerance = 1e-12
+
+    for name, weights in (
+        ("Equal-weight baseline", equal),
+        ("Inverse-volatility baseline", inverse),
+        ("Constrained portfolio", None if constrained is None else constrained["weights"]),
+    ):
+        if weights is None:
+            comparison[name] = ["N/A"] * len(labels)
+            continue
+        estimate = portfolio.expected_return(weights, estimates)
+        reserve = portfolio.reserve_weight(weights, eligible)
+        volatility = portfolio.portfolio_volatility(weights, covariance)
+        checks = [
+            abs(sum(weights) - 1) <= tolerance,
+            min(weights) >= -tolerance,
+            estimate >= objective - tolerance,
+            reserve >= minimum - tolerance,
+            all(asset in allowed_assets for asset, weight in zip(assets, weights)
+                if weight > tolerance),
+        ]
+        verdicts = ["Pass" if passed else "Fail" for passed in checks]
+        if is_training:
+            verdicts[-1] = unresolved
+        comparison[name] = [
+            *(f"{weight:.2%}" for weight in weights),
+            f"{estimate:.2%}", f"{volatility:.2%}", f"{reserve:.2%}",
+            *verdicts, *([unresolved] * 4),
+        ]
+
+    st.subheader("Portfolio comparison — selected inputs")
+    st.caption("All three use the selected window, current return estimates, covariance, "
+               "reserve eligibility and thresholds. The two baselines keep their formula "
+               "weights even when they fail a rule.")
+    st.dataframe(comparison, hide_index=True, row_height=34, height=34 * (len(labels) + 1) + 3)
+    if constrained is None:
+        st.info("The constrained comparison has no feasible mix on the five-point grid.")
+    st.caption("The universe check flags any positive weight outside the draft ETF list, "
+               "using the ticker labels supplied in the data. "
+               "Meridian uses course training sleeves. The reserve check uses the selected "
+               "eligibility assumptions. Actual redemption terms, issuer exposures and "
+               "exemptions, and live implementation restrictions require separate verification.")
+    st.caption("The return screen compares an annual estimate with a numerical threshold. "
+               "The rolling five-year net CPI + 4% objective remains unresolved. The model "
+               "does not evaluate rolling net outcomes with realized inflation and costs.")
+
 
 st.set_page_config(page_title="Portfolio stability", layout="wide")
 st.title("Portfolio stability")
@@ -53,13 +123,18 @@ try:
         eligible.append(right.checkbox(f"{asset} reserve-eligible",
                         value=default_eligible[index], key=f"reserve_{dataset}_{index}"))
 
-    baseline = portfolio.search_portfolio(loaded["returns"], loaded["volatilities"],
+    as_loaded = portfolio.search_portfolio(loaded["returns"], loaded["volatilities"],
                loaded["correlations"], objective, default_eligible, minimum)
     answer = portfolio.search_portfolio(estimates, current["volatilities"],
              current["correlations"], objective, eligible, minimum)
 
+    show_portfolio_comparison(current, estimates, eligible, objective, minimum, answer,
+                              is_training=raw is None)
+
+    st.subheader("Sensitivity — as loaded versus current inputs")
+
     def display_result(title, result):
-        st.subheader(title)
+        st.markdown(f"**{title}**")
         if result is None:
             st.warning("no mix meets the objective")
             return
@@ -73,15 +148,17 @@ try:
     with left:
         display_result("Current lowest-risk mix", answer)
     with right:
-        display_result("As loaded — all months", baseline)
+        display_result("As loaded — all months" if raw is not None else
+                       "As loaded — Meridian training inputs", as_loaded)
     st.caption("Both searches use the current sidebar objective and minimum. As loaded keeps "
                "the original returns, risk estimates and default eligibility.")
-    if answer is not None and baseline is not None:
-        change = max(abs(a-b) for a, b in zip(answer["weights"], baseline["weights"])) * 100
+    if answer is not None and as_loaded is not None:
+        change = max(abs(a-b) for a, b in zip(answer["weights"], as_loaded["weights"])) * 100
         st.metric("Largest weight change (percentage points)", f"{change:.2f}")
     else:
         st.info("Largest weight change: N/A when either search has no feasible mix.")
-    st.caption("Fully invested, long-only mixes in 5-point steps. Lowest risk means lowest "
-               "estimated volatility among these mixes; losses remain possible.")
+    st.caption("The constrained search minimizes estimated volatility on a five-percentage-point "
+               "grid of fully invested, long-only mixes that clear the return and reserve screens. "
+               "Losses remain possible.")
 except (ValueError, UnicodeError, OSError) as error:
     st.error(f"Input error: {error}")

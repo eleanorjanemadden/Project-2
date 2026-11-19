@@ -12,6 +12,14 @@ An independent challenger can reject adoption even if the portfolio clears the 6
 
 **Disposition:** Qualify the recommendation to a paper pilot. The reproduced switch moved BIL from 60% to 85% and VT from 40% to 15%, a 25-percentage-point maximum change. The screen was feasible in both cases and the stability condition failed. This checks an existing comparison. [Executed allocations](../outputs/allocations.csv)
 
+## Portfolio comparison validation
+
+Codex helped implement and test the Streamlit comparison. Equal-weight and inverse-volatility baselines use their formula weights. The constrained portfolio uses the existing minimum-volatility search. Each portfolio is evaluated with the same selected window, edited annual return estimates, annual covariance and reserve settings. The sensitivity section continues to compare the current constrained result with the original all-month constrained result.
+
+`python3 validate.py` independently recomputed the rendered weights, return, volatility, reserve and rule verdicts from the monthly prices using pandas and NumPy. Streamlit checks covered default inputs, the 36-month switch, a return override, an eligibility edit, a 100% reserve threshold, the upload path, Meridian and infeasibility. The 25.00-percentage-point window sensitivity was reproduced. [Executed check log and rendered tables](../outputs/portfolio-comparison-validation.txt)
+
+With default settings, the all-month estimated return was 3.01% for equal weight, 3.37% for inverse volatility, and 6.61% for the constrained portfolio. Over the last 36 months these estimates were 8.13%, 4.61%, and 6.75%, respectively. All three met the 3% reserve allocation screen in both windows under the assumed eligibility. The rolling five-year net CPI + 4% objective remains unresolved because the numerical screen uses annual estimates and the model does not evaluate rolling outcomes net of costs and against realized inflation. Actual liquidity, issuer exposure and exemptions, and live implementation restrictions also remain unresolved.
+
 ## Locked Changed-Input Record — unresolved
 
 The existing Lab 15 stresses provide comparison evidence. No Project 2 AI-off prediction, pre-run GitHub commit or locked execution was located. The Week 12 assistant test is recorded separately. For submission, independently select one material input, record its old/new values, predicted direction and decision effect with timestamp, commit the prediction to GitHub before execution, run with AI closed, then preserve and reconcile actual before/after output and the decision effect. [Lab 11 pattern](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-06/lab-11-proforma-what-if.md)

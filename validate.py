@@ -26,6 +26,44 @@ def run_search(returns=p.RETURNS, correlations=p.CORRELATIONS, objective=.065,
                               objective, eligible, minimum)
 
 
+def check_comparison(at, monthly, constrained_weights, *, estimates=None,
+                     eligible=(True, True, False, False), minimum=.03):
+    """Compare the actual displayed rows with calculations from raw returns."""
+    import numpy as np
+
+    table = at.dataframe[0].value.set_index("Measure or rule")
+    covariance = monthly.cov().to_numpy() * 12
+    returns = monthly.mean().to_numpy() * 12 if estimates is None else estimates
+    inverse = 1 / np.sqrt(covariance.diagonal())
+    names = ["Equal-weight baseline", "Inverse-volatility baseline", "Constrained portfolio"]
+    assert list(table.columns) == names
+    for name, weights in zip(names, (
+        np.full(len(returns), 1 / len(returns)),
+        inverse / inverse.sum(),
+        np.array(constrained_weights),
+    )):
+        estimated_return = weights @ returns
+        volatility = np.sqrt(weights @ covariance @ weights)
+        reserve = weights @ np.array(eligible)
+        expected = {
+            **{f"{asset} weight": f"{weight:.2%}" for asset, weight in zip(monthly.columns, weights)},
+            "Estimated annual return": f"{estimated_return:.2%}",
+            "Estimated annual volatility": f"{volatility:.2%}",
+            "Reserve-eligible weight": f"{reserve:.2%}",
+            "Fully invested (100%)": "Pass",
+            "Long-only weights": "Pass",
+            "Numerical return screen (≥ 6.50%)": "Pass" if estimated_return >= .065 else "Fail",
+            f"Reserve allocation (≥ {minimum:.2%})": "Pass" if reserve >= minimum - 1e-12 else "Fail",
+            "Project 2 universe (BIL, IEF, LQD, VT)": "Pass",
+            "Liquidity (≥ 90% within 5 business days)": "Unresolved",
+            "Company issuer limit (≤ 8%, subject to exemptions)": "Unresolved",
+            "Live borrowing, short sales and derivatives restrictions": "Unresolved",
+            "Rolling five-year net return objective (CPI + 4%)": "Unresolved",
+        }
+        assert table[name].to_dict() == expected, (name, table[name].to_dict(), expected)
+    return table
+
+
 def main():
     # Same main function and output as the preserved GitHub engine.
     old = subprocess.check_output([sys.executable, str(ROOT / 'instructions/lab14_portfolio.py')])
@@ -81,6 +119,9 @@ def main():
     at=AppTest.from_file(str(ROOT/'app.py'), default_timeout=20).run()
     check(not at.exception,'Streamlit starts without an exception')
     check('60.00' in at.table[0].value.to_string(), 'Project 2 snapshot is the default view')
+    monthly = df.pct_change().dropna()
+    all_months = check_comparison(at, monthly, [.60, 0, 0, .40])
+    check(True, 'All-month app weights, risk, return, reserve, and verdicts agree with independent calculations')
     next(w for w in at.checkbox if w.label == "Use included Project 2 prices.csv").set_value(False).run()
     check('9.44%' in '\n'.join(x.value for x in at.markdown), 'App displays training volatility')
     next(w for w in at.number_input if w.label == "Global equity index fund return estimate (%)").set_value(7.0).run()
@@ -94,6 +135,24 @@ def main():
     check(not at.exception and at.metric[0].value=='25.00' and
           '85.00' in at.table[0].value.to_string(),
           '36-month app switch displays 85% BIL and 25.00-point change')
+    recent = monthly.tail(36)
+    last_36 = check_comparison(at, recent, [.85, 0, 0, .15])
+    check(True, '36-month app weights, risk, return, reserve, and verdicts agree with independent calculations')
+    estimates = (recent.mean() * 12).to_numpy()
+    estimates[0] = .07
+    next(w for w in at.number_input if w.label == "BIL return estimate (%)").set_value(7.0)
+    next(w for w in at.checkbox if w.label == "IEF reserve-eligible").set_value(False).run()
+    check(not at.exception, 'App accepts a return override and a reserve eligibility edit')
+    check_comparison(at, recent, [1, 0, 0, 0], estimates=estimates,
+                     eligible=(True, False, False, False))
+    check(True, 'All three comparisons use the edited return and reserve eligibility')
+
+    next(w for w in at.number_input if w.label == "Reserve minimum (%)").set_value(100.0).run()
+    check_comparison(at, recent, [1, 0, 0, 0], estimates=estimates,
+                     eligible=(True, False, False, False), minimum=1.0)
+    check(True, 'A 100% reserve threshold fails both baselines and passes the all-BIL constrained mix')
+    next(w for w in at.number_input if w.label == "Reserve minimum (%)").set_value(3.0).run()
+
     # Upload path (same bytes, separate Streamlit input).
     with patch('streamlit.delta_generator.DeltaGenerator.file_uploader', return_value=io.BytesIO((ROOT/'prices.csv').read_bytes())):
         uploaded=AppTest.from_file(str(ROOT/'app.py'),default_timeout=20).run()
@@ -103,10 +162,15 @@ def main():
     check(not at.exception and len(at.warning)==2 and
           all(x.value=='no mix meets the objective' for x in at.warning),
           'App reports infeasibility without lowering the objective')
+    failed = at.dataframe[0].value.set_index("Measure or rule")
+    check(all(failed.loc["Numerical return screen (≥ 50.00%)",
+                         ["Equal-weight baseline", "Inverse-volatility baseline"]] == "Fail")
+          and all(failed["Constrained portfolio"] == "N/A"),
+          'Infeasible search still displays both failing baselines and leaves the constrained column unavailable')
     # Edit the actual engine file in an isolated copy; app must change on reload.
     with tempfile.TemporaryDirectory() as folder:
         temp=Path(folder)
-        for name in ['app.py','portfolio.py','prices.csv']:
+        for name in ['app.py','portfolio.py','mandate.py','prices.csv']:
             shutil.copy2(ROOT/name,temp/name)
         source=(temp/'portfolio.py').read_text()
         changed=source.replace('[0.05, 0.80, 1.00, 0.25]', '[0.05, 0.80, 1.00, 0.50]').replace(
@@ -126,7 +190,11 @@ assert list(at.table[0].value['Weight (%)'])==['0.00','40.00','0.00','60.00']
         subprocess.run([sys.executable,'-c',program],cwd=temp,check=True,capture_output=True)
     check(True,'Saved engine correlation 0.50 changes actual app to 0/40/0/60, 6.52%, 9.73%')
     check(p.CORRELATIONS[2][3]==p.CORRELATIONS[3][2]==.25,'Submitted engine restored to 0.25')
-    print('All checks passed.')
+    print('\nRendered comparison, 59 monthly returns:')
+    print(all_months.to_string())
+    print('\nRendered comparison, 36 monthly returns:')
+    print(last_36.to_string())
+    print('\nAll checks passed.')
 
 
 if __name__=='__main__':

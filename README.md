@@ -22,7 +22,11 @@ On Windows PowerShell, activate with `.\.venv\Scripts\Activate.ps1` after creati
 python analyze.py && python -m streamlit run app.py
 ```
 
-Open the local URL printed by Streamlit, normally http://localhost:8501. The app opens on the included ETF snapshot and displays the all-month 60% BIL / 40% VT result. In the sidebar, select **Last 36 months** to see 85% BIL / 15% VT and a 25.00 percentage-point change. Keep the 6.5% objective, 3% minimum reserve, and BIL/IEF eligibility at their defaults for that comparison. Clear **Use included Project 2 prices.csv** to see the separate Meridian training inputs. Stop the app with Ctrl+C.
+Open the local URL printed by Streamlit, normally http://localhost:8501. **Portfolio comparison** shows equal-weight, inverse-volatility, and constrained portfolios side by side. All three use the selected window and the same current return estimates, covariance, reserve eligibility, and mandate thresholds. Each column shows weights, estimated annual return and volatility, reserve weight, and rule verdicts. The constrained search minimizes estimated volatility on a five-percentage-point grid subject to the numerical return and reserve screens. The app flags universe compliance from the ticker labels and marks requirements that need external evidence as unresolved, including live liquidity, issuer limits, and the rolling five-year net CPI + 4% objective.
+
+**Sensitivity** compares the constrained mix from the original all-month inputs with the constrained mix from the current inputs. The bundled data opens at 60% BIL / 40% VT. Select **Last 36 months** to see 85% BIL / 15% VT and a 25.00-percentage-point change. Keep the 6.5% return screen, 3% reserve minimum, and BIL/IEF eligibility at their defaults for that comparison. Clear **Use included Project 2 prices.csv** to see the Meridian training inputs. Stop the app with Ctrl+C.
+
+Run `python validate.py` for calculation checks and Streamlit interaction tests. [Executed comparison and check results](outputs/portfolio-comparison-validation.txt)
 
 The command writes [allocations.csv](outputs/allocations.csv), full-precision estimates in `outputs/results.json`, and mandate-checker output in `outputs/mandate_search_run.txt`. [Visible executed result](outputs/week-12-result.md)
 
