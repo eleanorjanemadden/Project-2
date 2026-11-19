@@ -1,0 +1,32 @@
+[
+  {
+    "Investor": "Buffett",
+    "number": "40.0%",
+    "position": 13
+  },
+  {
+    "Investor": "Buffett",
+    "number": "40.0%",
+    "position": 29
+  },
+  {
+    "Investor": "Graham",
+    "number": "40.0%",
+    "position": 13
+  },
+  {
+    "Investor": "Graham",
+    "number": "40.0%",
+    "position": 29
+  },
+  {
+    "Investor": "Burry",
+    "number": "40.0%",
+    "position": 13
+  },
+  {
+    "Investor": "Burry",
+    "number": "40.0%",
+    "position": 29
+  }
+]

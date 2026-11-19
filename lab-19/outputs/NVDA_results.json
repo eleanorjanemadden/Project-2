@@ -1,0 +1,625 @@
+{
+  "ticker": "NVDA",
+  "company": "NVIDIA CORP",
+  "cik": 1045810,
+  "units": "USD millions; ROE percent; current ratio and liabilities / equity multiples",
+  "rows": [
+    {
+      "fiscal_year_end": "2022-01-30",
+      "provenance": {
+        "revenue": {
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 26914000000,
+          "accn": "0001045810-22-000036",
+          "fy": 2022,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2022-03-18",
+          "frame": "CY2021"
+        },
+        "net_income": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 9752000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21"
+        },
+        "operating_cash_flow": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 9108000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2021"
+        },
+        "capital_spending": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "start": "2021-02-01",
+          "end": "2022-01-30",
+          "val": 976000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2021"
+        },
+        "equity": {
+          "tag": "us-gaap:StockholdersEquity",
+          "end": "2022-01-30",
+          "val": 26612000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2021Q4I"
+        },
+        "roe": {
+          "tag": "derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity \u00d7 100"
+        },
+        "owner_earnings": {
+          "tag": "derived: us-gaap:NetCashProvidedByUsedInOperatingActivities \u2212 us-gaap:PaymentsToAcquireProductiveAssets"
+        },
+        "liabilities": {
+          "tag": "us-gaap:Liabilities",
+          "end": "2022-01-30",
+          "val": 17575000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I"
+        },
+        "current_assets": {
+          "tag": "us-gaap:AssetsCurrent",
+          "end": "2022-01-30",
+          "val": 28829000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I"
+        },
+        "current_liabilities": {
+          "tag": "us-gaap:LiabilitiesCurrent",
+          "end": "2022-01-30",
+          "val": 4335000000,
+          "accn": "0001045810-23-000017",
+          "fy": 2023,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2023-02-24",
+          "frame": "CY2021Q4I"
+        },
+        "current_ratio": {
+          "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+        },
+        "liabilities_equity": {
+          "tag": "derived: us-gaap:Liabilities / us-gaap:StockholdersEquity"
+        }
+      },
+      "revenue": 26914000000,
+      "net_income": 9752000000,
+      "operating_cash_flow": 9108000000,
+      "capital_spending": 976000000,
+      "equity": 26612000000,
+      "roe": 36.64512250112731,
+      "owner_earnings": 8132000000,
+      "liabilities": 17575000000,
+      "current_assets": 28829000000,
+      "current_liabilities": 4335000000,
+      "current_ratio": 6.650288350634371,
+      "liabilities_equity": 0.6604163535247257
+    },
+    {
+      "fiscal_year_end": "2023-01-29",
+      "provenance": {
+        "revenue": {
+          "tag": "us-gaap:Revenues",
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 26974000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2022"
+        },
+        "net_income": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 4368000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26"
+        },
+        "operating_cash_flow": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 5641000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2022"
+        },
+        "capital_spending": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "start": "2022-01-31",
+          "end": "2023-01-29",
+          "val": 1833000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2022"
+        },
+        "equity": {
+          "tag": "us-gaap:StockholdersEquity",
+          "end": "2023-01-29",
+          "val": 22101000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2022Q4I"
+        },
+        "roe": {
+          "tag": "derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity \u00d7 100"
+        },
+        "owner_earnings": {
+          "tag": "derived: us-gaap:NetCashProvidedByUsedInOperatingActivities \u2212 us-gaap:PaymentsToAcquireProductiveAssets"
+        },
+        "liabilities": {
+          "tag": "us-gaap:Liabilities",
+          "end": "2023-01-29",
+          "val": 19081000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2022Q4I"
+        },
+        "current_assets": {
+          "tag": "us-gaap:AssetsCurrent",
+          "end": "2023-01-29",
+          "val": 23073000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2022Q4I"
+        },
+        "current_liabilities": {
+          "tag": "us-gaap:LiabilitiesCurrent",
+          "end": "2023-01-29",
+          "val": 6563000000,
+          "accn": "0001045810-24-000029",
+          "fy": 2024,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2024-02-21",
+          "frame": "CY2022Q4I"
+        },
+        "current_ratio": {
+          "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+        },
+        "liabilities_equity": {
+          "tag": "derived: us-gaap:Liabilities / us-gaap:StockholdersEquity"
+        }
+      },
+      "revenue": 26974000000,
+      "net_income": 4368000000,
+      "operating_cash_flow": 5641000000,
+      "capital_spending": 1833000000,
+      "equity": 22101000000,
+      "roe": 19.763811592235644,
+      "owner_earnings": 3808000000,
+      "liabilities": 19081000000,
+      "current_assets": 23073000000,
+      "current_liabilities": 6563000000,
+      "current_ratio": 3.515617857687033,
+      "liabilities_equity": 0.8633545993393964
+    },
+    {
+      "fiscal_year_end": "2024-01-28",
+      "provenance": {
+        "revenue": {
+          "tag": "us-gaap:Revenues",
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 60922000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2023"
+        },
+        "net_income": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 29760000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "operating_cash_flow": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 28090000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2023"
+        },
+        "capital_spending": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "start": "2023-01-30",
+          "end": "2024-01-28",
+          "val": 1069000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2023"
+        },
+        "equity": {
+          "tag": "us-gaap:StockholdersEquity",
+          "end": "2024-01-28",
+          "val": 42978000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2023Q4I"
+        },
+        "roe": {
+          "tag": "derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity \u00d7 100"
+        },
+        "owner_earnings": {
+          "tag": "derived: us-gaap:NetCashProvidedByUsedInOperatingActivities \u2212 us-gaap:PaymentsToAcquireProductiveAssets"
+        },
+        "liabilities": {
+          "tag": "us-gaap:Liabilities",
+          "end": "2024-01-28",
+          "val": 22750000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2023Q4I"
+        },
+        "current_assets": {
+          "tag": "us-gaap:AssetsCurrent",
+          "end": "2024-01-28",
+          "val": 44345000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2023Q4I"
+        },
+        "current_liabilities": {
+          "tag": "us-gaap:LiabilitiesCurrent",
+          "end": "2024-01-28",
+          "val": 10631000000,
+          "accn": "0001045810-25-000023",
+          "fy": 2025,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2025-02-26",
+          "frame": "CY2023Q4I"
+        },
+        "current_ratio": {
+          "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+        },
+        "liabilities_equity": {
+          "tag": "derived: us-gaap:Liabilities / us-gaap:StockholdersEquity"
+        }
+      },
+      "revenue": 60922000000,
+      "net_income": 29760000000,
+      "operating_cash_flow": 28090000000,
+      "capital_spending": 1069000000,
+      "equity": 42978000000,
+      "roe": 69.24472986178975,
+      "owner_earnings": 27021000000,
+      "liabilities": 22750000000,
+      "current_assets": 44345000000,
+      "current_liabilities": 10631000000,
+      "current_ratio": 4.171291505973097,
+      "liabilities_equity": 0.529340592861464
+    },
+    {
+      "fiscal_year_end": "2025-01-26",
+      "provenance": {
+        "revenue": {
+          "tag": "us-gaap:Revenues",
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "val": 130497000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024"
+        },
+        "net_income": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "val": 72880000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "operating_cash_flow": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "val": 64089000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024"
+        },
+        "capital_spending": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "start": "2024-01-29",
+          "end": "2025-01-26",
+          "val": 3236000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024"
+        },
+        "equity": {
+          "tag": "us-gaap:StockholdersEquity",
+          "end": "2025-01-26",
+          "val": 79327000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "roe": {
+          "tag": "derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity \u00d7 100"
+        },
+        "owner_earnings": {
+          "tag": "derived: us-gaap:NetCashProvidedByUsedInOperatingActivities \u2212 us-gaap:PaymentsToAcquireProductiveAssets"
+        },
+        "liabilities": {
+          "tag": "us-gaap:Liabilities",
+          "end": "2025-01-26",
+          "val": 32274000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024Q4I"
+        },
+        "current_assets": {
+          "tag": "us-gaap:AssetsCurrent",
+          "end": "2025-01-26",
+          "val": 80126000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024Q4I"
+        },
+        "current_liabilities": {
+          "tag": "us-gaap:LiabilitiesCurrent",
+          "end": "2025-01-26",
+          "val": 18047000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2024Q4I"
+        },
+        "current_ratio": {
+          "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+        },
+        "liabilities_equity": {
+          "tag": "derived: us-gaap:Liabilities / us-gaap:StockholdersEquity"
+        }
+      },
+      "revenue": 130497000000,
+      "net_income": 72880000000,
+      "operating_cash_flow": 64089000000,
+      "capital_spending": 3236000000,
+      "equity": 79327000000,
+      "roe": 91.87288060811576,
+      "owner_earnings": 60853000000,
+      "liabilities": 32274000000,
+      "current_assets": 80126000000,
+      "current_liabilities": 18047000000,
+      "current_ratio": 4.439851498864077,
+      "liabilities_equity": 0.4068476054811098
+    },
+    {
+      "fiscal_year_end": "2026-01-25",
+      "provenance": {
+        "revenue": {
+          "tag": "us-gaap:Revenues",
+          "start": "2025-01-27",
+          "end": "2026-01-25",
+          "val": 215938000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2025"
+        },
+        "net_income": {
+          "tag": "us-gaap:NetIncomeLoss",
+          "start": "2025-01-27",
+          "end": "2026-01-25",
+          "val": 120067000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "operating_cash_flow": {
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "start": "2025-01-27",
+          "end": "2026-01-25",
+          "val": 102718000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2025"
+        },
+        "capital_spending": {
+          "tag": "us-gaap:PaymentsToAcquireProductiveAssets",
+          "start": "2025-01-27",
+          "end": "2026-01-25",
+          "val": 6042000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25",
+          "frame": "CY2025"
+        },
+        "equity": {
+          "tag": "us-gaap:StockholdersEquity",
+          "end": "2026-01-25",
+          "val": 157293000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "roe": {
+          "tag": "derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity \u00d7 100"
+        },
+        "owner_earnings": {
+          "tag": "derived: us-gaap:NetCashProvidedByUsedInOperatingActivities \u2212 us-gaap:PaymentsToAcquireProductiveAssets"
+        },
+        "liabilities": {
+          "tag": "us-gaap:Liabilities",
+          "end": "2026-01-25",
+          "val": 49510000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "current_assets": {
+          "tag": "us-gaap:AssetsCurrent",
+          "end": "2026-01-25",
+          "val": 125605000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "current_liabilities": {
+          "tag": "us-gaap:LiabilitiesCurrent",
+          "end": "2026-01-25",
+          "val": 32163000000,
+          "accn": "0001045810-26-000021",
+          "fy": 2026,
+          "fp": "FY",
+          "form": "10-K",
+          "filed": "2026-02-25"
+        },
+        "current_ratio": {
+          "tag": "derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent"
+        },
+        "liabilities_equity": {
+          "tag": "derived: us-gaap:Liabilities / us-gaap:StockholdersEquity"
+        }
+      },
+      "revenue": 215938000000,
+      "net_income": 120067000000,
+      "operating_cash_flow": 102718000000,
+      "capital_spending": 6042000000,
+      "equity": 157293000000,
+      "roe": 76.33333969089534,
+      "owner_earnings": 96676000000,
+      "liabilities": 49510000000,
+      "current_assets": 125605000000,
+      "current_liabilities": 32163000000,
+      "current_ratio": 3.905263812455306,
+      "liabilities_equity": 0.3147628947251308
+    }
+  ],
+  "checks": {
+    "ROE of 15% or more every year": "pass",
+    "Owner earnings positive every year": "pass",
+    "Owner earnings grew, first year to last": "pass"
+  },
+  "panel": {
+    "Buffett": {
+      "ROE of 15% or more every year": "pass",
+      "Owner earnings positive every year": "pass",
+      "Owner earnings grew, first year to last": "pass"
+    },
+    "Graham": {
+      "Current ratio of 2 or more, latest year": "pass",
+      "Net income positive every year": "pass",
+      "Net income grew, first year to last": "pass"
+    },
+    "Burry": {
+      "Operating cash flow at least net income every year": "fail",
+      "Liabilities no more than twice equity, latest year": "pass"
+    }
+  },
+  "graham_threshold": 2.0
+}

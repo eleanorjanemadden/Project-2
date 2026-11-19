@@ -1,0 +1,56 @@
+[
+  {
+    "ticker": "COST",
+    "investor": "Buffett",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "COST",
+    "investor": "Graham",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "COST",
+    "investor": "Burry",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "NVDA",
+    "investor": "Buffett",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "NVDA",
+    "investor": "Graham",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "NVDA",
+    "investor": "Burry",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "JPM",
+    "investor": "Buffett",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "JPM",
+    "investor": "Graham",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  },
+  {
+    "ticker": "JPM",
+    "investor": "Burry",
+    "unsupported_numbers": [],
+    "binding_matches": true
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "COST": "passed",
+  "NVDA": "passed",
+  "JPM": "passed",
+  "columns": 3,
+  "financial_table": true,
+  "panel_checks": 8,
+  "chart": true,
+  "all_memo_number_probes": true,
+  "threshold_probe": true,
+  "stale_memo_warnings": true,
+  "invalid_ticker_handled": true,
+  "method": "Streamlit AppTest; no browser screenshot"
+}

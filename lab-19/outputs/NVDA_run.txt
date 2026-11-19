@@ -1,0 +1,86 @@
+# NVDA — NVIDIA CORP
+Amounts in USD millions. ROE in percent. Ratios are multiples.
+Thresholds: ROE >= 15%; owner earnings > 0; current ratio >= 2.0; net income > 0; liabilities / equity <= 2.
+Fiscal year end: 2022-01-30 | Revenue: 26,914 | Net income: 9,752 | Operating cash flow: 9,108 | Capital spending: 976 | Equity: 26,612 | ROE %: 36.6% | Owner earnings: 8,132 | Liabilities: 17,575 | Current assets: 28,829 | Current liabilities: 4,335 | Current ratio: 6.65 | Liabilities / equity: 0.66
+Fiscal year end: 2023-01-29 | Revenue: 26,974 | Net income: 4,368 | Operating cash flow: 5,641 | Capital spending: 1,833 | Equity: 22,101 | ROE %: 19.8% | Owner earnings: 3,808 | Liabilities: 19,081 | Current assets: 23,073 | Current liabilities: 6,563 | Current ratio: 3.52 | Liabilities / equity: 0.86
+Fiscal year end: 2024-01-28 | Revenue: 60,922 | Net income: 29,760 | Operating cash flow: 28,090 | Capital spending: 1,069 | Equity: 42,978 | ROE %: 69.2% | Owner earnings: 27,021 | Liabilities: 22,750 | Current assets: 44,345 | Current liabilities: 10,631 | Current ratio: 4.17 | Liabilities / equity: 0.53
+Fiscal year end: 2025-01-26 | Revenue: 130,497 | Net income: 72,880 | Operating cash flow: 64,089 | Capital spending: 3,236 | Equity: 79,327 | ROE %: 91.9% | Owner earnings: 60,853 | Liabilities: 32,274 | Current assets: 80,126 | Current liabilities: 18,047 | Current ratio: 4.44 | Liabilities / equity: 0.41
+Fiscal year end: 2026-01-25 | Revenue: 215,938 | Net income: 120,067 | Operating cash flow: 102,718 | Capital spending: 6,042 | Equity: 157,293 | ROE %: 76.3% | Owner earnings: 96,676 | Liabilities: 49,510 | Current assets: 125,605 | Current liabilities: 32,163 | Current ratio: 3.91 | Liabilities / equity: 0.31
+Buffett | ROE of 15% or more every year | pass
+Buffett | Owner earnings positive every year | pass
+Buffett | Owner earnings grew, first year to last | pass
+Graham | Current ratio of 2 or more, latest year | pass
+Graham | Net income positive every year | pass
+Graham | Net income grew, first year to last | pass
+Burry | Operating cash flow at least net income every year | fail
+Burry | Liabilities no more than twice equity, latest year | pass
+Buffett: 3 of 3 pass; 0 fail; 0 not known.
+Graham: 3 of 3 pass; 0 fail; 0 not known.
+Burry: 1 of 2 pass; 1 fail; 0 not known.
+
+XBRL sources (USD):
+2022-01-30
+  Revenue: 26,914; us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; period 2021-02-01 to 2022-01-30; filed 2022-03-18; accession 0001045810-22-000036
+  Net income: 9,752; us-gaap:NetIncomeLoss; period 2021-02-01 to 2022-01-30; filed 2024-02-21; accession 0001045810-24-000029
+  Operating cash flow: 9,108; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2021-02-01 to 2022-01-30; filed 2024-02-21; accession 0001045810-24-000029
+  Capital spending: 976; us-gaap:PaymentsToAcquireProductiveAssets; period 2021-02-01 to 2022-01-30; filed 2024-02-21; accession 0001045810-24-000029
+  Equity: 26,612; us-gaap:StockholdersEquity; period instant to 2022-01-30; filed 2025-02-26; accession 0001045810-25-000023
+  ROE %: 36.6%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 8,132; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquireProductiveAssets
+  Liabilities: 17,575; us-gaap:Liabilities; period instant to 2022-01-30; filed 2023-02-24; accession 0001045810-23-000017
+  Current assets: 28,829; us-gaap:AssetsCurrent; period instant to 2022-01-30; filed 2023-02-24; accession 0001045810-23-000017
+  Current liabilities: 4,335; us-gaap:LiabilitiesCurrent; period instant to 2022-01-30; filed 2023-02-24; accession 0001045810-23-000017
+  Current ratio: 6.65; derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent
+  Liabilities / equity: 0.66; derived: us-gaap:Liabilities / us-gaap:StockholdersEquity
+2023-01-29
+  Revenue: 26,974; us-gaap:Revenues; period 2022-01-31 to 2023-01-29; filed 2025-02-26; accession 0001045810-25-000023
+  Net income: 4,368; us-gaap:NetIncomeLoss; period 2022-01-31 to 2023-01-29; filed 2025-02-26; accession 0001045810-25-000023
+  Operating cash flow: 5,641; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2022-01-31 to 2023-01-29; filed 2025-02-26; accession 0001045810-25-000023
+  Capital spending: 1,833; us-gaap:PaymentsToAcquireProductiveAssets; period 2022-01-31 to 2023-01-29; filed 2025-02-26; accession 0001045810-25-000023
+  Equity: 22,101; us-gaap:StockholdersEquity; period instant to 2023-01-29; filed 2026-02-25; accession 0001045810-26-000021
+  ROE %: 19.8%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 3,808; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquireProductiveAssets
+  Liabilities: 19,081; us-gaap:Liabilities; period instant to 2023-01-29; filed 2024-02-21; accession 0001045810-24-000029
+  Current assets: 23,073; us-gaap:AssetsCurrent; period instant to 2023-01-29; filed 2024-02-21; accession 0001045810-24-000029
+  Current liabilities: 6,563; us-gaap:LiabilitiesCurrent; period instant to 2023-01-29; filed 2024-02-21; accession 0001045810-24-000029
+  Current ratio: 3.52; derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent
+  Liabilities / equity: 0.86; derived: us-gaap:Liabilities / us-gaap:StockholdersEquity
+2024-01-28
+  Revenue: 60,922; us-gaap:Revenues; period 2023-01-30 to 2024-01-28; filed 2026-02-25; accession 0001045810-26-000021
+  Net income: 29,760; us-gaap:NetIncomeLoss; period 2023-01-30 to 2024-01-28; filed 2026-02-25; accession 0001045810-26-000021
+  Operating cash flow: 28,090; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2023-01-30 to 2024-01-28; filed 2026-02-25; accession 0001045810-26-000021
+  Capital spending: 1,069; us-gaap:PaymentsToAcquireProductiveAssets; period 2023-01-30 to 2024-01-28; filed 2026-02-25; accession 0001045810-26-000021
+  Equity: 42,978; us-gaap:StockholdersEquity; period instant to 2024-01-28; filed 2026-02-25; accession 0001045810-26-000021
+  ROE %: 69.2%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 27,021; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquireProductiveAssets
+  Liabilities: 22,750; us-gaap:Liabilities; period instant to 2024-01-28; filed 2025-02-26; accession 0001045810-25-000023
+  Current assets: 44,345; us-gaap:AssetsCurrent; period instant to 2024-01-28; filed 2025-02-26; accession 0001045810-25-000023
+  Current liabilities: 10,631; us-gaap:LiabilitiesCurrent; period instant to 2024-01-28; filed 2025-02-26; accession 0001045810-25-000023
+  Current ratio: 4.17; derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent
+  Liabilities / equity: 0.53; derived: us-gaap:Liabilities / us-gaap:StockholdersEquity
+2025-01-26
+  Revenue: 130,497; us-gaap:Revenues; period 2024-01-29 to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Net income: 72,880; us-gaap:NetIncomeLoss; period 2024-01-29 to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Operating cash flow: 64,089; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2024-01-29 to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Capital spending: 3,236; us-gaap:PaymentsToAcquireProductiveAssets; period 2024-01-29 to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Equity: 79,327; us-gaap:StockholdersEquity; period instant to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  ROE %: 91.9%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 60,853; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquireProductiveAssets
+  Liabilities: 32,274; us-gaap:Liabilities; period instant to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Current assets: 80,126; us-gaap:AssetsCurrent; period instant to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Current liabilities: 18,047; us-gaap:LiabilitiesCurrent; period instant to 2025-01-26; filed 2026-02-25; accession 0001045810-26-000021
+  Current ratio: 4.44; derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent
+  Liabilities / equity: 0.41; derived: us-gaap:Liabilities / us-gaap:StockholdersEquity
+2026-01-25
+  Revenue: 215,938; us-gaap:Revenues; period 2025-01-27 to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Net income: 120,067; us-gaap:NetIncomeLoss; period 2025-01-27 to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Operating cash flow: 102,718; us-gaap:NetCashProvidedByUsedInOperatingActivities; period 2025-01-27 to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Capital spending: 6,042; us-gaap:PaymentsToAcquireProductiveAssets; period 2025-01-27 to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Equity: 157,293; us-gaap:StockholdersEquity; period instant to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  ROE %: 76.3%; derived: us-gaap:NetIncomeLoss / us-gaap:StockholdersEquity × 100
+  Owner earnings: 96,676; derived: us-gaap:NetCashProvidedByUsedInOperatingActivities − us-gaap:PaymentsToAcquireProductiveAssets
+  Liabilities: 49,510; us-gaap:Liabilities; period instant to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Current assets: 125,605; us-gaap:AssetsCurrent; period instant to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Current liabilities: 32,163; us-gaap:LiabilitiesCurrent; period instant to 2026-01-25; filed 2026-02-25; accession 0001045810-26-000021
+  Current ratio: 3.91; derived: us-gaap:AssetsCurrent / us-gaap:LiabilitiesCurrent
+  Liabilities / equity: 0.31; derived: us-gaap:Liabilities / us-gaap:StockholdersEquity

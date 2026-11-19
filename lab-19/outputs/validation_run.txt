@@ -1,0 +1,14 @@
+test_all_memos_and_number_flags (__main__.LabChecks.test_all_memos_and_number_flags) ... ok
+test_company_and_jpm_gaps (__main__.LabChecks.test_company_and_jpm_gaps) ... ok
+test_known_answer (__main__.LabChecks.test_known_answer) ... ok
+test_missing_and_invalid_inputs (__main__.LabChecks.test_missing_and_invalid_inputs) ... ok
+test_packaged_skills (__main__.LabChecks.test_packaged_skills) ... ok
+test_sources_and_selection (__main__.LabChecks.test_sources_and_selection) ... ok
+test_streamlit (__main__.LabChecks.test_streamlit) ... 2026-11-05 15:38:20.770 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_threshold_changes_only_liquidity_check (__main__.LabChecks.test_threshold_changes_only_liquidity_check) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.234s
+
+OK

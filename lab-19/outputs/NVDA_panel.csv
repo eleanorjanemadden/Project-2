@@ -1,0 +1,9 @@
+Investor,Check,Result
+Buffett,ROE of 15% or more every year,pass
+Buffett,Owner earnings positive every year,pass
+Buffett,"Owner earnings grew, first year to last",pass
+Graham,"Current ratio of 2 or more, latest year",pass
+Graham,Net income positive every year,pass
+Graham,"Net income grew, first year to last",pass
+Burry,Operating cash flow at least net income every year,fail
+Burry,"Liabilities no more than twice equity, latest year",pass
