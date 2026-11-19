@@ -1,0 +1,15 @@
+LIVE LAB 17 VALIDATION — downloaded 2026-10-29
+PASS known answer: BAA: 2026-09-01, 6.47; later=0, revised=0
+PASS known answer: FEDFUNDS: 2026-09-01, 3.75; later=0, revised=0
+PASS known answer: DGS10: 2026-10-02, 5.28; later=17, revised=0
+PASS known answer: MORTGAGE30US: 2026-10-01, 7.28; later=4, revised=0
+PASS PAYEMS: Dec 2024 known=159,536; same month today=158,316; difference=-1,220 thousand jobs; revised dates=381
+GS10 as of 2026-09-30: last=2026-08-01, value=4.68%; later=1; revised=0
+GS10 as of 2026-10-29: last=2026-09-01, value=4.99%; later=0; revised=0
+PASS GS10 publication boundary: September absent Sep 30; 4.99 present Oct 1.
+PASS source-page cross-check: Jul 2026: page=4.60%, CSV=4.60%
+PASS source-page cross-check: Aug 2026: page=4.68%, CSV=4.68%
+PASS source-page cross-check: Sep 2026: page=4.99%, CSV=4.99%
+PASS counts, missing-day handling, and empty vintage edge case.
+PASS executed Streamlit UI: four default charts/table, defaults, October known answers, typed GS10, unknown-ID isolation, empty selection.
+ALL CHECKS PASSED — actual downloads, no hard-coded app results.

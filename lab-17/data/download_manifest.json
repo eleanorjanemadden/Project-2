@@ -1,0 +1,77 @@
+[
+  {
+    "file": "data/BAA_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BAA",
+    "downloaded": "2026-10-29T17:08:05.476816-04:00"
+  },
+  {
+    "file": "data/BAA_2026-10-05.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=BAA&vintage_date=2026-10-05",
+    "downloaded": "2026-10-29T17:08:05.554451-04:00"
+  },
+  {
+    "file": "data/FEDFUNDS_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS",
+    "downloaded": "2026-10-29T17:08:05.633402-04:00"
+  },
+  {
+    "file": "data/FEDFUNDS_2026-10-05.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=FEDFUNDS&vintage_date=2026-10-05",
+    "downloaded": "2026-10-29T17:08:05.725813-04:00"
+  },
+  {
+    "file": "data/DGS10_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+    "downloaded": "2026-10-29T17:08:05.934453-04:00"
+  },
+  {
+    "file": "data/DGS10_2026-10-05.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=DGS10&vintage_date=2026-10-05",
+    "downloaded": "2026-10-29T17:08:06.070688-04:00"
+  },
+  {
+    "file": "data/MORTGAGE30US_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US",
+    "downloaded": "2026-10-29T17:08:06.177912-04:00"
+  },
+  {
+    "file": "data/MORTGAGE30US_2026-10-05.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=MORTGAGE30US&vintage_date=2026-10-05",
+    "downloaded": "2026-10-29T17:08:06.271137-04:00"
+  },
+  {
+    "file": "data/PAYEMS_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS",
+    "downloaded": "2026-10-29T17:08:06.438468-04:00"
+  },
+  {
+    "file": "data/PAYEMS_2025-01-15.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=PAYEMS&vintage_date=2025-01-15",
+    "downloaded": "2026-10-29T17:08:06.517594-04:00"
+  },
+  {
+    "file": "data/GS10_today.csv",
+    "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10",
+    "downloaded": "2026-10-29T17:08:06.604685-04:00"
+  },
+  {
+    "file": "data/GS10_2026-09-30.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-09-30",
+    "downloaded": "2026-10-29T17:08:06.683254-04:00"
+  },
+  {
+    "file": "data/GS10_2026-10-29.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-10-29",
+    "downloaded": "2026-10-29T17:08:06.760135-04:00"
+  },
+  {
+    "file": "data/GS10_2026-09-30.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-09-30",
+    "downloaded": "2026-10-29T17:08:06.683254-04:00"
+  },
+  {
+    "file": "data/GS10_2026-10-01.csv",
+    "url": "https://alfred.stlouisfed.org/graph/alfredgraph.csv?id=GS10&vintage_date=2026-10-01",
+    "downloaded": "2026-10-29T17:08:06.924534-04:00"
+  }
+]

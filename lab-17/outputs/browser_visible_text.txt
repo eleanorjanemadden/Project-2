@@ -1,0 +1,249 @@
+Skip to main content
+
+Series
+
+BAA — Moody's Baa corporate bond yield
+FEDFUNDS — Federal funds rate
+DGS10 — 10-year Treasury yield
+MORTGAGE30US — 30-year mortgage rate
+
+Add another FRED series ID
+
+Start date
+
+2020
+/
+01
+/
+01
+
+As known on
+
+2026
+/
+10
+/
+29
+Deploy
+Point-in-Time Rates Audit
+
+Data from FRED and ALFRED, Federal Reserve Bank of St. Louis, downloaded today (2026-10-29); built with AI help, a learning demonstration, not investment advice.
+
+BAA — Moody's Baa corporate bond yield
+2020
+April
+July
+October
+2021
+April
+July
+October
+2022
+April
+July
+October
+2023
+April
+July
+October
+2024
+April
+July
+October
+2025
+April
+July
+October
+2026
+April
+July
+Date measured
+0
+1
+2
+3
+4
+5
+6
+7
+Series units (see source)
+
+Last date measured known on 2026-10-29: 2026-09-01; value: 6.47. Retrieved 2026-10-29T17:07:50.382331-04:00.
+
+FRED series and units · ALFRED vintage CSV
+
+FEDFUNDS — Federal funds rate
+2020
+April
+July
+October
+2021
+April
+July
+October
+2022
+April
+July
+October
+2023
+April
+July
+October
+2024
+April
+July
+October
+2025
+April
+July
+October
+2026
+April
+July
+Date measured
+0
+1
+2
+3
+4
+5
+Series units (see source)
+
+Last date measured known on 2026-10-29: 2026-09-01; value: 3.75. Retrieved 2026-10-29T17:07:51.015662-04:00.
+
+FRED series and units · ALFRED vintage CSV
+
+DGS10 — 10-year Treasury yield
+2020
+April
+July
+October
+2021
+April
+July
+October
+2022
+April
+July
+October
+2023
+April
+July
+October
+2024
+April
+July
+October
+2025
+April
+July
+October
+2026
+April
+July
+October
+Date measured
+0
+1
+2
+3
+4
+5
+Series units (see source)
+
+Last date measured known on 2026-10-29: 2026-10-28; value: 5.05. Retrieved 2026-10-29T17:07:51.364565-04:00.
+
+FRED series and units · ALFRED vintage CSV
+
+MORTGAGE30US — 30-year mortgage rate
+April
+July
+October
+2021
+April
+July
+October
+2022
+April
+July
+October
+2023
+April
+July
+October
+2024
+April
+July
+October
+2025
+April
+July
+October
+2026
+April
+July
+October
+Date measured
+0
+1
+2
+3
+4
+5
+6
+7
+8
+Series units (see source)
+
+Last date measured known on 2026-10-29: 2026-10-29; value: 7.24. Retrieved 2026-10-29T17:07:51.727935-04:00.
+
+FRED series and units · ALFRED vintage CSV
+
+GS10 — Additional FRED series
+2020
+April
+July
+October
+2021
+April
+July
+October
+2022
+April
+July
+October
+2023
+April
+July
+October
+2024
+April
+July
+October
+2025
+April
+July
+October
+2026
+April
+July
+Date measured
+0
+1
+2
+3
+4
+5
+Series units (see source)
+
+Last date measured known on 2026-10-29: 2026-09-01; value: 4.99. Retrieved 2026-10-29T17:07:53.023493-04:00.
+
+FRED series and units · ALFRED vintage CSV
+
+As-known comparison
+
+Counts use all downloaded history; Start date changes charts only. Later values are nonmissing observations after the last known measured date. Revisions compare nonmissing values on shared dates (absolute tolerance 0.000000001). Missing days are never filled.
+
+Download comparison CSV
+
+A vintage date is a day-level cutoff, not proof of availability before a same-day trade. Use a verified release time or trade the following session.

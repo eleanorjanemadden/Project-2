@@ -1,0 +1,5 @@
+PASS: all four funnel steps, all six panel rows, and all six known signals.
+PASS: edited temporary file to April 15; all three as-of signals equal naive signals.
+PASS: submitted file remains at March 31; later-date output saved.
+PASS: same-day publication is included; revision selection does not require input sorting.
+ALL CHECKS PASSED
