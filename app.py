@@ -4,6 +4,7 @@ import importlib
 import io
 from pathlib import Path
 import streamlit as st
+import gs10
 import mandate
 import portfolio
 
@@ -87,6 +88,46 @@ def show_portfolio_comparison(comparison, constrained, objective, cost_bps):
     st.caption("The return screen compares an after-cost annual estimate with a numerical threshold. "
                "The rolling five-year net CPI + 4% objective remains unresolved. The model "
                "does not evaluate rolling net outcomes with realized inflation and costs.")
+
+
+def show_gs10_monitor():
+    st.subheader("GS10 point-in-time monitoring")
+    st.caption("Monitoring only. The monthly 10-year Treasury yield gives context for "
+               "interest-rate exposure in IEF and LQD. It does not enter the ETF return "
+               "estimates, mandate screens or allocation search. This cutoff applies only to GS10.")
+    try:
+        vintages = gs10.saved_vintages()
+        if not vintages:
+            st.warning("GS10 is unresolved because no dated vintage is recorded.")
+            return
+        cutoff = st.selectbox("Decision cutoff (saved vintage date)", sorted(vintages))
+        record = vintages[cutoff]
+        observations = gs10.read_vintage(cutoff)
+        if not observations:
+            st.warning("GS10 is unresolved because the saved vintage has no usable observation.")
+            return
+        latest = max(observations)
+    except (OSError, ValueError, ArithmeticError, KeyError) as error:
+        st.warning(f"GS10 is unresolved because the saved evidence could not be read: {error}")
+        return
+
+    st.markdown(f"**Decision cutoff:** {cutoff}  \n"
+                f"**Latest observation in the cutoff vintage:** {latest:%B %Y}  \n"
+                f"**Signal value:** {observations[latest]:.2f}% per annum "
+                "(monthly average, not seasonally adjusted)  \n"
+                f"**ALFRED vintage date:** {cutoff}")
+    evidence_url = ("https://github.com/eleanorjanemadden/Project-2/blob/main/"
+                    "evidence/lab-17/")
+    st.markdown("Source: Federal Reserve Board, H.15 Selected Interest Rates, "
+                f"via [ALFRED vintage download]({record['url']}). "
+                f"[Bundled GS10 data card]({evidence_url}Lab_17.md#r--represent-my-data-card) · "
+                f"[Download manifest]({evidence_url}data/download_manifest.json)")
+    st.caption("The observation month identifies the period measured. The dated ALFRED "
+               "snapshot establishes availability at date level, and contains the version "
+               "used here. Later releases and revisions are kept separate, and missing "
+               "values are skipped without filling. For a decision at the opening, use "
+               "the prior calendar day's vintage or verify the publication timestamp "
+               "before trading. Same-day pre-trade availability is unresolved.")
 
 
 st.set_page_config(page_title="Portfolio stability", layout="wide")
@@ -213,3 +254,6 @@ try:
                "Losses remain possible.")
 except (ValueError, UnicodeError, OSError) as error:
     st.error(f"Input error: {error}")
+
+
+show_gs10_monitor()

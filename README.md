@@ -28,6 +28,8 @@ Set **Annual additional cost assumption (bps)** in the sidebar. It defaults to 0
 
 **Sensitivity** compares the constrained mix from the original all-month inputs with the constrained mix from the current inputs. The bundled data opens at 60% BIL / 40% VT. Select **Last 36 months** to see 85% BIL / 15% VT and a 25.00-percentage-point change. Keep the 6.5% return screen, 3% reserve minimum, 0 bps additional cost, and BIL/IEF eligibility at their defaults for that comparison. Clear **Use included Project 2 prices.csv** to see the Meridian training inputs. Stop the app with Ctrl+C.
 
+**GS10 point-in-time monitoring** uses the bundled September 30, October 1, and October 29, 2026 ALFRED vintages. The decision cutoff applies to the GS10 panel. Select September 30 to see August's 4.68% annual yield, then October 1 to see September's 4.99%. The panel shows the vintage date and links to its source and the data card. The monthly yield gives context for IEF and LQD interest-rate exposure. Portfolio weights and screens still use the ETF model. Same-day pre-trade availability requires a verified publication time. [GS10 data card](evidence/lab-17/Lab_17.md#r--represent-my-data-card) · [Executed GS10 checks](outputs/gs10-validation.txt)
+
 Run `python validate.py` for calculation checks and Streamlit interaction tests. [Executed comparison and cost checks](outputs/cost-stress-validation.txt)
 
 The command writes [allocations.csv](outputs/allocations.csv), full-precision estimates in `outputs/results.json`, and mandate-checker output in `outputs/mandate_search_run.txt`. [Visible executed result](outputs/week-12-result.md)

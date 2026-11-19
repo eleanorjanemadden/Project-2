@@ -1,6 +1,8 @@
 """Executed engine and Streamlit checks. Run: python3 validate.py."""
 import contextlib
 import csv
+from datetime import date
+from decimal import Decimal
 import io
 import json
 from itertools import product
@@ -11,6 +13,7 @@ import sys
 import tempfile
 from unittest.mock import patch
 from streamlit.testing.v1 import AppTest
+import gs10
 import portfolio as p
 
 ROOT = Path(__file__).resolve().parent
@@ -108,6 +111,56 @@ def check_cost_scenarios(at, monthly):
     return scenarios
 
 
+def check_gs10(at):
+    september = date(2026, 9, 1)
+    cutoffs = {
+        date(2026, 9, 30): (date(2026, 8, 1), Decimal("4.68")),
+        date(2026, 10, 1): (september, Decimal("4.99")),
+        date(2026, 10, 29): (september, Decimal("4.99")),
+    }
+    vintages = gs10.saved_vintages()
+    check(vintages.keys() == cutoffs.keys(), 'GS10 offers exactly the dated Lab 17 ALFRED vintages')
+    snapshots = {cutoff: gs10.read_vintage(cutoff) for cutoff in cutoffs}
+    before, after, later = snapshots.values()
+    check(september not in before and after[september] == Decimal("4.99"),
+          'September GS10 is absent September 30 and present in the October 1 vintage')
+    for next_snapshot in (after, later):
+        check(next_snapshot.keys() - before.keys() == {september}
+              and all(next_snapshot[month] == before[month] for month in before),
+              'Later GS10 vintage adds September with zero revisions to shared months')
+    comparison = at.dataframe[0].value.copy()
+    readouts = []
+    for cutoff, (month, value) in cutoffs.items():
+        records = snapshots[cutoff]
+        check(max(records) == month and records[month] == value,
+              f'{cutoff} saved GS10 observation is {month:%B %Y} at {value}% per annum')
+        at.selectbox[0].set_value(cutoff).run()
+        lines = [node.value for node in at.markdown]
+        captions = [node.value for node in at.caption]
+        signal = next(line for line in lines if line.startswith("**Decision cutoff:**"))
+        source = next(line for line in lines if line.startswith("Source: Federal Reserve Board"))
+        check(not at.exception and f"**Decision cutoff:** {cutoff}" in signal
+              and f"**Latest observation in the cutoff vintage:** {month:%B %Y}" in signal
+              and f"**Signal value:** {value}% per annum" in signal
+              and f"**ALFRED vintage date:** {cutoff}" in signal
+              and vintages[cutoff]["url"] in source and "Lab_17.md#r--represent-my-data-card" in source
+              and any("Monitoring only." in line for line in captions)
+              and any("Same-day pre-trade availability is unresolved." in line for line in captions),
+              f'{cutoff} app displays the cutoff, observation, value, units, vintage, source and timing caveat')
+        check(at.dataframe[0].value.equals(comparison),
+              f'{cutoff} GS10 selection leaves the portfolio comparison unchanged')
+        readouts.append((signal, source))
+
+    with patch('gs10.read_vintage', side_effect=FileNotFoundError("saved test vintage")):
+        at.run()
+    check(not at.exception and any("GS10 is unresolved" in item.value for item in at.warning)
+          and not any("**Signal value:**" in item.value for item in at.markdown)
+          and at.dataframe[0].value.equals(comparison),
+          'Missing GS10 evidence reports unresolved without substituting a value or changing weights')
+    at.selectbox[0].set_value(next(iter(cutoffs))).run()
+    return readouts
+
+
 def main():
     for invalid_cost in (-.01, float("inf"), float("nan")):
         try:
@@ -180,6 +233,7 @@ def main():
     check(not at.exception,'Streamlit starts without an exception')
     check('60.00' in at.table[0].value.to_string(), 'Project 2 snapshot is the default view')
     monthly = df.pct_change().dropna()
+    gs10_readouts = check_gs10(at)
     all_months = check_comparison(at, monthly, [.60, 0, 0, .40])
     stress_all = check_cost_scenarios(at, monthly)
     check(True, 'All-month 0/25/50/100 bps tables match independent grid and baseline calculations')
@@ -254,8 +308,9 @@ def main():
     # Edit the actual engine file in an isolated copy; app must change on reload.
     with tempfile.TemporaryDirectory() as folder:
         temp=Path(folder)
-        for name in ['app.py','portfolio.py','mandate.py','prices.csv']:
+        for name in ['app.py','portfolio.py','mandate.py','gs10.py','prices.csv']:
             shutil.copy2(ROOT/name,temp/name)
+        shutil.copytree(gs10.DATA, temp / 'evidence/lab-17/data')
         source=(temp/'portfolio.py').read_text()
         changed=source.replace('[0.05, 0.80, 1.00, 0.25]', '[0.05, 0.80, 1.00, 0.50]').replace(
                                '[0.00, -0.10, 0.25, 1.00]', '[0.00, -0.10, 0.50, 1.00]')
@@ -282,7 +337,12 @@ assert list(at.table[0].value['Weight (%)'])==['0.00','40.00','0.00','60.00']
     print(stress_all.to_string(index=False))
     print('\nRendered cost scenarios, 36 monthly returns:')
     print(stress_recent.to_string(index=False))
-    print('\nAll checks passed.')
+    print('\nRendered GS10 panel, saved decision cutoffs:')
+    for signal, source in gs10_readouts:
+        print(signal)
+        print(source)
+        print()
+    print('All checks passed.')
 
 
 if __name__=='__main__':

@@ -28,6 +28,14 @@ Codex added and tested a flat annual cost deduction in the Streamlit comparison 
 
 The illustrative costs changed the selected weights. The paper-pilot recommendation and live deferral still apply, given the differences between windows and the need for actual cost and forward return evidence. The rolling five-year net CPI + 4% objective remains unresolved. [Executed results and decision implications](../outputs/week-12-result.md#annual-additional-cost-stress)
 
+## GS10 point-in-time monitoring validation
+
+Codex added a GS10 monitoring panel that reads the saved Lab 17 ALFRED CSV listed for the selected cutoff in the download manifest. It selects the latest nonmissing observation from that vintage and preserves the archived value for that month. The observation month labels the measured period. Date-level availability comes from the saved vintage, and same-day pre-trade timing remains unresolved without a verified timestamp. For an opening decision, the prior calendar day's vintage is the conservative input. [Lab 17 data card](../evidence/lab-17/Lab_17.md#r--represent-my-data-card) · [Source manifest](../evidence/lab-17/data/download_manifest.json)
+
+`python3 validate.py` confirmed that September's observation was absent from the September 30 vintage, which ended with August at 4.68% per annum. September's 4.99% is present in the October 1 and October 29 vintages. Compared with September 30, both later vintages add one month and have zero changed values for shared months. Streamlit checks verified all three readouts, their source links and timing caveat, and unchanged portfolio results when the cutoff changed. A missing saved vintage produced an unresolved warning without substituting a value. [Executed validation and app readouts](../outputs/gs10-validation.txt)
+
+The panel covers the three saved dates and supplies monitoring context for IEF and LQD. The ETF allocation and mandate screens are independent of GS10. The evidence establishes a historical availability boundary. A trading or allocation rule tied to GS10 and any effect on returns remain unvalidated.
+
 ## Locked Changed-Input Record — unresolved
 
 The existing Lab 15 stresses provide comparison evidence. No Project 2 AI-off prediction, pre-run GitHub commit or locked execution was located. The Week 12 assistant test is recorded separately. For submission, independently select one material input, record its old/new values, predicted direction and decision effect with timestamp, commit the prediction to GitHub before execution, run with AI closed, then preserve and reconcile actual before/after output and the decision effect. [Lab 11 pattern](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-06/lab-11-proforma-what-if.md)
