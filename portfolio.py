@@ -82,8 +82,8 @@ def baseline_weights():
 
 
 def search_portfolio(returns, volatilities, correlations, objective,
-                     eligible, reserve_minimum):
-    """Exhaust every fully invested long-only 5-percentage-point mix."""
+                     eligible, reserve_minimum, *, additional_cost=0.0):
+    """Search the five-point grid with a flat annual cost in decimal return units."""
     n = len(returns)
     if not 3 <= n <= 6 or len(volatilities) != n or len(eligible) != n:
         raise ValueError("Use three to six assets with matching input lengths.")
@@ -91,6 +91,8 @@ def search_portfolio(returns, volatilities, correlations, objective,
         raise ValueError("Return estimates and objective must be finite.")
     if not math.isfinite(reserve_minimum) or not 0 <= reserve_minimum <= 1:
         raise ValueError("Reserve minimum must be between 0 and 100%.")
+    if not math.isfinite(additional_cost) or additional_cost < 0:
+        raise ValueError("Annual additional cost must be finite and nonnegative.")
     covariance = covariance_matrix(volatilities, correlations)
 
     def mixes(remaining, slots):
@@ -106,7 +108,7 @@ def search_portfolio(returns, volatilities, correlations, objective,
     for weights in mixes(20, n):
         result = expected_return(weights, returns)
         reserve = reserve_weight(weights, eligible)
-        if result < objective - 1e-12 or reserve < reserve_minimum - 1e-12:
+        if result - additional_cost < objective - 1e-12 or reserve < reserve_minimum - 1e-12:
             continue
         volatility = portfolio_volatility(weights, covariance)
         if best is None or volatility < best["volatility"] - 1e-12:

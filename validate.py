@@ -3,6 +3,7 @@ import contextlib
 import csv
 import io
 import json
+from itertools import product
 from pathlib import Path
 import shutil
 import subprocess
@@ -27,7 +28,7 @@ def run_search(returns=p.RETURNS, correlations=p.CORRELATIONS, objective=.065,
 
 
 def check_comparison(at, monthly, constrained_weights, *, estimates=None,
-                     eligible=(True, True, False, False), minimum=.03):
+                     eligible=(True, True, False, False), minimum=.03, cost=0):
     """Compare the actual displayed rows with calculations from raw returns."""
     import numpy as np
 
@@ -44,15 +45,17 @@ def check_comparison(at, monthly, constrained_weights, *, estimates=None,
     )):
         estimated_return = weights @ returns
         volatility = np.sqrt(weights @ covariance @ weights)
+        after_cost = estimated_return - cost
         reserve = weights @ np.array(eligible)
         expected = {
             **{f"{asset} weight": f"{weight:.2%}" for asset, weight in zip(monthly.columns, weights)},
-            "Estimated annual return": f"{estimated_return:.2%}",
+            "Annual return before additional cost": f"{estimated_return:.2%}",
+            "Annual return after additional cost": f"{after_cost:.2%}",
             "Estimated annual volatility": f"{volatility:.2%}",
             "Reserve-eligible weight": f"{reserve:.2%}",
             "Fully invested (100%)": "Pass",
             "Long-only weights": "Pass",
-            "Numerical return screen (≥ 6.50%)": "Pass" if estimated_return >= .065 else "Fail",
+            "After-cost return screen (≥ 6.50%)": "Pass" if after_cost >= .065 - 1e-12 else "Fail",
             f"Reserve allocation (≥ {minimum:.2%})": "Pass" if reserve >= minimum - 1e-12 else "Fail",
             "Project 2 universe (BIL, IEF, LQD, VT)": "Pass",
             "Liquidity (≥ 90% within 5 business days)": "Unresolved",
@@ -64,7 +67,64 @@ def check_comparison(at, monthly, constrained_weights, *, estimates=None,
     return table
 
 
+def check_cost_scenarios(at, monthly):
+    """Independently enumerate and score every four-asset allocation on the grid."""
+    import numpy as np
+
+    scenarios = at.dataframe[1].value
+    covariance = monthly.cov().to_numpy() * 12
+    returns = monthly.mean().to_numpy() * 12
+    grid = np.array([units for units in product(range(21), repeat=4) if sum(units) == 20]) / 20
+    grid_reserves = grid[:, :2].sum(axis=1)
+    grid_returns = grid @ returns
+    grid_variances = np.einsum("ij,jk,ik->i", grid, covariance, grid)
+    inverse = 1 / np.sqrt(covariance.diagonal())
+    expected = []
+    for bps in (0, 25, 50, 100):
+        cost = bps / 10_000
+        feasible = np.flatnonzero((grid_returns - cost >= .065 - 1e-12)
+                                 & (grid_reserves >= .03 - 1e-12))
+        assert len(feasible), bps
+        best = feasible[np.argmin(grid_variances[feasible])]
+        for name, weights in (
+            ("Equal-weight baseline", np.full(4, .25)),
+            ("Inverse-volatility baseline", inverse / inverse.sum()),
+            ("Constrained portfolio", grid[best]),
+        ):
+            before = weights @ returns
+            after = before - cost
+            expected.append({
+                "Annual cost (bps)": bps,
+                "Portfolio": name,
+                "Weights": ", ".join(f"{asset} {weight:.2%}"
+                                     for asset, weight in zip(monthly.columns, weights)),
+                "Return before cost": f"{before:.2%}",
+                "Return after cost": f"{after:.2%}",
+                "Volatility": f"{np.sqrt(weights @ covariance @ weights):.2%}",
+                "Reserve weight": f"{sum(weights[:2]):.2%}",
+                "After-cost screen": "Pass" if after >= .065 - 1e-12 else "Fail",
+            })
+    assert scenarios.to_dict("records") == expected, scenarios.to_string()
+    return scenarios
+
+
 def main():
+    for invalid_cost in (-.01, float("inf"), float("nan")):
+        try:
+            p.search_portfolio(p.RETURNS, p.VOLATILITIES, p.CORRELATIONS, .065,
+                               p.RESERVE_ELIGIBLE, .03, additional_cost=invalid_cost)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("Invalid cost accepted")
+    check(True, 'Negative and nonfinite cost assumptions rejected')
+    costs = dict(returns=[.07] * 3, volatilities=[.1] * 3,
+                 correlations=[[float(i == j) for j in range(3)] for i in range(3)],
+                 objective=.065, eligible=[True] * 3, reserve_minimum=.03)
+    check(p.search_portfolio(**costs, additional_cost=.005) is not None and
+          p.search_portfolio(**costs, additional_cost=.005001) is None,
+          'An exact after-cost threshold is feasible and a higher cost makes the same grid infeasible')
+
     # Same main function and output as the preserved GitHub engine.
     old = subprocess.check_output([sys.executable, str(ROOT / 'instructions/lab14_portfolio.py')])
     new = subprocess.check_output([sys.executable, str(ROOT / 'portfolio.py')])
@@ -121,6 +181,15 @@ def main():
     check('60.00' in at.table[0].value.to_string(), 'Project 2 snapshot is the default view')
     monthly = df.pct_change().dropna()
     all_months = check_comparison(at, monthly, [.60, 0, 0, .40])
+    stress_all = check_cost_scenarios(at, monthly)
+    check(True, 'All-month 0/25/50/100 bps tables match independent grid and baseline calculations')
+    next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)").set_value(25.0).run()
+    check_comparison(at, monthly, [.55, 0, 0, .45], cost=.0025)
+    check(at.metric[0].value == "0.00" and
+          all(list(table.value["Weight (%)"]) == ["55.00", "0.00", "0.00", "45.00"]
+              for table in at.table),
+          'Editable 25 bps cost reoptimizes both all-month sensitivity mixes at the unchanged objective')
+    next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)").set_value(0.0).run()
     check(True, 'All-month app weights, risk, return, reserve, and verdicts agree with independent calculations')
     next(w for w in at.checkbox if w.label == "Use included Project 2 prices.csv").set_value(False).run()
     check('9.44%' in '\n'.join(x.value for x in at.markdown), 'App displays training volatility')
@@ -137,6 +206,8 @@ def main():
           '36-month app switch displays 85% BIL and 25.00-point change')
     recent = monthly.tail(36)
     last_36 = check_comparison(at, recent, [.85, 0, 0, .15])
+    stress_recent = check_cost_scenarios(at, recent)
+    check(True, '36-month 0/25/50/100 bps tables match independent grid and baseline calculations')
     check(True, '36-month app weights, risk, return, reserve, and verdicts agree with independent calculations')
     estimates = (recent.mean() * 12).to_numpy()
     estimates[0] = .07
@@ -151,6 +222,19 @@ def main():
     check_comparison(at, recent, [1, 0, 0, 0], estimates=estimates,
                      eligible=(True, False, False, False), minimum=1.0)
     check(True, 'A 100% reserve threshold fails both baselines and passes the all-BIL constrained mix')
+    cost_widget = next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)")
+    cost_widget.set_value(100.0).run()
+    cost_failure = at.dataframe[0].value.set_index("Measure or rule")
+    stress_failure = at.dataframe[1].value
+    check(not at.exception and len(at.error) == 1 and "6.50%" in at.error[0].value
+          and all(cost_failure["Constrained portfolio"] == "N/A")
+          and list(stress_failure.loc[
+              (stress_failure["Annual cost (bps)"] == 100)
+              & (stress_failure["Portfolio"] == "Constrained portfolio"),
+              "After-cost screen"]) == ["Infeasible"]
+          and next(w for w in at.number_input if w.label == "Objective (%)").value == 6.5,
+          '100 bps makes the reserve-constrained app case infeasible while the objective stays at 6.5%')
+    next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)").set_value(0.0)
     next(w for w in at.number_input if w.label == "Reserve minimum (%)").set_value(3.0).run()
 
     # Upload path (same bytes, separate Streamlit input).
@@ -160,10 +244,10 @@ def main():
           'Uploaded CSV bytes load through the uploader path')
     next(w for w in at.number_input if w.label == "Objective (%)").set_value(50.0).run()
     check(not at.exception and len(at.warning)==2 and
-          all(x.value=='no mix meets the objective' for x in at.warning),
+          all('50.00% after-cost screen' in x.value for x in at.warning),
           'App reports infeasibility without lowering the objective')
     failed = at.dataframe[0].value.set_index("Measure or rule")
-    check(all(failed.loc["Numerical return screen (≥ 50.00%)",
+    check(all(failed.loc["After-cost return screen (≥ 50.00%)",
                          ["Equal-weight baseline", "Inverse-volatility baseline"]] == "Fail")
           and all(failed["Constrained portfolio"] == "N/A"),
           'Infeasible search still displays both failing baselines and leaves the constrained column unavailable')
@@ -194,6 +278,10 @@ assert list(at.table[0].value['Weight (%)'])==['0.00','40.00','0.00','60.00']
     print(all_months.to_string())
     print('\nRendered comparison, 36 monthly returns:')
     print(last_36.to_string())
+    print('\nRendered cost scenarios, 59 monthly returns:')
+    print(stress_all.to_string(index=False))
+    print('\nRendered cost scenarios, 36 monthly returns:')
+    print(stress_recent.to_string(index=False))
     print('\nAll checks passed.')
 
 

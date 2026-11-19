@@ -18,7 +18,15 @@ Codex helped implement and test the Streamlit comparison. Equal-weight and inver
 
 `python3 validate.py` independently recomputed the rendered weights, return, volatility, reserve and rule verdicts from the monthly prices using pandas and NumPy. Streamlit checks covered default inputs, the 36-month switch, a return override, an eligibility edit, a 100% reserve threshold, the upload path, Meridian and infeasibility. The 25.00-percentage-point window sensitivity was reproduced. [Executed check log and rendered tables](../outputs/portfolio-comparison-validation.txt)
 
-With default settings, the all-month estimated return was 3.01% for equal weight, 3.37% for inverse volatility, and 6.61% for the constrained portfolio. Over the last 36 months these estimates were 8.13%, 4.61%, and 6.75%, respectively. All three met the 3% reserve allocation screen in both windows under the assumed eligibility. The rolling five-year net CPI + 4% objective remains unresolved because the numerical screen uses annual estimates and the model does not evaluate rolling outcomes net of costs and against realized inflation. Actual liquidity, issuer exposure and exemptions, and live implementation restrictions also remain unresolved.
+At the default 0 bps additional cost, the all-month estimated return was 3.01% for equal weight, 3.37% for inverse volatility, and 6.61% for the constrained portfolio. Over the last 36 months these estimates were 8.13%, 4.61%, and 6.75%, respectively. All three met the 3% reserve allocation screen in both windows under the assumed eligibility. The rolling five-year net CPI + 4% objective remains unresolved because the numerical screen uses annual estimates and the model does not evaluate rolling outcomes net of costs and against realized inflation. Actual liquidity, issuer exposure and exemptions, and live implementation restrictions also remain unresolved.
+
+## Annual additional cost validation
+
+Codex added and tested a flat annual cost deduction in the Streamlit comparison and constrained search. The assumption covers costs beyond fund expenses already reflected in adjusted prices. The comparison subtracts basis points divided by 10,000 from the annual return estimate. The constrained search uses that after-cost estimate with the original numerical threshold and reserve minimum.
+
+`python3 validate.py` independently enumerated the four-asset weight grid and matched the app's 0, 25, 50, and 100 bps scenarios for the full and 36-month windows. The checks covered the exact threshold, invalid costs, unchanged zero-cost behavior, reoptimization after a widget edit, and an infeasible case that kept the 6.5% threshold. [Executed check log and scenario tables](../outputs/cost-stress-validation.txt)
+
+The illustrative costs changed the selected weights. The paper-pilot recommendation and live deferral still apply, given the differences between windows and the need for actual cost and forward return evidence. The rolling five-year net CPI + 4% objective remains unresolved. [Executed results and decision implications](../outputs/week-12-result.md#annual-additional-cost-stress)
 
 ## Locked Changed-Input Record — unresolved
 
