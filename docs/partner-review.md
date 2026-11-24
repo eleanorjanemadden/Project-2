@@ -1,6 +1,6 @@
 # Partner review
 
-**Reviewer name for the simulation:** Mrigna Goel
+**Reviewer name:** Mrigna Goel
 
 ## What I ran and where I found the result
 
