@@ -1,0 +1,1 @@
+Setup through healthy app: 30.51 seconds

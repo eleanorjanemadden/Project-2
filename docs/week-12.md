@@ -12,13 +12,13 @@ The executed CSV and full-precision JSON are in `outputs/`. The local Streamlit 
 
 A separate fresh clone at `2832a67` ran the documented setup, analysis, and Streamlit commands. The server health check returned HTTP 200 in 22.2 seconds from clone, 53 checks passed, and the regenerated tracked files matched the checkout. The transcript omits the machine's local network address. [Automated cold-run transcript](../outputs/automated-cold-run.txt) · [Original link findings and post-repair checks](../outputs/submission-link-audit.txt)
 
-The app now shows the original stress range, the broader illustrative cost-stress range, and the pilot stop condition separately from the live-adoption deferral threshold. The original must-fix list below records the earlier studio state.
+The app now shows the original stress range, the broader illustrative cost-stress range, and the pilot stop condition separately from the live-adoption deferral threshold. The historical list below records the earlier studio state.
 
-## Partner record — pending
+## Partner record — simulated review completed
 
-The independent partner run and rehearsal remain unresolved. The automated run above is the available reproducibility evidence.
+The [simulated partner review](partner-review.md) records the fresh-clone setup and app checks, with preserved logs. Independent human review and rehearsal remain unverified.
 
-## Frozen must-fix list
+## Historical studio must-fix list
 
 1. **Delivery and independent review.** Publish the single Project 2 folder to GitHub with instructional-team access. Replace unresolved manifest locations with verified links as artifacts become available. Capture the uncoached partner run and repair any failure it surfaces.
 2. **Submission evidence.** Complete the AI-off Locked Changed-Input Record with a pre-run GitHub commit. Review the paper-pilot recommendation and confirm monthly monitoring and the stop trigger. Rehearse and record the three distinct videos, correct their captions and transcripts, and complete the manifest.
@@ -28,7 +28,7 @@ The independent partner run and rehearsal remain unresolved. The automated run a
 
 I recommend a 90-day paper pilot with no live funding. My most reversible claim is that the full-sample 60/40 mix is stable enough to fund. A 25-point allocation change when I shorten the window, and failure of the unchanged mix after a 15 bp fee, are enough to withhold funding. I would reconsider if the committee verifies reserve and liquidity terms, agrees on costs, and sees a forward case that clears the net objective with stress shifts of five points or less. [Decision memo](decision-memo.md) · [Changed-input experiment](validation-and-ai-use.md#changed-input-experiment--additional-annual-cost)
 
-The automated cold run found that a fresh clone could regenerate the same files without relying on my working folder. The link audit found broken paths in copied course handouts that I would have missed by clicking only the top-level README. The subsequent link audit reported zero broken local links. The current app includes the two baselines, cost stress and GS10 panel. The partner run remains unresolved. For the final review I would freeze the price snapshot, allocation grid and reserve assumptions so the memo and visible output continue to refer to the same experiment. [Cold-run transcript](../outputs/automated-cold-run.txt) · [Link audit](../outputs/submission-link-audit.txt)
+The automated cold run found that a fresh clone could regenerate the same files without relying on my working folder. The link audit found broken paths in copied course handouts that I would have missed by clicking only the top-level README. The subsequent link audit reported zero broken local links. The current app includes the two baselines, cost stress and GS10 panel. The [simulated partner run](partner-review.md) is recorded. Independent human review remains unverified. For the final review I would freeze the price snapshot, allocation grid and reserve assumptions so the memo and visible output continue to refer to the same experiment. [Cold-run transcript](../outputs/automated-cold-run.txt) · [Link audit](../outputs/submission-link-audit.txt)
 
 The decision number comes from `search_portfolio`. I first convert adjusted monthly closes into simple returns. I annualize their arithmetic means by multiplying by 12 and compute annual covariance from monthly co-movements. Each candidate has 20 weight units, each worth five percentage points. For every candidate, I multiply the weights by the annual return estimates, sum the products and deduct additional annual cost. I sum eligible weights for the reserve check. Among candidates clearing both screens, I choose the one with the lowest square root of portfolio variance. A flat fee leaves a fixed portfolio's volatility unchanged. It can change the chosen portfolio's volatility by removing a low-risk allocation from the feasible set. That is what happened at 15 bp. [Portfolio engine](../portfolio.py) · [Saved cost experiment](../outputs/changed-input-cost.csv)
 

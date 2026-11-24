@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/private/tmp/project2-review.wDlqT1/repo/../logs/probe.py", line 14, in <module>
+    app = AppTest.from_file("app.py").run()
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/private/tmp/project2-review.wDlqT1/repo/.venv/lib/python3.13/site-packages/streamlit/testing/v1/app_test.py", line 475, in from_file
+    raise FileNotFoundError(
+    ...<2 lines>...
+    )
+FileNotFoundError: AppTest script not found at /private/tmp/project2-review.wDlqT1/logs/app.py. Relative paths are resolved against the file that calls AppTest.from_file().

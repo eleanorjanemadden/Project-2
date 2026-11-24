@@ -17,4 +17,4 @@ Project 2 is public on GitHub. The [evidence map](https://github.com/eleanorjane
 | Video 3 transcript | Pending — add corrected GitHub plain-text transcript |
 | Deployed output | Optional — unresolved, no deployment planned |
 
-The independent partner review is pending. Confirm frozen files and video access before submission.
+The [simulated partner review](partner-review.md) records a fresh-clone run and decision challenge. Independent human review and rehearsal remain unverified. Confirm frozen files and video access before submission.

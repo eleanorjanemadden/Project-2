@@ -246,16 +246,23 @@ def main():
     all_months = check_comparison(at, monthly, [.60, 0, 0, .40])
     stress_all = check_cost_scenarios(at, monthly)
     check(True, 'All-month 0/25/50/100 bps tables match independent grid and baseline calculations')
-    next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)").set_value(25.0).run()
+    cost_control = next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)")
+    cost_control.set_value(15.0).run()
+    check_comparison(at, monthly, [.55, 0, 0, .45], cost=.0015)
+    check([(metric.label, metric.value) for metric in at.metric] == [
+        ("Largest weight change vs. as loaded at the same cost (percentage points)", "0.00"),
+        ("Largest weight change vs. zero-cost paper reference (percentage points)", "5.00"),
+    ], '15 bps distinguishes same-cost stability from the move away from the zero-cost paper reference')
+    cost_control.set_value(25.0).run()
     check_comparison(at, monthly, [.55, 0, 0, .45], cost=.0025)
-    check(at.metric[0].value == "0.00" and
+    check([metric.value for metric in at.metric] == ["0.00", "5.00"] and
           all(list(table.value["Weight (%)"]) == ["55.00", "0.00", "0.00", "45.00"]
               for table in at.table),
           'Editable 25 bps cost reoptimizes both all-month sensitivity mixes at the unchanged objective')
     next(w for w in at.number_input if w.label == "Annual additional cost assumption (bps)").set_value(0.0).run()
     check(True, 'All-month app weights, risk, return, reserve, and verdicts agree with independent calculations')
     next(w for w in at.checkbox if w.label == "Use included Project 2 prices.csv").set_value(False).run()
-    check('9.44%' in '\n'.join(x.value for x in at.markdown), 'App displays training volatility')
+    check(len(at.metric) == 1 and '9.44%' in '\n'.join(x.value for x in at.markdown), 'App displays training volatility')
     next(w for w in at.number_input if w.label == "Global equity index fund return estimate (%)").set_value(7.0).run()
     check(not at.exception and at.metric[0].value=='25.00' and
           '12.94%' in '\n'.join(x.value for x in at.markdown),
@@ -264,7 +271,7 @@ def main():
     check(not at.exception and '60.00' in at.table[0].value.to_string(),
           'Bundled CSV loads in the app')
     next(w for w in at.checkbox if w.label == "Last 36 months").set_value(True).run()
-    check(not at.exception and at.metric[0].value=='25.00' and
+    check(not at.exception and [metric.value for metric in at.metric] == ['25.00', '25.00'] and
           '85.00' in at.table[0].value.to_string(),
           '36-month app switch displays 85% BIL and 25.00-point change')
     recent = monthly.tail(36)
@@ -292,6 +299,7 @@ def main():
     check(not at.exception and len(at.error) == 1 and "6.50%" in at.error[0].value
           and "Stop the paper pilot and return to committee" in at.error[0].value
           and all(cost_failure["Constrained portfolio"] == "N/A")
+          and [metric.value for metric in at.metric] == ["N/A", "N/A"]
           and list(stress_failure.loc[
               (stress_failure["Annual cost (bps)"] == 100)
               & (stress_failure["Portfolio"] == "Constrained portfolio"),

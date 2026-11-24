@@ -230,7 +230,7 @@ try:
                 })
         st.dataframe(scenarios, hide_index=True)
 
-    st.subheader("Sensitivity — as loaded versus current inputs")
+    st.subheader("Sensitivity — current mix versus reference mixes")
 
     def display_result(title, result):
         st.markdown(f"**{title}**")
@@ -248,16 +248,31 @@ try:
     with left:
         display_result("Current lowest-risk mix", answer)
     with right:
-        display_result("As loaded — all months" if raw is not None else
-                       "As loaded — Meridian training inputs", as_loaded)
-    st.caption("Both searches use the current sidebar objective, reserve minimum, and additional cost. "
-               "As loaded keeps "
-               "the original returns, risk estimates and default eligibility.")
-    if answer is not None and as_loaded is not None:
-        change = max(abs(a-b) for a, b in zip(answer["weights"], as_loaded["weights"])) * 100
-        st.metric("Largest weight change (percentage points)", f"{change:.2f}")
+        display_result("As loaded — all months at current cost" if raw is not None else
+                       "As loaded — Meridian training inputs at current cost", as_loaded)
+    st.caption("Both searches use the current cost, return objective and reserve minimum. "
+               "As loaded keeps the original estimates and default reserve eligibility.")
+
+    def show_weight_change(label, reference):
+        value = "N/A"
+        if answer is not None and reference is not None:
+            change = max(abs(a - b) for a, b in zip(answer["weights"], reference["weights"]))
+            value = f"{100 * change:.2f}"
+        st.metric(label, value)
+
+    show_weight_change("Largest weight change vs. as loaded at the same cost (percentage points)", as_loaded)
+    if upload is None and bundled:
+        paper_reference = portfolio.search_portfolio(
+            loaded["returns"], loaded["volatilities"], loaded["correlations"],
+            .065, default_eligible, .03,
+        )
+        show_weight_change("Largest weight change vs. zero-cost paper reference (percentage points)",
+                           paper_reference)
+        st.caption("The fixed paper reference uses all 59 bundled monthly returns, 0 bps additional "
+                   "cost, the 6.50% return screen, and the 3% reserve minimum with BIL/IEF eligible. "
+                   "A change is unavailable when either mix is infeasible.")
     else:
-        st.info("Largest weight change: N/A when either search has no feasible mix.")
+        st.caption("A change is unavailable when either mix is infeasible.")
     st.caption("The constrained search minimizes estimated volatility on a five-percentage-point "
                "grid of fully invested, long-only mixes that clear the after-cost return and reserve screens. "
                "Losses remain possible.")

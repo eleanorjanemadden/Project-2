@@ -1,0 +1,136 @@
+2026-11-23 20:25:46.013 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-23 20:25:46.644 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+
+ Default
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      87.24%                60.00%
+                                              IEF weight                25.00%                       5.55%                 0.00%
+                                              LQD weight                25.00%                       4.34%                 0.00%
+                                               VT weight                25.00%                       2.87%                40.00%
+                    Annual return before additional cost                 3.01%                       3.37%                 6.61%
+                     Annual return after additional cost                 3.01%                       3.37%                 6.61%
+                             Estimated annual volatility                 7.55%                       1.37%                 6.05%
+                                 Reserve-eligible weight                50.00%                      92.79%                60.00%
+                                   Fully invested (100%)                  Pass                        Pass                  Pass
+                                       Long-only weights                  Pass                        Pass                  Pass
+                      After-cost return screen (≥ 6.50%)                  Fail                        Fail                  Pass
+                            Reserve allocation (≥ 3.00%)                  Pass                        Pass                  Pass
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                  Pass
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved            Unresolved
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved            Unresolved
+[('Largest weight change (percentage points)', '0.00')]
+[]
+
+ Last 36
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      92.80%                85.00%
+                                              IEF weight                25.00%                       2.97%                 0.00%
+                                              LQD weight                25.00%                       2.53%                 0.00%
+                                               VT weight                25.00%                       1.69%                15.00%
+                    Annual return before additional cost                 8.13%                       4.61%                 6.75%
+                     Annual return after additional cost                 8.13%                       4.61%                 6.75%
+                             Estimated annual volatility                 5.88%                       0.61%                 1.79%
+                                 Reserve-eligible weight                50.00%                      95.78%                85.00%
+                                   Fully invested (100%)                  Pass                        Pass                  Pass
+                                       Long-only weights                  Pass                        Pass                  Pass
+                      After-cost return screen (≥ 6.50%)                  Pass                        Fail                  Pass
+                            Reserve allocation (≥ 3.00%)                  Pass                        Pass                  Pass
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                  Pass
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved            Unresolved
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved            Unresolved
+[('Largest weight change (percentage points)', '25.00')]
+[]
+
+ VT return down 1 pp
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      87.24%                55.00%
+                                              IEF weight                25.00%                       5.55%                 0.00%
+                                              LQD weight                25.00%                       4.34%                 0.00%
+                                               VT weight                25.00%                       2.87%                45.00%
+                    Annual return before additional cost                 2.76%                       3.34%                 6.53%
+                     Annual return after additional cost                 2.76%                       3.34%                 6.53%
+                             Estimated annual volatility                 7.55%                       1.37%                 6.79%
+                                 Reserve-eligible weight                50.00%                      92.79%                55.00%
+                                   Fully invested (100%)                  Pass                        Pass                  Pass
+                                       Long-only weights                  Pass                        Pass                  Pass
+                      After-cost return screen (≥ 6.50%)                  Fail                        Fail                  Pass
+                            Reserve allocation (≥ 3.00%)                  Pass                        Pass                  Pass
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                  Pass
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved            Unresolved
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved            Unresolved
+[('Largest weight change (percentage points)', '5.00')]
+[]
+
+ 15 bp
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      87.24%                55.00%
+                                              IEF weight                25.00%                       5.55%                 0.00%
+                                              LQD weight                25.00%                       4.34%                 0.00%
+                                               VT weight                25.00%                       2.87%                45.00%
+                    Annual return before additional cost                 3.01%                       3.37%                 6.98%
+                     Annual return after additional cost                 2.86%                       3.22%                 6.83%
+                             Estimated annual volatility                 7.55%                       1.37%                 6.79%
+                                 Reserve-eligible weight                50.00%                      92.79%                55.00%
+                                   Fully invested (100%)                  Pass                        Pass                  Pass
+                                       Long-only weights                  Pass                        Pass                  Pass
+                      After-cost return screen (≥ 6.50%)                  Fail                        Fail                  Pass
+                            Reserve allocation (≥ 3.00%)                  Pass                        Pass                  Pass
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                  Pass
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved            Unresolved
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved            Unresolved
+[('Largest weight change (percentage points)', '0.00')]
+[]
+Fixed original 60/40 after 15 bp: 6.46454130%
+
+ 15 bp, bills-only eligibility
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      87.24%                55.00%
+                                              IEF weight                25.00%                       5.55%                 0.00%
+                                              LQD weight                25.00%                       4.34%                 0.00%
+                                               VT weight                25.00%                       2.87%                45.00%
+                    Annual return before additional cost                 3.01%                       3.37%                 6.98%
+                     Annual return after additional cost                 2.86%                       3.22%                 6.83%
+                             Estimated annual volatility                 7.55%                       1.37%                 6.79%
+                                 Reserve-eligible weight                25.00%                      87.24%                55.00%
+                                   Fully invested (100%)                  Pass                        Pass                  Pass
+                                       Long-only weights                  Pass                        Pass                  Pass
+                      After-cost return screen (≥ 6.50%)                  Fail                        Fail                  Pass
+                            Reserve allocation (≥ 3.00%)                  Pass                        Pass                  Pass
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                  Pass
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved            Unresolved
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved            Unresolved
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved            Unresolved
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved            Unresolved
+[('Largest weight change (percentage points)', '0.00')]
+[]
+
+ 15 bp, 100% BIL reserve
+                                         Measure or rule Equal-weight baseline Inverse-volatility baseline Constrained portfolio
+                                              BIL weight                25.00%                      87.24%                   N/A
+                                              IEF weight                25.00%                       5.55%                   N/A
+                                              LQD weight                25.00%                       4.34%                   N/A
+                                               VT weight                25.00%                       2.87%                   N/A
+                    Annual return before additional cost                 3.01%                       3.37%                   N/A
+                     Annual return after additional cost                 2.86%                       3.22%                   N/A
+                             Estimated annual volatility                 7.55%                       1.37%                   N/A
+                                 Reserve-eligible weight                25.00%                      87.24%                   N/A
+                                   Fully invested (100%)                  Pass                        Pass                   N/A
+                                       Long-only weights                  Pass                        Pass                   N/A
+                      After-cost return screen (≥ 6.50%)                  Fail                        Fail                   N/A
+                          Reserve allocation (≥ 100.00%)                  Fail                        Fail                   N/A
+                  Project 2 universe (BIL, IEF, LQD, VT)                  Pass                        Pass                   N/A
+                Liquidity (≥ 90% within 5 business days)            Unresolved                  Unresolved                   N/A
+      Company issuer limit (≤ 8%, subject to exemptions)            Unresolved                  Unresolved                   N/A
+Live borrowing, short sales and derivatives restrictions            Unresolved                  Unresolved                   N/A
+       Rolling five-year net return objective (CPI + 4%)            Unresolved                  Unresolved                   N/A
+[]
+['No constrained mix meets the 6.50% after-cost screen and reserve minimum on the five-point grid. Stop the paper pilot and return to committee under the agreed settings.']
+Selectbox choices: [('Decision cutoff (saved vintage date)', ['2026-09-30', '2026-10-01', '2026-10-29'])]
