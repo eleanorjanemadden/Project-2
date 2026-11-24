@@ -1,4 +1,6 @@
-# Project 2 video scripts
+# Project 2 recording scripts
+
+These drafts are for recording. The final transcripts will reflect the recorded videos.
 
 ## Video 1 — How it changed
 

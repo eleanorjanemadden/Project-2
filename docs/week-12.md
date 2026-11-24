@@ -1,6 +1,6 @@
 # Week 12 studio record
 
-[Course handout](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-12/student-handout.md) · [Prework answer and claim test](validation-and-ai-use.md) · [Video outlines](video-outlines.md)
+[Course handout](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-12/student-handout.md) · [Prework answer and claim test](validation-and-ai-use.md) · [Recording scripts](video-outlines.md)
 
 ## Assistant reproducibility run — November 17, 2026
 
