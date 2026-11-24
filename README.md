@@ -2,7 +2,7 @@
 
 **AI disclosure.** I used ChatGPT through Codex to consolidate my lab work, verify reproducibility, test the stability claim, and draft the Week 12 materials. The analysis and decision are mine. Education, not investment advice. [Validation and AI use](docs/validation-and-ai-use.md)
 
-The fictional scholarship foundation’s committee is deciding whether to pilot a long-only ETF allocation. The draft recommendation is a paper pilot at 60% BIL / 40% VT, with live allocation deferred. [Decision memo](docs/decision-memo.md)
+The fictional scholarship foundation’s committee is deciding whether to pilot a long-only ETF allocation. I recommend a 90-day paper pilot at 60% BIL / 40% VT as the zero-additional-cost reference, with live allocation deferred. [Decision memo](docs/decision-memo.md)
 
 ## Install
 

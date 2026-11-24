@@ -29,3 +29,8 @@ Assistant validation run using the same frozen snapshot, 6.5% after-cost screen,
 The baseline weights stay fixed within each window. Equal weight fails the numerical screen at all four costs in the all-month window and passes at all four in the 36-month window. Inverse volatility fails at all four costs in both windows. [Executed tables with both baselines, weights, returns, reserve and verdicts](cost-stress-validation.txt)
 
 At 25 bps, the unchanged 60% BIL / 40% VT reference falls to 6.36% after cost. Reoptimization raises estimated risk and shifts the weights to clear the same hurdle. The largest cross-window weight difference is 25, 25, 30, and 35 percentage points at 0, 25, 50, and 100 bps, respectively. The cost stresses across both windows produced 45–85% BIL, 15–55% VT, 0% IEF, and 0–5% LQD. All four cross-window shifts exceed the five-point review condition and keep live adoption deferred. Stop the paper pilot and return to committee if the agreed reserve rule or after-cost return screen becomes infeasible. The decision remains a paper pilot with live allocation deferred. The rolling five-year net CPI + 4% objective remains unresolved. [Decision memo](../docs/decision-memo.md)
+
+
+## Additional 15 bp changed-input experiment
+
+With all 59 monthly returns and other inputs fixed, adding 15 bp of annual cost reduced the unchanged 60% BIL / 40% VT reference from 6.6145% to 6.4645%, below the 6.50% screen. Reoptimization selected 55% BIL / 45% VT at 6.8342% after cost and 6.7901% volatility. This supports a 90-day paper pilot, monthly monitoring by the portfolio analyst, and zero live funding. [Saved output](changed-input-cost.csv) · [Reconciliation](../docs/validation-and-ai-use.md#changed-input-experiment--additional-annual-cost)

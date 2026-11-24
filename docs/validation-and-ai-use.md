@@ -1,10 +1,10 @@
 # Validation and AI use
 
-ChatGPT (Codex) helped consolidate files, check execution, test the stability claim, and draft the handoff. The student owns the analysis and decision. Earlier Lab 17 and 19 AI disclosures are linked in the [evidence index](evidence-index.md).
+I used ChatGPT through Codex to consolidate files, check execution, test the stability claim, run the 15 bp experiment, and draft the written materials. Earlier Lab 17 and 19 AI disclosures are linked in the [evidence index](evidence-index.md).
 
 ## Week 12 prework
 
-An independent challenger can reject adoption even if the portfolio clears the 6.5% screen. The challenger can show that an annualized historical mean is insufficient evidence for the forward rolling five-year net objective, reproduce a window comparison that exceeds the decision's stability limit, or find that reserve eligibility or vintage timing cannot be verified. To keep use bounded, assign a monthly review to the portfolio analyst and return to committee if the screen or reserve rule becomes infeasible. [Week 12 handout model-risk reference](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-12/student-handout.md#local-model-risk-reference)
+I would give an independent challenger the price snapshot, assumptions and comparison tables. The challenger can restrict model use if historical arithmetic returns are the only evidence for a forward rolling five-year net objective, if a rerun exceeds the five-point weight limit, or if reserve eligibility or vintage timing cannot be verified. I would assign monthly monitoring to the portfolio analyst and return to the committee if the reserve rule and after-cost screen cannot both be satisfied. [Week 12 handout model-risk reference](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-12/student-handout.md#local-model-risk-reference)
 
 ## Riskiest claim and test
 
@@ -36,10 +36,41 @@ Codex added a GS10 monitoring panel that reads the saved Lab 17 ALFRED CSV liste
 
 The panel covers the three saved dates and supplies monitoring context for IEF and LQD. The ETF allocation and mandate screens are independent of GS10. The evidence establishes a historical availability boundary. A trading or allocation rule tied to GS10 and any effect on returns remain unvalidated.
 
-## Locked Changed-Input Record — unresolved
+## Changed-input experiment — additional annual cost
 
-The existing Lab 15 stresses provide comparison evidence. No Project 2 AI-off prediction, pre-run GitHub commit or locked execution was located. The Week 12 assistant test is recorded separately. For submission, independently select one material input, record its old/new values, predicted direction and decision effect with timestamp, commit the prediction to GitHub before execution, run with AI closed, then preserve and reconcile actual before/after output and the decision effect. [Lab 11 pattern](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-06/lab-11-proforma-what-if.md)
+**Prediction.** I expected a move from 0 to 15 bp of annual additional costs to make the unchanged 60% BIL / 40% VT portfolio miss the 6.50% screen. Its zero-cost headroom was about 11 bp. I expected the search to shift five percentage points from BIL into VT, where the estimated return was higher, and to produce a feasible mix with higher volatility and a lower eligible reserve weight. I expected to retain the paper pilot and defer live funding. [Timestamped AI-assisted prediction](changed-input-prediction.md) · Local pre-run commit `ffb2071`.
 
-## Partner cold run — pending
+**Execution.** With Codex I ran the Streamlit app through AppTest on November 23, 2026, using the frozen October 20 UTC price snapshot and all 59 monthly returns through September 2026. I changed only the annual additional cost widget. I held the 6.50% objective, 3% reserve minimum, BIL/IEF eligibility, five-point grid and all estimates fixed. An independent enumeration of the weight grid using pandas/NumPy means and covariance matched the app's weights, annualized risk and return in both runs. [Saved before/after output](../outputs/changed-input-cost.csv)
 
-Give your partner only the published README link. Have them run in their own folder without coaching and record command, first failure (or none), elapsed time, and result location. Swap roles. The assistant run is logged separately in the [Week 12 record](week-12.md).
+| Measure | Before, 0 bp | After, 15 bp | Change |
+|---|---:|---:|---:|
+| BIL | 60% | 55% | −5 pp |
+| VT | 40% | 45% | +5 pp |
+| IEF and LQD | 0% each | 0% each | 0 pp |
+| Estimated annual return before additional cost | 6.6145% | 6.9842% | +0.3696 pp |
+| Estimated annual return after additional cost | 6.6145% | 6.8342% | +0.2196 pp |
+| Estimated annual volatility | 6.0518% | 6.7901% | +0.7382 pp |
+| Eligible reserve | 60% | 55% | −5 pp |
+| 6.50% return and 3% reserve screens | Pass | Pass | Both optimized mixes feasible |
+
+**Reconciliation and committee effect.** At a fixed 60/40, the 15 bp fee reduces the return estimate to 6.4645%, missing the hurdle by 3.55 bp. The next five-point shift into VT adds 36.96 bp to the gross return estimate. That exceeds the 15 bp fee and leaves the reoptimized net estimate 21.96 bp above the original zero-cost estimate, with higher equity exposure and risk. The fixed-mix result and the reoptimized result answer different questions. I would retain 60/40 as the zero-cost paper reference and track 55/45 as the 15 bp scenario. I would keep live funding deferred because the fee sensitivity compounds the 25-point window sensitivity and the forward five-year net objective remains unproven. [Decision memo](decision-memo.md)
+
+**Locked Changed-Input Record status.** The prediction was saved before execution in local commit `ffb2071`. Codex helped draft the prediction and execute the run. The course requires a student-authored prediction, a pre-run GitHub commit, and an AI-off run. That submission evidence remains unresolved. [Project 2 requirements](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/projects/project-2-investment-management-application.md)
+
+## AI-output register
+
+These are my proposed dispositions based on the preserved checks.
+
+| Material ChatGPT/Codex suggestion or output | Supporting check | Proposed disposition |
+|---|---|---|
+| Use the October 20 snapshot to reproduce the allocation. | Compared the retained Yahoo responses with every row in the saved CSV and reproduced the full-precision allocations. The source audit found that a later Lab 15 CSV mixed vintages. [Run record](week-12.md) · [Validation](../outputs/portfolio-comparison-validation.txt) | **Accept.** Pair the frozen CSV with its matching raw responses. |
+| Challenge the stability of 60/40 by changing the return window. | Reran the same snapshot and rules on 59 and 36 returns. The maximum weight change was 25 pp against a 5 pp review limit. [Allocations](../outputs/allocations.csv) | **Accept the test and reject live stability.** Keep the result as a paper reference. |
+| Put equal weight and inverse volatility beside the optimized allocation. | Recomputed each portfolio independently. At zero additional cost equal weight passed only in the recent window, and inverse volatility failed the 6.50% screen in both. All three passed the assumed 3% reserve rule in both. [Comparison check](../outputs/portfolio-comparison-validation.txt) | **Accept.** The common inputs make the differences interpretable. Keep live mandate terms unresolved. |
+| Deduct a flat annual cost before applying the return screen. | Independently enumerated the grid at 0/25/50/100 bp and checked threshold, infeasibility and widget behavior. The 15 bp run also showed the reference failing while reoptimization remained feasible. [Cost checks](../outputs/cost-stress-validation.txt) · [15 bp output](../outputs/changed-input-cost.csv) | **Qualify.** Use the deduction as a sensitivity assumption. Actual trading and advisory costs still require a documented estimate. |
+| Use the saved ALFRED vintage to monitor GS10. | September 30 ended at August's 4.68%. October 1 and October 29 added September's 4.99% with no shared-month revisions. Changing vintages left ETF allocations unchanged. [Timing check](../outputs/gs10-validation.txt) | **Accept for dated monitoring.** Use the prior day's vintage for an opening decision unless release time is verified. A GS10 trading rule remains unvalidated. |
+| Use the automated cold run as reproducibility evidence. | A fresh clone reached healthy Streamlit in 22.2 seconds and passed 53 checks. [Cold-run transcript](../outputs/automated-cold-run.txt) | **Qualify.** This verifies automated execution. The uncoached partner check remains unresolved. |
+| Recommend a paper pilot, with a stop rule and a separate live-funding gate. | The default search passed, the window gap exceeded the review limit, and a 15 bp fee broke the unchanged reference's return screen. [Allocations](../outputs/allocations.csv) · [15 bp output](../outputs/changed-input-cost.csv) | **Accept as the proposed committee action.** Use quarterly governance and monthly monitoring while collecting forward return, cost and liquidity evidence. |
+
+## Independent review
+
+The automated cold run established that the published command can reach the result from a fresh clone. The partner record, including their command, first failure, elapsed time and result location, remains unresolved. [Week 12 studio record](week-12.md)

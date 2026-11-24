@@ -1,0 +1,4 @@
+scenario,annual_cost_bps,BIL,IEF,LQD,VT,gross_return_pct,net_return_pct,volatility_pct,eligible_reserve_pct,return_screen
+optimized,0,60.0,0.0,0.0,40.0,6.6145413,6.6145413,6.05184231,60.0,Pass
+optimized,15,55.0,0.0,0.0,45.0,6.98418247,6.83418247,6.79006554,55.0,Pass
+fixed reference,15,60,0,0,40,6.6145413,6.4645413,6.05184231,60.0,Fail
