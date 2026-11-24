@@ -1,8 +1,9 @@
-Lab 15 final audit
+Historical Lab 15 audit
+Current Project 2 submission status: docs/manifest.md
 Python 3.13.1
 26 validation checks passed.
 Streamlit server started successfully on 127.0.0.1:8515; health endpoint returned ok.
 Browser visual inspection unavailable: no connected browser. Actual Streamlit app tested with AppTest.
 Report links checked; source CSV preserved byte for byte.
 Original Lab 13 and Lab 14 work preserved.
-Remaining personal steps: review drafts, independent paper drawing/code explanation, real partner exchange, GitHub upload and Brightspace links.
+Personal steps listed at the time: review drafts, independent paper drawing/code explanation, real partner exchange, GitHub upload and Brightspace links.

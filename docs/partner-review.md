@@ -1,6 +1,6 @@
-# Partner review
+# AI-simulated partner review
 
-**Reviewer name:** Mrigna Goel
+An AI-simulated reviewer wrote the first-person account below around a documented fresh-clone run and app checks. The run logs are linked throughout. Independent human review remains unverified. [Original review record](https://github.com/eleanorjanemadden/Project-2/commit/9c46132)
 
 ## What I ran and where I found the result
 

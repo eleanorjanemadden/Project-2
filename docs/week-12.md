@@ -28,7 +28,7 @@ This list records the original studio findings.
 
 1. **Delivery and independent review.** Publish the single Project 2 folder to GitHub with instructional-team access. Replace unresolved manifest locations with verified links as artifacts become available. Capture the uncoached partner run and repair any failure it surfaces.
 2. **Submission evidence.** Complete the AI-off Locked Changed-Input Record with a pre-run GitHub commit. Review the paper-pilot recommendation and confirm monthly monitoring and the stop trigger. Rehearse and record the three distinct videos, correct their captions and transcripts, and complete the manifest.
-3. **Existing app coverage.** The preserved Lab 14 baselines and mandate verdicts are separate from the Lab 15 app, and its stress controls cover the window, return estimates and reserve constraints. The final Project 2 brief asks for both baseline verdicts in the app and an explicit cost stress. These remain submission gaps. Keep the GS10 timing evidence separate from any unverified trading claim.
+3. **Existing app coverage.** The preserved Lab 14 baselines and mandate verdicts are separate from the Lab 15 app, and its stress controls cover the window, return estimates and reserve constraints. The final Project 2 brief asks for both baseline verdicts in the app and an explicit cost stress. At the studio stage, both items were still open. The current app now includes both. Keep the GS10 timing evidence separate from any unverified trading claim.
 
 ## Committee answer and readiness reflection
 

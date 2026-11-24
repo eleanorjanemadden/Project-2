@@ -15,8 +15,7 @@ Project 2 is public on GitHub. The [evidence map](https://github.com/eleanorjane
 | Video 1 transcript | [transcript-video-1.txt](https://github.com/eleanorjanemadden/Project-2/blob/main/docs/transcript-video-1.txt) |
 | Video 2 transcript | [transcript-video-2.txt](https://github.com/eleanorjanemadden/Project-2/blob/main/docs/transcript-video-2.txt) |
 | Video 3 transcript | [transcript-video-3.txt](https://github.com/eleanorjanemadden/Project-2/blob/main/docs/transcript-video-3.txt) |
-| Deployed output | Optional — unresolved, no deployment planned |
-
+| Deployed output | Optional. No deployment submitted. |
 
 ## Video evidence index
 

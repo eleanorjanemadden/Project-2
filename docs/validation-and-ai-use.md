@@ -14,7 +14,7 @@ I would give an independent challenger the price snapshot, assumptions and compa
 
 ## Portfolio comparison validation
 
-Codex helped implement and test the Streamlit comparison. Equal-weight and inverse-volatility baselines use their formula weights. The constrained portfolio uses the existing minimum-volatility search. Each portfolio is evaluated with the same selected window, edited annual return estimates, annual covariance and reserve settings. The sensitivity section continues to compare the current constrained result with the original all-month constrained result.
+Codex helped implement and test the Streamlit comparison. Equal-weight and inverse-volatility baselines use their formula weights. The constrained portfolio uses the existing minimum-volatility search. Each portfolio is evaluated with the same selected window, edited annual return estimates, annual covariance and reserve settings. The sensitivity section compares the current constrained result with both the all-month allocation at current cost and, for the bundled snapshot, the fixed zero-cost paper reference.
 
 `python3 validate.py` independently recomputed the rendered weights, return, volatility, reserve and rule verdicts from the monthly prices using pandas and NumPy. Streamlit checks covered default inputs, the 36-month switch, a return override, an eligibility edit, a 100% reserve threshold, the upload path, Meridian and infeasibility. The 25.00-percentage-point window sensitivity was reproduced. [Executed check log and rendered tables](../outputs/portfolio-comparison-validation.txt)
 
@@ -30,7 +30,7 @@ The illustrative costs changed the selected weights. The paper-pilot recommendat
 
 ### Sensitivity display follow-up
 
-The partner review found that the same-cost comparator could be mistaken for the fixed zero-cost paper reference. The app now shows both comparisons on the bundled snapshot. Changing only cost to 15 bp results in 0.00 percentage points versus the all-month allocation at 15 bp and 5.00 percentage points versus the fixed 60/40 paper reference at 0 bp. Both changes are unavailable when the current search is infeasible. [Partner review](partner-review.md#follow-up-on-the-sensitivity-display) · [Validation code](../validate.py)
+The AI-simulated partner review found that the same-cost comparator could be mistaken for the fixed zero-cost paper reference. The app now shows both comparisons on the bundled snapshot. Changing only cost to 15 bp results in 0.00 percentage points versus the all-month allocation at 15 bp and 5.00 percentage points versus the fixed 60/40 paper reference at 0 bp. Both changes are unavailable when the current search is infeasible. [Partner review](partner-review.md#follow-up-on-the-sensitivity-display) · [Validation code](../validate.py)
 
 ## GS10 point-in-time monitoring validation
 
@@ -59,7 +59,7 @@ The panel covers the three saved dates and supplies monitoring context for IEF a
 
 **Reconciliation and committee effect.** At a fixed 60/40, the 15 bp fee reduces the return estimate to 6.4645%, missing the hurdle by 3.55 bp. The next five-point shift into VT adds 36.96 bp to the gross return estimate. That exceeds the 15 bp fee and leaves the reoptimized net estimate 21.96 bp above the original zero-cost estimate, with higher equity exposure and risk. The fixed-mix result and the reoptimized result answer different questions. I would retain 60/40 as the zero-cost paper reference and track 55/45 as the 15 bp scenario. I would keep live funding deferred because the fee sensitivity compounds the 25-point window sensitivity and the forward five-year net objective remains unproven. [Decision memo](decision-memo.md)
 
-**Locked Changed-Input Record status.** The prediction was saved in commit `ffb2071` before execution. The commit was local at the time of the run. 
+**Locked Changed-Input Record status.** The prediction was saved in commit `ffb2071` before execution. The commit was local at the time of the run. Codex assisted with both the prediction and execution. The required student-authored, AI-off record with a GitHub commit before execution remains outstanding.
 
 ## AI-output register
 
@@ -73,9 +73,9 @@ I used ChatGPT through Codex for the entries below. Dates identify the event doc
 | Deduct a flat annual cost before applying the return screen. | AI-output date unavailable. Cost stress and validation log committed November 19, 2026 (`59bac78`). | Independently enumerated the grid at 0/25/50/100 bp and checked threshold, infeasibility and widget behavior. The 15 bp run also showed the reference failing while reoptimization remained feasible. [Cost checks](../outputs/cost-stress-validation.txt) · [15 bp output](../outputs/changed-input-cost.csv) | **Qualify.** Use the deduction as a sensitivity assumption. Actual trading and advisory costs still require a documented estimate. |
 | Predict that a 15 bp fee will make the fixed 60/40 mix fail and shift the optimized allocation five points toward VT. | November 23, 2026 (EST). Prediction committed before the assisted run in `ffb2071`. | Streamlit AppTest and an independent pandas/NumPy grid calculation agreed. The fixed mix fell to 6.4645%, and the reoptimized mix passed at 6.8342% with higher volatility. [Prediction](changed-input-prediction.md) · [Saved output](../outputs/changed-input-cost.csv) | **Accept as an illustrative sensitivity test.** The fee is an assumption. The pilot recommendation stands. |
 | Use the saved ALFRED vintage to monitor GS10. | AI-output date unavailable. Panel and validation log committed November 19, 2026 (`2832a67`). | September 30 ended at August's 4.68%. October 1 and October 29 added September's 4.99% with no shared-month revisions. Changing vintages left ETF allocations unchanged. [Timing check](../outputs/gs10-validation.txt) | **Accept for dated monitoring.** Use the prior day's vintage for an opening decision unless release time is verified. A GS10 trading rule remains unvalidated. |
-| Use the automated cold run as reproducibility evidence. | AI-output date unavailable. Automated run logged November 19, 2026. | A fresh clone reached healthy Streamlit in 22.2 seconds and passed 53 checks. [Cold-run transcript](../outputs/automated-cold-run.txt) | **Qualify.** This verifies automated execution. The partner review is recorded.|
+| Use the automated cold run as reproducibility evidence. | AI-output date unavailable. Automated run logged November 19, 2026. | A fresh clone reached healthy Streamlit in 22.2 seconds and passed 53 checks. [Cold-run transcript](../outputs/automated-cold-run.txt) | **Qualify.** This verifies automated execution. The separate partner-review write-up was AI-simulated. |
 | Recommend a paper pilot, with a stop rule and a separate live-funding gate. | Original AI-output date unavailable. The 90-day pilot draft was committed November 23, 2026 (`c806543`). | The default search passed, the window gap exceeded the review limit, and a 15 bp fee broke the unchanged reference's return screen. [Allocations](../outputs/allocations.csv) · [15 bp output](../outputs/changed-input-cost.csv) | **Accept as the proposed committee action.** Use quarterly governance and monthly monitoring while collecting forward return, cost and liquidity evidence. |
 
-## Independent review
+## Fresh-clone and partner-review evidence
 
-The automated cold run established that the published command can reach the result from a fresh clone. The  partner review (partner-review.md) records the command, first failure, elapsed time and result location for a separate fresh-clone run. 
+The automated cold run established that the published command can reach the result from a fresh clone. The separate fresh-clone run has logs for setup, elapsed time, the first probe failure, and the result location. Codex wrote the simulated reviewer account. Independent human review remains unverified. [AI-simulated partner review](partner-review.md)
