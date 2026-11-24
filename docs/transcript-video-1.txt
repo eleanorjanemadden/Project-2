@@ -1,0 +1,53 @@
+Video 1 How the system and decision changed
+https://youtu.be/F8yuSqVVWOA
+
+Source: captions 1.srt. Paragraph timestamps are approximate SRT cue starts.
+Punctuation and clear caption errors were edited for readability. Brackets
+flag uncertain wording or caption discrepancies for audio review.
+
+[00:00] In this video, I'm going to describe how the system and decision
+changed. This project is for education, not investment advice.
+
+[00:10] I began with the Meridian mandate checker and developed a portfolio
+process for a fictional scholarship foundation. The foundation has $100 million
+and pays $750,000 each quarter. Four payments total $3 million establishing the
+3% reserve floor. The universe is BIL, IEF, LQD, and VT.
+
+[00:35] Initially, the full sample search selected 60% BIL and 40% VT. It
+cleared the 6.5% estimated return screen with estimated annual volatility of
+about “650%” [1], which we can see in this app.
+
+[00:59] Codex suggested the—challenging the allocation here by changing the
+estimation window. I accepted that suggestion as a test rather than accepting
+the initial allocation as stable. With the same frozen data set, return hurdle,
+reserve settings, and search grid, changing from 59 monthly returns to the most
+recent 36 moved VT from 40% to 15%.
+
+[01:32] Both portfolios passed the numerical screen, but the maximum allocation
+change was 25 percentage points, which exceeded my proposed five-point review
+limit. This window comparison changes estimated returns, volatility and
+correlations together. However, it does not isolate the effect of the expected
+returns alone.
+
+[01:53] My disposition was to accept the test and reject the claim that the
+initial allocation was sufficiently stable for live adoption. I retained “64”
+[2] as a paper reference and recommended a 90-day pilot with zero live capital.
+Cost testing reinforced that situation. A 15 basis point additional annual cost
+makes the unchanged reference miss the return screen. Reoptimization restores
+feasibility by adding—by adding equity exposure and increasing estimated risk.
+
+[02:29] And the key lesson is that successful optimization does not establish
+suitable inputs or a dependable investment process. A feasible answer can
+conceal sensitivity to assumptions. I distinguish code checks and AI-assisted
+experiments from independent review. The evidence for each activity is
+documented separately. My final position is a bounded paper pilot with live
+funding deferred until the evidence and implementation conditions improve.
+
+Review notes
+
+[1] 00:47–00:54. The SRT says “650%.” The saved annual volatility is 6.0518%
+(about 6.05%). Check the spoken figure.
+[2] 02:00. The SRT says “64.” The documented paper reference is 60% BIL / 40%
+VT. Check the spoken wording.
+The captions include an education disclaimer. They do not show the full
+required opening AI-use and ownership statement. Check the recording.

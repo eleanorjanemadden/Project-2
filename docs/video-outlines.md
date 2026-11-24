@@ -1,8 +1,10 @@
 # Project 2 recording scripts
 
-These drafts are for recording. The final transcripts will reflect the recorded videos.
+These are the preparation scripts. The [submission manifest](manifest.md) indexes the linked recordings and their caption-derived transcripts.
 
 ## Video 1 — How it changed
+
+[Video 1 How the system and decision changed](https://youtu.be/F8yuSqVVWOA) · [Transcript](transcript-video-1.txt)
 
 I used ChatGPT through Codex to package and reproduce my work, test allocation sensitivity, and draft these materials. The analysis and decision are mine. Education, not investment advice.
 
@@ -11,6 +13,8 @@ I started with the Meridian mandate checker. It taught me to turn a client reque
 My first full-sample result was 60% BIL and 40% VT. Codex suggested checking whether it survived a shorter estimation window. I held the price snapshot and mandate rules fixed and changed from 59 monthly returns to 36. VT fell from 40% to 15%, with BIL rising by the same 25 points. Both mixes passed the numerical screen, but their difference was five times my five-point review limit. I accepted the test and withdrew the case for live adoption. I kept the 60/40 mix as a paper reference because it gives the committee a concrete allocation to monitor under different assumptions. [Mandate](../PROJECT2-MANDATE.md) · [AI-output register](validation-and-ai-use.md#ai-output-register)
 
 ## Video 2 — Technical walkthrough
+
+[Video 2 Code and validation walkthrough](https://youtu.be/aWG3P416M40) · [Transcript](transcript-video-2.txt)
 
 I used ChatGPT through Codex to reproduce the app, check the optimizer and draft these materials. The analysis and decision are mine. Education, not investment advice.
 
@@ -21,6 +25,8 @@ The comparison table applies the same screens to equal weight and inverse volati
 The GS10 panel uses saved vintages. On September 30 the latest visible month was August at 4.68%. The October 1 vintage first shows September at 4.99% among the saved cutoffs. That panel gives me timing context for the bond sleeves. The optimizer uses ETF inputs. [README](../README.md) · [15 bp experiment](validation-and-ai-use.md#changed-input-experiment--additional-annual-cost) · [GS10 validation](../outputs/gs10-validation.txt)
 
 ## Video 3 — Committee presentation
+
+[Video 3 Committee recommendation](https://youtu.be/Ll0ZDmA_yuU) · [Transcript](transcript-video-3.txt)
 
 *Opening visual: the running app on the default portfolio comparison.*
 

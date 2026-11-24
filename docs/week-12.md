@@ -18,7 +18,13 @@ The app now shows the original stress range, the broader illustrative cost-stres
 
 The [simulated partner review](partner-review.md) records the fresh-clone setup and app checks, with preserved logs. Independent human review and rehearsal remain unverified.
 
+## Submission status
+
+The public repository, three recordings, and caption-derived transcripts are linked in the [submission manifest](manifest.md). The current app includes both baselines with verdicts and an explicit cost stress. The student-authored AI-off Locked Changed-Input Record remains unresolved.
+
 ## Historical studio must-fix list
+
+This list records the original studio findings.
 
 1. **Delivery and independent review.** Publish the single Project 2 folder to GitHub with instructional-team access. Replace unresolved manifest locations with verified links as artifacts become available. Capture the uncoached partner run and repair any failure it surfaces.
 2. **Submission evidence.** Complete the AI-off Locked Changed-Input Record with a pre-run GitHub commit. Review the paper-pilot recommendation and confirm monthly monitoring and the stop trigger. Rehearse and record the three distinct videos, correct their captions and transcripts, and complete the manifest.

@@ -44,7 +44,7 @@ The GS10 checks reproduced August 2026 at 4.68% for the September 30 vintage and
 
 My skeptical committee question is **“If a 15 bp cost makes the reference miss the hurdle and the equity weight moves 25 points when you shorten the history, what after-cost forward evidence would persuade you to risk scholarship capital?”** I would support the 90-day paper pilot with zero live capital, monthly ownership by the portfolio analyst, and a committee review at day 90. I would record reserve coverage and agreed cost assumptions at every review. If no allocation jointly clears the reserve and return screens, I would stop and refer the result to the committee. A stress shift above five points would continue to block live funding even when an allocation is feasible. Before a funded vote I would want verified eligibility and liquidity, a documented cost allowance, and forward evidence for the rolling net objective.
 
-## What must be fixed before submission
+## Findings at the time of review
 
 The app, memo, and saved output agree on the zero-cost reference, the stress ranges, and deferring live funding. The memo adds the operating schedule. The validation record distinguishes the assisted run from the required student-authored prediction and AI-off execution. I would keep that distinction in the manifest, complete the course's Locked Changed-Input Record, and add the three video URLs, timing details, and corrected transcripts. I would also clarify the moving sensitivity comparator and update the studio notes so that the older checklist's baseline and cost items are clearly historical.
 
@@ -52,3 +52,5 @@ The app, memo, and saved output agree on the zero-cost reference, the stress ran
 ## Follow-up on the sensitivity display
 
 The original observations above apply to the reviewed commit. The app now shows the same-cost comparison and, when using the bundled snapshot, a separate comparison against the fixed zero-cost paper reference. At 15 bp the validator checks for 0.00 and 5.00 percentage points respectively. An infeasible current mix shows N/A for both. [README](../README.md#run) · [Validation code](../validate.py)
+
+The [submission manifest](manifest.md) now links the three recordings, cue timestamps, and transcripts. The [Week 12 studio record](week-12.md) distinguishes current status from the original checklist. The student-authored AI-off Locked Changed-Input Record remains unresolved.

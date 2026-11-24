@@ -1,0 +1,72 @@
+Video 3 Committee recommendation
+https://youtu.be/Ll0ZDmA_yuU
+
+Source: captions 3.srt. Paragraph timestamps are approximate SRT cue starts.
+Punctuation and clear caption errors were edited for readability. Brackets
+flag uncertain wording or caption discrepancies for audio review.
+
+[00:00] Finally, I am going to deliver my committee recommendation [unclear
+phrase: “as review”]. The Fictional Scholarship Foundation has $100 million, a
+7-year horizon, and quarterly scholarship payments of $750,000. 12 months of
+payments total $3 million, setting the reserve floor at 3%. The actual
+objective is CPI plus 4% annually over rolling 5-year periods, net of costs.
+Assuming 2.5% inflation gives the app a 6.5% numerical hurdle. Passing the
+annual estimate screen is only preliminary evidence.
+
+[00:37] Now looking at the results and alternatives on the frozen data through
+September 2026, the constrained reference estimates 6.61% annual return and
+6.05% volatility. Equal weight estimates 3.01% and inverse volatility 3.37%.
+Both miss the return screen on the full sample. However, shortening the window
+makes equal weight pass. This shows why the comparison depends on the
+estimation basis. The constrained process is useful for making the trade-offs
+explicit, but its in-sample selection does not establish superior future
+performance.
+
+[01:19] Now, let's see why funding is deferred. I'm going to toggle last 36
+months and also increase the basis points to 15. This moves [1] the constrained
+portfolio from 40% VT to 15% VT, a 25 point shift. Separately, 15 basis points
+of annual additional cost makes the original reference miss the hurdle. The
+optimizer responds by raising equity exposure to 45% and increasing volatility.
+Across the original window and return stresses, VT ranged from 15 to 45%.
+Across the broader illustrative cost scenarios and both windows, it ranged from
+15 to 55% with BIL from 45 to 85% and LQD up to 5%. These are results tested
+across portfolios, not a menu of independently interchangeable rates [2].
+
+[02:26] Now, let's look more into the scope and limitations. I mentioned this
+in my previous video, but before live implementation, the committee must
+perform [3] reserve eligibility, including whether IEF's fluctuating principal
+is acceptable and verify liquidity, issuer treatment, and actual costs. The
+pilot therefore is a test of the process and its governance, not necessarily a
+claim that the investment objective has been demonstrated.
+
+[02:54] And so, as my closing ask, the portfolio analyst will drive the pilot
+and record hypothetical weights, turnover, costs, reserve coverage, and
+performance against the benchmark and two baselines at each monthly review. The
+analyst will rerun the window, return, cost, and reserve scenarios and present
+the evidence to the committee on day 90.
+
+[03:19] If no allocation satisfies both the agreed reserve rule and after-cost
+return screen, suspend the pilot and return immediately to committee. A stress-
+driven weight shift above 5 percentage points keeps live funding deferred. So
+we can see this in my decision as well but I'll continue to summarize.
+Reconsidering requires verified implementation terms documentation costs [4],
+credible forward evidence for the net objective and acceptable allocation
+stability. Ninety days cannot establish a 5-year return record and completing
+the pilot does not automatically authorize funding.
+
+[04:03] My request today is approval of the 90-day paper pilot, designation of
+its monitoring owner, and no allocation of live scholarship capital. Thank you.
+
+Review notes
+
+[1] 01:25–01:56. The captions mention both controls before describing the
+25-point shift. The saved window-only result at 0 bp is 15% VT. The separate
+full-window 15 bp run selects 45% VT. Check the screen sequence and spoken
+attribution.
+[2] 02:19–02:23. The SRT says “rates.” The saved ranges are portfolio weights.
+[3] 02:34–02:40. “Perform reserve eligibility” is unclear. The memo calls for
+confirming reserve eligibility, including how the committee treats IEF.
+[4] 03:45–03:51. “Documentation costs” is unclear. The memo calls for
+documented costs.
+The captions do not show the required opening AI-use, ownership, and education
+statements. Check the recording, including the live-app opening.

@@ -1,0 +1,78 @@
+Video 2 Code and validation walkthrough
+https://youtu.be/aWG3P416M40
+
+Source: captions 2.srt. Paragraph timestamps are approximate SRT cue starts.
+Punctuation and clear caption errors were edited for readability. Brackets
+flag uncertain wording or caption discrepancies for audio review.
+
+[00:00] In this video, I'm going to do my code and validation walkthrough.
+First, let me discuss my inputs. Here I have my prices.csv file and the
+price_download.txt.
+
+[00:13] The input contains 60 monthly adjusted prices from October 2021 through
+September 2026, producing 59 monthly returns. The snapshot was retrieved on
+October 20th. That retrieval date is different from the final observation
+month. The repository preserves the Yahoo responses and download record.
+Validation compares every submitted price with its retained source response,
+helping prevent an accidental mixture of different downloads. Now looking into
+return risk and logic. Here is my portfolio Python file.
+
+[00:47] First, in estimate_from_csv. Let me locate the function. Adjacent
+adjusted prices produce simple monthly returns. Current price divided by
+previous price minus one. The annual return estimate is the monthly arithmetic
+mean times 12. Annual volatility is the same—is the sample monthly standard
+deviation times the square root of 12. Correlations and volatilities use the
+same selected window. Covariance combines each correlation with the two annual
+volatilities. Portfolio return is the weighted sum of asset returns. Portfolio
+variance sums all weighted covariance pairs. Taking its square root gives
+volatility. These are historical arithmetic estimates. They're not compound
+growth rates or proof of the foundation's future rolling 5-year objective.
+
+[01:42] Now looking into the search and baselines functions, we see that the
+search divides the portfolio into 20 units each worth 5 percentage points with
+four assets. It evaluates 1,771 fully invested long-only combinations.
+
+[02:03] It excludes mixes that miss the after-cost return screen or reserve
+minimum and selects the remaining mix with the lowest estimated volatility.
+Additionally, equal weight assigns 25% to each asset etc. And going over to the
+app here, it evaluates all three portfolios with common inputs and reports
+rule-specific verdicts.
+
+[02:28] Now let's look at the changed-cost demonstration where I'm going to
+reference this CSV file. I only changed the additional annual cost from 0 to 15
+basis points. The unchanged 60/40 portfolio's estimate falls from this number
+to about 6.46%, below the 6.5 screen. When it's reoptimized at this level—one
+moment—when it's optimized, it selects 50—55% BIL [1] and 45% VT. Its
+after-cost estimate is [value absent from captions], with volatility increasing
+[2]. The higher after-cost estimate comes from the changing allocation. The fee
+itself does not improve returns.
+
+[03:31] Now let's look at validation and failure handling which is executed
+through this Python file. Validation independently recomputes estimates and
+enumerates the grid rather than relying on the app's displayed answer. It also
+checks source price matches, invalid data, widget changes, and infeasibility.
+
+[03:54] Now, finally, let's go back to the app and look at point-in-time. Here
+we have the GS10 point-in-time monitoring panel that reads saved ALFRED
+vintages. At the September 13th [3] cutoff, the latest observation is August at
+4.68% [unclear word]. The October 1st vintage contains September at 4.49% ...
+4.99% [4]. The observation is not its publication timestamp. Date- level
+vintages do not establish availability before a same-day trade and so GS10 is
+monitoring monitoring context for bond exposure. It doesn't drive this
+optimizer. And as a closing note, overall the system reproduces the numerical
+result, but estimate instability, implementation assumptions, and the unproven
+rolling net objective limit its use to a paper pilot.
+
+Review notes
+
+[1] 03:11. The SRT reads “50 55% VIL.” The saved 15 bp mix is 55% BIL / 45% VT.
+Check the apparent false start.
+[2] 02:46–03:24. The speaker points to a number and the captions omit the new
+estimate. The saved 60/40 estimate goes from 6.6145% to 6.4645%, and the
+reoptimized estimate is 6.8342% with 6.7901% volatility.
+[3] 04:10. The SRT says September 13. The saved cutoff for August at 4.68% is
+September 30.
+[4] 04:18–04:21. Both readings appear in the captions. The October 1 vintage
+shows September at 4.99%.
+The captions do not show the required opening AI-use, ownership, and education
+statements. Check the recording.

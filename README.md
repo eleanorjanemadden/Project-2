@@ -34,10 +34,18 @@ Run `python validate.py` for calculation checks and Streamlit interaction tests.
 
 The command writes [allocations.csv](outputs/allocations.csv), full-precision estimates in `outputs/results.json`, and mandate-checker output in `outputs/mandate_search_run.txt`. [Visible executed result](outputs/week-12-result.md)
 
+## Submission recordings
+
+- [Video 1 How the system and decision changed](https://youtu.be/F8yuSqVVWOA) · [Transcript](docs/transcript-video-1.txt)
+- [Video 2 Code and validation walkthrough](https://youtu.be/aWG3P416M40) · [Transcript](docs/transcript-video-2.txt)
+- [Video 3 Committee recommendation](https://youtu.be/Ll0ZDmA_yuU) · [Transcript](docs/transcript-video-3.txt)
+
+[Submission manifest and evidence timestamps](docs/manifest.md)
+
 ## Files and limitations
 
 - [Mandate](PROJECT2-MANDATE.md), [Streamlit app](app.py), [portfolio engine](portfolio.py), and [frozen prices](prices.csv). The saved Yahoo adjusted monthly closes were retrieved October 20, 2026 UTC and cover October 2021–September 2026. [Download record](data/price_download.txt)
 - [Labs 13–19 evidence map](docs/evidence-index.md). The Lab 14 verdicts are supporting evidence. The GS10 vintage check and the NVDA panel are standalone supporting work. The optimizer uses ETF prices and its sidebar inputs.
-- [Week 12 audit and must-fix list](docs/week-12.md), [draft manifest](docs/manifest.md), and [recording scripts](docs/video-outlines.md).
+- [Week 12 studio record](docs/week-12.md) and [recording scripts](docs/video-outlines.md).
 
 The historical annualized return screen and minimum-volatility search support the paper pilot. Live adoption requires stable weights, verified reserve terms, forward return evidence and an explicit cost allowance.
