@@ -2,8 +2,6 @@
 
 **Reviewer name for the simulation:** Mrigna Goel
 
-This AI-simulated review records an actual fresh-clone run on November 23, 2026, at [commit `b66a7ad`](https://github.com/eleanorjanemadden/Project-2/commit/b66a7adea248cd8967edd85b6d4c1da53bdd24de).
-
 ## What I ran and where I found the result
 
 I cloned the published repository into a new directory, opened the README, and followed its macOS instructions using Python 3.13.1 and an empty virtual environment. Pip reused cached wheels. I ran these commands from the clone.

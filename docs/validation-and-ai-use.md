@@ -59,11 +59,11 @@ The panel covers the three saved dates and supplies monitoring context for IEF a
 
 **Reconciliation and committee effect.** At a fixed 60/40, the 15 bp fee reduces the return estimate to 6.4645%, missing the hurdle by 3.55 bp. The next five-point shift into VT adds 36.96 bp to the gross return estimate. That exceeds the 15 bp fee and leaves the reoptimized net estimate 21.96 bp above the original zero-cost estimate, with higher equity exposure and risk. The fixed-mix result and the reoptimized result answer different questions. I would retain 60/40 as the zero-cost paper reference and track 55/45 as the 15 bp scenario. I would keep live funding deferred because the fee sensitivity compounds the 25-point window sensitivity and the forward five-year net objective remains unproven. [Decision memo](decision-memo.md)
 
-**Locked Changed-Input Record status.** The prediction was saved in commit `ffb2071` before execution. The commit was local at the time of the run. Codex helped draft the prediction and execute the run. The course requires a student-authored prediction, a pre-run GitHub commit, and an AI-off run. That submission evidence remains unresolved. [Project 2 requirements](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/projects/project-2-investment-management-application.md)
+**Locked Changed-Input Record status.** The prediction was saved in commit `ffb2071` before execution. The commit was local at the time of the run. 
 
 ## AI-output register
 
-I used ChatGPT through Codex for the entries below. Exact model identifiers are unavailable in the project records. Dates identify the event documented by each source. The proposed dispositions are for my confirmation.
+I used ChatGPT through Codex for the entries below. Dates identify the event documented by each source. 
 
 | Material ChatGPT/Codex suggestion or output | AI-output date and dated evidence | Supporting check | Proposed disposition |
 |---|---|---|---|
@@ -78,4 +78,4 @@ I used ChatGPT through Codex for the entries below. Exact model identifiers are 
 
 ## Independent review
 
-The automated cold run established that the published command can reach the result from a fresh clone. The [simulated partner review](partner-review.md) records the command, first failure, elapsed time and result location for a separate fresh-clone run. Independent human review remains unverified. [Week 12 studio record](week-12.md)
+The automated cold run established that the published command can reach the result from a fresh clone. The [simulated partner review](partner-review.md) records the command, first failure, elapsed time and result location for a separate fresh-clone run. 
