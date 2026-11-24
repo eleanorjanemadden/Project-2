@@ -1,0 +1,260 @@
+1
+00:00:00,240 --> 00:00:05,759
+In this video, I'm going to describe how
+
+2
+00:00:02,560 --> 00:00:08,720
+the system and decision changed. This
+
+3
+00:00:05,759 --> 00:00:10,320
+project is for education, not investment
+
+4
+00:00:08,720 --> 00:00:12,160
+advice.
+
+5
+00:00:10,320 --> 00:00:15,360
+I began with the Meridian mandate
+
+6
+00:00:12,160 --> 00:00:18,320
+checker and developed a portfolio
+
+7
+00:00:15,360 --> 00:00:21,039
+process for a fictional scholarship
+
+8
+00:00:18,320 --> 00:00:24,000
+foundation. The foundation has $100
+
+9
+00:00:21,039 --> 00:00:25,760
+million and pays $750,000
+
+10
+00:00:24,000 --> 00:00:28,080
+each quarter.
+
+11
+00:00:25,760 --> 00:00:30,560
+Four payments total $3 million
+
+12
+00:00:28,080 --> 00:00:35,760
+establishing the 3% reserve floor. The
+
+13
+00:00:30,560 --> 00:00:39,040
+universe is BIL, IEF, LQD, and VT.
+
+14
+00:00:35,760 --> 00:00:43,840
+Initially, the full sample search
+
+15
+00:00:39,040 --> 00:00:47,760
+selected 60% BIL and 40% VT. It cleared
+
+16
+00:00:43,840 --> 00:00:50,960
+the 6.5% estimated return screen with
+
+17
+00:00:47,760 --> 00:00:53,960
+estimated annual volatility of about
+
+18
+00:00:50,960 --> 00:00:53,960
+650%.
+
+19
+00:00:54,079 --> 00:00:59,760
+which we can see
+
+20
+00:00:56,559 --> 00:01:03,320
+in this app.
+
+21
+00:00:59,760 --> 00:01:03,320
+Codeex suggested
+
+22
+00:01:05,280 --> 00:01:12,080
+the challenging the allocation
+
+23
+00:01:09,200 --> 00:01:14,479
+here
+
+24
+00:01:12,080 --> 00:01:16,320
+by changing the estimation window. I
+
+25
+00:01:14,479 --> 00:01:18,479
+accepted that suggestion as a test
+
+26
+00:01:16,320 --> 00:01:21,040
+rather than accepting the initial
+
+27
+00:01:18,479 --> 00:01:23,200
+allocation as stable. With the same
+
+28
+00:01:21,040 --> 00:01:25,680
+frozen data set, return hurdle, reserve
+
+29
+00:01:23,200 --> 00:01:28,240
+settings, and search grid. Changing from
+
+30
+00:01:25,680 --> 00:01:32,400
+59 monthly returns to the most recent 36
+
+31
+00:01:28,240 --> 00:01:34,240
+moved VT from 40% to 15%.
+
+32
+00:01:32,400 --> 00:01:35,840
+Both portfolios passed the numerical
+
+33
+00:01:34,240 --> 00:01:38,079
+screen, but the maximum allocation
+
+34
+00:01:35,840 --> 00:01:40,799
+change was 25 percentage points, which
+
+35
+00:01:38,079 --> 00:01:43,360
+exceeded my proposed 5point review
+
+36
+00:01:40,799 --> 00:01:45,200
+limit. This window comparison changes
+
+37
+00:01:43,360 --> 00:01:47,280
+estimated returns, volatility and
+
+38
+00:01:45,200 --> 00:01:49,439
+correlations together. However, it does
+
+39
+00:01:47,280 --> 00:01:53,240
+not isolate the effect of the expected
+
+40
+00:01:49,439 --> 00:01:53,240
+returns alone.
+
+41
+00:01:53,360 --> 00:01:58,399
+My disposition was to accept the test
+
+42
+00:01:56,560 --> 00:02:00,479
+and reject the claim that the initial
+
+43
+00:01:58,399 --> 00:02:05,680
+allocation was sufficiently stable for
+
+44
+00:02:00,479 --> 00:02:08,000
+live adoption. I retained 64 as a paper
+
+45
+00:02:05,680 --> 00:02:11,039
+reference and recommended a 90-day pilot
+
+46
+00:02:08,000 --> 00:02:14,239
+pilot with zero life capital. Cost
+
+47
+00:02:11,039 --> 00:02:17,040
+testing reinforced that situation.
+
+48
+00:02:14,239 --> 00:02:18,879
+A 15 basis point additional annual cost
+
+49
+00:02:17,040 --> 00:02:21,440
+makes the unchanged reference miss the
+
+50
+00:02:18,879 --> 00:02:24,400
+return screen. Reoptimization restores
+
+51
+00:02:21,440 --> 00:02:28,080
+feasibility by adding qu by adding
+
+52
+00:02:24,400 --> 00:02:29,920
+equity exposure and increasing estimated
+
+53
+00:02:28,080 --> 00:02:32,239
+risk.
+
+54
+00:02:29,920 --> 00:02:34,239
+And the key lesson is that successful
+
+55
+00:02:32,239 --> 00:02:36,000
+optimization does not establish suitable
+
+56
+00:02:34,239 --> 00:02:38,319
+inputs or a dependable investment
+
+57
+00:02:36,000 --> 00:02:40,800
+process. A feasible answer can conceal
+
+58
+00:02:38,319 --> 00:02:43,040
+sensitivity to assumptions. I
+
+59
+00:02:40,800 --> 00:02:46,959
+distinguish code checks and AI assisted
+
+60
+00:02:43,040 --> 00:02:48,720
+experiments from independent review.
+
+61
+00:02:46,959 --> 00:02:51,680
+The evidence for each activity is
+
+62
+00:02:48,720 --> 00:02:53,840
+documented separately. My final position
+
+63
+00:02:51,680 --> 00:02:56,000
+is a bounded paper pilot with live
+
+64
+00:02:53,840 --> 00:03:00,319
+funding deferred until the evidence and
+
+65
+00:02:56,000 --> 00:03:00,319
+implementation conditions improve.
+

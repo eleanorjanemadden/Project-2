@@ -1,0 +1,364 @@
+1
+00:00:00,960 --> 00:00:05,520
+Finally, I am going to deliver my
+
+2
+00:00:03,520 --> 00:00:07,759
+committee recommendation
+
+3
+00:00:05,520 --> 00:00:10,880
+as review. The F Fictional Scholarship
+
+4
+00:00:07,759 --> 00:00:12,639
+Foundation has $100 million, a 7-year
+
+5
+00:00:10,880 --> 00:00:16,000
+horizon, and quarterly scholarship
+
+6
+00:00:12,639 --> 00:00:18,400
+payments of $750,000.
+
+7
+00:00:16,000 --> 00:00:22,080
+12 months of payments total $3 million,
+
+8
+00:00:18,400 --> 00:00:24,800
+setting the reserve floor at 3%. The
+
+9
+00:00:22,080 --> 00:00:27,039
+actual objective is CPI plus 4% annually
+
+10
+00:00:24,800 --> 00:00:30,080
+over rolling 5-year periods. net of
+
+11
+00:00:27,039 --> 00:00:33,360
+costs. Assuming 2.5% inflation gives the
+
+12
+00:00:30,080 --> 00:00:34,640
+app a 6.5% numerical hurdle. Passing the
+
+13
+00:00:33,360 --> 00:00:37,120
+annual estimate screen is only
+
+14
+00:00:34,640 --> 00:00:39,360
+preliminary evidence.
+
+15
+00:00:37,120 --> 00:00:41,920
+Now looking at the results and
+
+16
+00:00:39,360 --> 00:00:43,840
+alternatives
+
+17
+00:00:41,920 --> 00:00:45,760
+on the frozen data through September
+
+18
+00:00:43,840 --> 00:00:48,239
+2026, the constrained reference
+
+19
+00:00:45,760 --> 00:00:51,200
+estimates 6.61%
+
+20
+00:00:48,239 --> 00:00:54,160
+annual return and 6.05%
+
+21
+00:00:51,200 --> 00:00:58,960
+volatility. Equal weight estimates 3.01%
+
+22
+00:00:54,160 --> 00:01:01,600
+01% and inverse volatility 3.37%.
+
+23
+00:00:58,960 --> 00:01:04,000
+Both miss the return screen on the full
+
+24
+00:01:01,600 --> 00:01:06,560
+sample. However, shortening the window
+
+25
+00:01:04,000 --> 00:01:08,479
+makes equal weight pass. This shows why
+
+26
+00:01:06,560 --> 00:01:10,000
+the comparison depends on the estimation
+
+27
+00:01:08,479 --> 00:01:11,600
+basis.
+
+28
+00:01:10,000 --> 00:01:14,240
+The constrained process is useful for
+
+29
+00:01:11,600 --> 00:01:16,320
+making the trade-offs explicit, but it's
+
+30
+00:01:14,240 --> 00:01:19,920
+in sample selection does not establish
+
+31
+00:01:16,320 --> 00:01:25,360
+superior future performance.
+
+32
+00:01:19,920 --> 00:01:25,360
+Now, let's see why funding is deferred.
+
+33
+00:01:25,680 --> 00:01:37,360
+I'm going to toggle last 36 months
+
+34
+00:01:31,360 --> 00:01:39,200
+and also increase the bips to 15.
+
+35
+00:01:37,360 --> 00:01:47,200
+This moves the constrained portfolio
+
+36
+00:01:39,200 --> 00:01:49,360
+from 40% VT to 15% VT, a 25 point shift.
+
+37
+00:01:47,200 --> 00:01:51,040
+Separately, 15 basis points of annual
+
+38
+00:01:49,360 --> 00:01:53,600
+additional cost makes the original
+
+39
+00:01:51,040 --> 00:01:56,000
+reference miss the hurdle. The optimizer
+
+40
+00:01:53,600 --> 00:01:59,840
+responds by raising equity exposure to
+
+41
+00:01:56,000 --> 00:02:03,040
+45% and increasing volatility across the
+
+42
+00:01:59,840 --> 00:02:07,360
+original window and return stresses. VT
+
+43
+00:02:03,040 --> 00:02:09,440
+range from 15 to 45%. Across the broader
+
+44
+00:02:07,360 --> 00:02:13,920
+illustrative cost scenarios and both
+
+45
+00:02:09,440 --> 00:02:19,360
+windows, it ranged from 15 to 55% with
+
+46
+00:02:13,920 --> 00:02:20,800
+BIL from 45 to 85% and LQD up to 5%.
+
+47
+00:02:19,360 --> 00:02:23,280
+These are results tested across
+
+48
+00:02:20,800 --> 00:02:26,480
+portfolios, not a menu of independently
+
+49
+00:02:23,280 --> 00:02:29,760
+interchangeable rates.
+
+50
+00:02:26,480 --> 00:02:32,239
+Now, let's look more into the scope and
+
+51
+00:02:29,760 --> 00:02:34,319
+limitations. I mentioned this in my
+
+52
+00:02:32,239 --> 00:02:36,000
+previous video, but before live
+
+53
+00:02:34,319 --> 00:02:38,000
+implementation, the committee must
+
+54
+00:02:36,000 --> 00:02:40,000
+perform reserve eligibility, including
+
+55
+00:02:38,000 --> 00:02:42,400
+whether IF's fluctuating principle is
+
+56
+00:02:40,000 --> 00:02:45,360
+acceptable and verify liquidity, issuer
+
+57
+00:02:42,400 --> 00:02:48,160
+treatment, and actual costs. The pilot
+
+58
+00:02:45,360 --> 00:02:50,239
+therefore is a test of the process and
+
+59
+00:02:48,160 --> 00:02:52,239
+its governance, not necessarily a claim
+
+60
+00:02:50,239 --> 00:02:54,560
+that the investment objective has been
+
+61
+00:02:52,239 --> 00:02:57,840
+demonstrated.
+
+62
+00:02:54,560 --> 00:03:00,000
+And so, as my closing ask, the portfolio
+
+63
+00:02:57,840 --> 00:03:02,560
+analyst will drive the pilot and record
+
+64
+00:03:00,000 --> 00:03:04,319
+hypothetical weights, turnover, costs,
+
+65
+00:03:02,560 --> 00:03:06,480
+reserve coverage, and performance
+
+66
+00:03:04,319 --> 00:03:09,200
+against the benchmark and two baselines
+
+67
+00:03:06,480 --> 00:03:12,560
+at each monthly review. The anal the
+
+68
+00:03:09,200 --> 00:03:16,159
+analyst will rewrun the window return
+
+69
+00:03:12,560 --> 00:03:19,840
+cost and reserve scenarios and present
+
+70
+00:03:16,159 --> 00:03:22,640
+the evidence to the committee on day 90.
+
+71
+00:03:19,840 --> 00:03:25,519
+If no allocation satisfies both the
+
+72
+00:03:22,640 --> 00:03:27,599
+agreed reserve rule and after cost
+
+73
+00:03:25,519 --> 00:03:30,239
+return screen, suspend the pilot and
+
+74
+00:03:27,599 --> 00:03:32,640
+return immediately to committee. A
+
+75
+00:03:30,239 --> 00:03:34,959
+stress-driven weight shift above 5
+
+76
+00:03:32,640 --> 00:03:38,400
+percentage points keeps live funding
+
+77
+00:03:34,959 --> 00:03:41,440
+deferred. So we can see this in my
+
+78
+00:03:38,400 --> 00:03:43,599
+decision as well but I'll continue to
+
+79
+00:03:41,440 --> 00:03:45,200
+summarize
+
+80
+00:03:43,599 --> 00:03:47,519
+reconsidering
+
+81
+00:03:45,200 --> 00:03:50,239
+requires verified implementation terms
+
+82
+00:03:47,519 --> 00:03:51,920
+documentation costs credible forward
+
+83
+00:03:50,239 --> 00:03:54,799
+evidence for the net objective and
+
+84
+00:03:51,920 --> 00:03:57,120
+acceptable allocation stability 90 days
+
+85
+00:03:54,799 --> 00:03:58,799
+cannot establish a 5-year return record
+
+86
+00:03:57,120 --> 00:04:03,360
+and completing the pilot does not
+
+87
+00:03:58,799 --> 00:04:06,159
+automatically authorize funded funding.
+
+88
+00:04:03,360 --> 00:04:08,879
+My request today is approval of the
+
+89
+00:04:06,159 --> 00:04:12,640
+90-day paper pilot, designation of its
+
+90
+00:04:08,879 --> 00:04:18,360
+monitoring owner, and no allocation of
+
+91
+00:04:12,640 --> 00:04:18,360
+live scholarship capital. Thank you.
+

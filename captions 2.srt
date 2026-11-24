@@ -1,0 +1,416 @@
+1
+00:00:00,400 --> 00:00:05,920
+In this video, I'm going to do my code
+
+2
+00:00:02,560 --> 00:00:08,559
+and validation walk through. First, let
+
+3
+00:00:05,920 --> 00:00:11,599
+me discuss my inputs. Here I have my
+
+4
+00:00:08,559 --> 00:00:13,200
+prices CSV file and the price download
+
+5
+00:00:11,599 --> 00:00:15,440
+txt.
+
+6
+00:00:13,200 --> 00:00:17,760
+The input contains 60 monthly adjusted
+
+7
+00:00:15,440 --> 00:00:20,480
+prices from October 2021 through
+
+8
+00:00:17,760 --> 00:00:23,279
+September 2026, producing 59 monthly
+
+9
+00:00:20,480 --> 00:00:25,519
+returns. The snapshot was retrieved on
+
+10
+00:00:23,279 --> 00:00:26,960
+October 20th. That retrieval date is
+
+11
+00:00:25,519 --> 00:00:29,279
+different from the final observation
+
+12
+00:00:26,960 --> 00:00:31,760
+month. The repository preserves the
+
+13
+00:00:29,279 --> 00:00:33,600
+Yahoo responses and download record.
+
+14
+00:00:31,760 --> 00:00:35,520
+Validation compares every submitted
+
+15
+00:00:33,600 --> 00:00:37,520
+price with its retained source response,
+
+16
+00:00:35,520 --> 00:00:40,320
+helping prevent an accidental mixture of
+
+17
+00:00:37,520 --> 00:00:42,800
+different downloads. Now looking into
+
+18
+00:00:40,320 --> 00:00:47,120
+return risk and logic.
+
+19
+00:00:42,800 --> 00:00:51,840
+Here is my portfolio Python file.
+
+20
+00:00:47,120 --> 00:00:55,879
+First in estimate from CSV.
+
+21
+00:00:51,840 --> 00:00:55,879
+Let me locate the function.
+
+22
+00:00:56,559 --> 00:01:01,039
+Adjacent adjusted prices produce simple
+
+23
+00:00:58,640 --> 00:01:03,840
+monthly returns. Current price divided
+
+24
+00:01:01,039 --> 00:01:05,360
+by previous price minus one. The annual
+
+25
+00:01:03,840 --> 00:01:08,320
+return estimate is the monthly
+
+26
+00:01:05,360 --> 00:01:10,560
+arithmetic mean * 12. Annual volatility
+
+27
+00:01:08,320 --> 00:01:12,320
+is the same is the sample monthly
+
+28
+00:01:10,560 --> 00:01:15,439
+standard deviation times the square root
+
+29
+00:01:12,320 --> 00:01:17,680
+of 12. Correlations and volatilities use
+
+30
+00:01:15,439 --> 00:01:21,280
+the same selected window. Coariance
+
+31
+00:01:17,680 --> 00:01:24,479
+combines each correlation with the two
+
+32
+00:01:21,280 --> 00:01:28,159
+annual volatilities. Portfolio return is
+
+33
+00:01:24,479 --> 00:01:30,000
+the weighted sum of asset returns.
+
+34
+00:01:28,159 --> 00:01:31,840
+Portfolio variance sums all weighted
+
+35
+00:01:30,000 --> 00:01:34,240
+coariance pairs. Taking its square root
+
+36
+00:01:31,840 --> 00:01:35,920
+gives volatility. These are historical
+
+37
+00:01:34,240 --> 00:01:38,079
+arithmetic estimates. They're not
+
+38
+00:01:35,920 --> 00:01:40,479
+compound growth rates or proof of the
+
+39
+00:01:38,079 --> 00:01:42,159
+foundation's future rolling 5-year
+
+40
+00:01:40,479 --> 00:01:45,119
+objective.
+
+41
+00:01:42,159 --> 00:01:48,119
+Now looking into the search and
+
+42
+00:01:45,119 --> 00:01:48,119
+baselines
+
+43
+00:01:49,119 --> 00:01:54,399
+functions, we see that the search
+
+44
+00:01:51,600 --> 00:01:56,240
+divides the portfolio into 20 units each
+
+45
+00:01:54,399 --> 00:02:00,799
+worth 5 percentage points with four
+
+46
+00:01:56,240 --> 00:02:03,119
+assets. It evaluates 1771 fully invested
+
+47
+00:02:00,799 --> 00:02:05,759
+long only combinations.
+
+48
+00:02:03,119 --> 00:02:07,680
+It excludes mixes that miss the after
+
+49
+00:02:05,759 --> 00:02:09,920
+cost return screen or reserve minimum
+
+50
+00:02:07,680 --> 00:02:13,360
+minimum and selects the remaining mix
+
+51
+00:02:09,920 --> 00:02:16,239
+with the lowest estimated volatility.
+
+52
+00:02:13,360 --> 00:02:20,319
+Additionally, equal weight assigns 25%
+
+53
+00:02:16,239 --> 00:02:22,560
+to each asset etc. And going over to the
+
+54
+00:02:20,319 --> 00:02:24,400
+app here, it evaluates all three
+
+55
+00:02:22,560 --> 00:02:28,400
+portfolios with common inputs and
+
+56
+00:02:24,400 --> 00:02:32,080
+reports rule specific verdicts.
+
+57
+00:02:28,400 --> 00:02:35,120
+Now let's look at changed cost
+
+58
+00:02:32,080 --> 00:02:39,680
+demonstration where I'm going to
+
+59
+00:02:35,120 --> 00:02:43,040
+reference this CSV file. I only changed
+
+60
+00:02:39,680 --> 00:02:46,400
+the additional annual cost from 0 to 15
+
+61
+00:02:43,040 --> 00:02:49,599
+basis points. The unchanged 60/40
+
+62
+00:02:46,400 --> 00:02:52,480
+portfolios estimates falls from
+
+63
+00:02:49,599 --> 00:02:54,640
+this number
+
+64
+00:02:52,480 --> 00:02:59,840
+to
+
+65
+00:02:54,640 --> 00:03:04,840
+about 6.46% 46% below the 6.5 screen.
+
+66
+00:02:59,840 --> 00:03:04,840
+When it's reoptimized at this level
+
+67
+00:03:08,000 --> 00:03:18,239
+one moment when it's optimized,
+
+68
+00:03:11,599 --> 00:03:21,200
+it selects 50 55% VIL and 45% VT. Its
+
+69
+00:03:18,239 --> 00:03:24,080
+after cost estimate is
+
+70
+00:03:21,200 --> 00:03:25,760
+with volatility increasing.
+
+71
+00:03:24,080 --> 00:03:27,760
+The higher after cost estimate comes
+
+72
+00:03:25,760 --> 00:03:31,120
+from the changing allocation. The fee
+
+73
+00:03:27,760 --> 00:03:34,400
+itself does not improve returns.
+
+74
+00:03:31,120 --> 00:03:37,280
+Now let's look at validation and failure
+
+75
+00:03:34,400 --> 00:03:39,760
+handling which is executed through this
+
+76
+00:03:37,280 --> 00:03:42,239
+Python file.
+
+77
+00:03:39,760 --> 00:03:44,319
+Validation independently recomputes
+
+78
+00:03:42,239 --> 00:03:46,480
+estimates and enumerates the grid rather
+
+79
+00:03:44,319 --> 00:03:49,200
+than relying on the app's displayed
+
+80
+00:03:46,480 --> 00:03:51,599
+answer. It also checks source price
+
+81
+00:03:49,200 --> 00:03:54,599
+matches invalid data widget changes and
+
+82
+00:03:51,599 --> 00:03:54,599
+infeasibility.
+
+83
+00:03:54,799 --> 00:04:02,400
+Now, finally, let's go back to the app
+
+84
+00:03:58,799 --> 00:04:06,400
+and look at point in time. Here we have
+
+85
+00:04:02,400 --> 00:04:10,720
+the GS10 point in time monitoring panel
+
+86
+00:04:06,400 --> 00:04:13,120
+that reads saved Alfred vintages.
+
+87
+00:04:10,720 --> 00:04:16,639
+At the September 13th cutoff, the latest
+
+88
+00:04:13,120 --> 00:04:18,400
+observation is August at 4.68% perom.
+
+89
+00:04:16,639 --> 00:04:21,199
+The October 1st vintage contains
+
+90
+00:04:18,400 --> 00:04:23,040
+September at 4.49%
+
+91
+00:04:21,199 --> 00:04:25,520
+4.99%.
+
+92
+00:04:23,040 --> 00:04:27,759
+The observation is not its publication
+
+93
+00:04:25,520 --> 00:04:30,400
+timestamp. Date level vintages do not
+
+94
+00:04:27,759 --> 00:04:32,479
+establish availability before a same day
+
+95
+00:04:30,400 --> 00:04:36,639
+trade
+
+96
+00:04:32,479 --> 00:04:38,800
+and so GS10 is monitoring monitoring
+
+97
+00:04:36,639 --> 00:04:40,960
+context for bond exposure. It doesn't
+
+98
+00:04:38,800 --> 00:04:42,560
+drive this optimizer.
+
+99
+00:04:40,960 --> 00:04:45,199
+And as a closing note, overall the
+
+100
+00:04:42,560 --> 00:04:48,000
+system reproduces the numerical result,
+
+101
+00:04:45,199 --> 00:04:49,759
+but estimate instability,
+
+102
+00:04:48,000 --> 00:04:52,800
+implementation assumptions, and the
+
+103
+00:04:49,759 --> 00:04:57,040
+unproven ruling net objective limit its
+
+104
+00:04:52,800 --> 00:04:57,040
+use to a paper pilot.
+
